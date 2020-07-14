@@ -1,7 +1,7 @@
 {
+  "homepage": "https://iainmchugh.github.io/tallaghtrehabilitationproject/",
   "name": "tallaghtrehabilitationproject",
   "version": "0.1.0",
-  "homepage": "https://iainmchugh.github.io/tallaghtrehabilitationproject/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "predeployLive": "npm run build",
     "deployLive": "npm run cleanup && gh-pages -d build -b deploy -e build",
-    "cleanup": "rm -rf node_modules/gh-pages/.cache"
+    "cleanup": "rimraf node_modules/gh-pages/.cache"
   },
   "eslintConfig": {
     "extends": "react-app"
