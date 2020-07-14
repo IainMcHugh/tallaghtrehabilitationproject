@@ -5,6 +5,8 @@ import ACReferralForm from '../../referral_forms/aftercare_referral_2018.pdf';
 import ACCriteria from '../../referral_forms/aftercare-referral-form.pdf';
 import RRLeaflet from '../../referral_forms/room_rental_booklet.pdf';
 
+import './Navigation.css';
+
 export class Navigation extends Component {
 
     constructor(props) {
