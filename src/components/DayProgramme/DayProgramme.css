@@ -1,0 +1,438 @@
+.dp-container {
+    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+}
+
+.dp-box {
+    width: 90%;
+    margin: 40px auto;
+    font-family: lemon-milk;
+    border-radius: 0 5px 5px 5px;
+}
+
+
+.dp-box h2 {
+    border-left: 15px solid #005987;
+    text-align: center;
+    background-color: #f4d90c;
+    color: #005987;
+    border-radius: 0 5px 5px 0;
+    font-size: 28px;
+}
+
+.dp-box h3 {
+    width: 70%;
+    margin: 30px auto;
+    padding: 10px 0;
+    font-family: 'Barlow', 'san-serif';
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    background-color: rgba(244, 217, 12, 0.2);
+    color: rgb(31, 31, 31);
+    border-radius: 5px;
+}
+
+.dp-box h4 {
+    font-family: 'Barlow', 'san-serif';
+    margin: 10px 5px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.aftercare-who-list {
+    margin: 30px 0;
+    font-family: 'Barlow', 'san-serif';
+    font-weight: 300;
+}
+
+.aftercare-who-list ul {
+    list-style-position: inside;
+    text-indent: -1.3em;
+    padding-left: 1.3em;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.aftercare-who-list ul li {
+    margin: 10px 0;
+}
+
+.days-container {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.day-1 {
+    background-color: rgba(245, 181, 252, 0.2);
+    border: 1px dashed black;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.017),
+        0 1px 5.3px rgba(0, 0, 0, 0.02),
+        0 1px 10px rgba(0, 0, 0, 0.03),
+        0 2px 10px rgba(0, 0, 0, 0.03),
+        0 4px 10px rgba(0, 0, 0, 0.03),
+        0 10px 10px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+}
+
+.day-2 {
+    background-color: rgba(150, 247, 210, 0.2);
+    border: 1px dashed black;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.017),
+        0 1px 5.3px rgba(0, 0, 0, 0.02),
+        0 1px 10px rgba(0, 0, 0, 0.03),
+        0 2px 10px rgba(0, 0, 0, 0.03),
+        0 4px 10px rgba(0, 0, 0, 0.03),
+        0 10px 10px rgba(0, 0, 0, 0.05);
+        opacity: 1;
+}
+
+.day-3 {
+    background-color: rgba(240, 246, 150, 0.2);
+    border: 1px dashed black;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.017),
+        0 1px 5.3px rgba(0, 0, 0, 0.02),
+        0 1px 10px rgba(0, 0, 0, 0.03),
+        0 2px 10px rgba(0, 0, 0, 0.03),
+        0 4px 10px rgba(0, 0, 0, 0.03),
+        0 10px 10px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+}
+
+.day-4 {
+    background-color: rgba(252, 177, 177, 0.2);
+    border: 1px dashed black;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.017),
+        0 1px 5.3px rgba(0, 0, 0, 0.02),
+        0 1px 10px rgba(0, 0, 0, 0.03),
+        0 2px 10px rgba(0, 0, 0, 0.03),
+        0 4px 10px rgba(0, 0, 0, 0.03),
+        0 10px 10px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+}
+
+.day-5 {
+    background-color: rgba(57, 189, 200, 0.2);
+    border: 1px dashed black;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow:
+        0 1px 2.2px rgba(0, 0, 0, 0.017),
+        0 1px 5.3px rgba(0, 0, 0, 0.02),
+        0 1px 10px rgba(0, 0, 0, 0.03),
+        0 2px 10px rgba(0, 0, 0, 0.03),
+        0 4px 10px rgba(0, 0, 0, 0.03),
+        0 10px 10px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+}
+
+.day-1:hover, .day-2:hover, .day-3:hover, .day-4:hover, .day-5:hover {  
+    opacity: 0.7;
+}
+
+.tuesdays{
+    margin: 5px;
+    width: 30%;
+    height: 100px;
+    background-color: rgb(245, 181, 252);
+    border: 2px solid black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.wednesdays{
+    margin: 5px;
+    width: 35%;
+    height: 100px;
+    background-color: rgb(150, 247, 210);
+    border: 2px solid black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 100px;
+}
+.thursdays{
+    margin: 5px;
+    width: 30%;
+    height: 100px;
+    background-color: rgb(240, 246, 150);
+    border: 2px solid black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 100px;
+}
+.fridays{
+    margin: 5px;
+    width: 35%;
+    height: 100px;
+    background-color: rgb(252, 177, 177);
+    border: 2px solid black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 100px;
+}
+.saturdays{
+    margin: 5px;
+    width: 30%;
+    height: 100px;
+    background-color: rgb(57, 189, 200);
+    border: 2px solid black;
+    font-size: 14px;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.day-text {
+    width: 60%;
+}
+
+.day-text h4 {
+    font-family: 'Barlow', 'san-serif';
+    font-weight: 800;
+    text-align: center;
+}
+
+.day-text h5 {
+    font-family: 'Barlow', 'san-serif';
+    font-weight: 500;
+    text-align: center;
+}
+
+.what-next-list {
+    font-family: 'Barlow', 'san-serif';
+    font-weight: 500;
+    text-align: left;
+    list-style-position: inside;
+    text-indent: -1.3em;
+    padding-left: 1.3em;
+}
+
+.what-next-list li {
+    margin: 10px 0;
+}
+
+.referral-button {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #f4d90c;
+    color: #005987;
+    border: none;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    text-align: center;
+    font-family: lemon-milk;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.referral-button:hover {
+    border: 2px solid black;
+}
+
+.dayprogramme-services-container {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dayprogramme-services-container a {
+    width: 80%;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 auto;
+    background-color: #f4d90c;
+    color: #005987;
+    text-align: center;
+    font-size: 12px;
+    box-shadow: -0.5em 0.5em 0 #cab300;
+    border-bottom: 1px solid #cab300;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.dayprogramme-services-container a:hover {
+    width: 81%;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 10px;
+    transform: translate(.9em, -.9em);
+    background-color: #ffe83b;
+    box-shadow: -0.5em 0.5em 0 #f1d500;
+    border-bottom: 1px solid #ffe625;
+    color: #008dd3;
+}
+
+.booklet-container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.booklet-page {
+    width: 100%;
+    display: none;
+}
+
+.booklet-active {
+    display: block;
+}
+
+.donation-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 768px){
+    .dp-container{
+        width: 100%;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    .dp-box {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .dp-box h2 {
+        width: 100%;
+        margin: 50px auto;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .dp-box h3 {
+        font-size: 28px;
+        margin-bottom: 100px;
+    }
+    
+    .dp-box h4 {
+        font-size: 18px;
+    }
+
+    .aftercare-who-list {
+        font-size: 18px;
+    }
+
+    .aftercare-who-list ul {
+        font-size: 18px;
+    }
+
+    .tuesdays, .wednesdays, .thursdays, .fridays, .saturdays {
+        height: 150px;
+        line-height: 150px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .dp-container{
+        padding: 20px 0;
+    }
+
+    .dp-box {
+        width: 70%;
+    }
+
+    .dp-box h3 {
+        font-size: 32px;
+    }
+    
+    .dp-box h4 {
+        font-size: 22px;
+    }
+
+    .aftercare-who-list {
+        font-size: 22px;
+    }
+
+    .aftercare-who-list ul {
+        font-size: 22px;
+    }
+
+    .aftercare-who-list ul li {
+        font-size: 22px;
+    }
+
+    .days-container{
+        width: 800px;
+        margin: 20px auto;
+    }
+
+    .tuesdays, .wednesdays, .thursdays, .fridays, .saturdays {
+        height: 200px;
+        line-height: 200px;
+        font-size: 20px;
+    }
+
+    .day-text h4 {
+        font-size: 28px;
+    }
+
+    .day-text h5 {
+        font-size: 22px;
+    }
+
+    .what-next-list li {
+        font-size: 22px;
+    }
+
+    .referral-button {
+        margin: 60px auto;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+    .dp-box {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    
+    .days-container{
+        width: 1000px;
+    }
+
+}
