@@ -22,7 +22,7 @@ function BuildSocialMedia() {
                 <img
                   className="video-play-button"
                   src={require("../../../images/play_button_out.png")}
-                  alt="play button"
+                  alt="Play Button"
                 />
               </div>
             </div>
