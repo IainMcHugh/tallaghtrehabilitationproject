@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import BuildDPSection from "./DPComponentLib/BuildDPSection";
 
 export class ProgrammePath extends Component {
     render() {

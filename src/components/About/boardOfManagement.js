@@ -19,7 +19,7 @@ function boardOfManagement() {
           statutory, voluntary and community agencies/groups based in the
           Tallaght area who freely volunteer their time and expertise.
         </h4>
-        <ul>
+        <ul className="bom-ul">
           <li>
             Mr. Seamus Massey (Jobstown School Principal Retired) Chairperson
           </li>
