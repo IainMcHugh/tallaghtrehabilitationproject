@@ -15,13 +15,12 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeployLive": "npm run build",
-    "deployLive": "npm run cleanup && gh-pages -d build -b deploy -e build",
-    "cleanup": "rimraf node_modules/gh-pages/.cache"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
