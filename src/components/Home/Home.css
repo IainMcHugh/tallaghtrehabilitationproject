@@ -1,18 +1,34 @@
 
 
-.homepage-image-container {
-    height: calc(100vh - 180px);
+/* .homepage-image-container {
+    height: calc(100vh - 100px);
     width: 100%;
-    background: url(../../images/lake_out.jpg);
+    background: url(../../images/TRPFrontFaded.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
     position: relative;
+    opacity: 1;
+} */
+
+.homepage-image-container {
+    height: calc(100vh - 100px);
+    width: 100%;
+    background: url(../../images/TRPFrontEdit.png);
+    background-color: rgb(240, 240, 240);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
 }
 
 
-.background-slider {
+/* .background-slider {
+    background-color: rgb(200, 200, 0, 0.2);
     position: absolute;
     top: 100px;
     left: 5%;
@@ -26,10 +42,49 @@
     animation-duration: 1s;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
+    border-radius: 40px;
+} */
+
+.background-slider {
+    /* background-color: rgba(244, 217, 12, 0.8); */
+    /* background-image: linear-gradient(to top left, rgba(244, 217, 12, 0.5), rgb(244, 217, 12)); */
+    position: relative;
+    width: 90%;
+    height: calc(100vh - 230px);
+    margin: 0 auto;
+    margin-top: 120px;
+    overflow: hidden;
+    border-radius: 4px;
+    opacity: 0;
+    animation-name: lightsOn2;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+@keyframes lightsOn2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slick-slider {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slick-list {
-    height: 80%;
+    height: 90%;
 }
 
 .slick-track {
@@ -45,25 +100,30 @@
 }
 
 .mission-statement-heading {
+    width: 100%;
+    background-color: rgb(244, 217, 12);
     text-align: center;
     font-family: lemon-milk;
-    /* font-size: 32px; */
+    border-radius: 5px;
     font-size: 3.25vh;
     font-weight: 800;
-    color: white;
+    color: black;
     margin: 10px 0;
 }
 
 .mission-statement-body {
-    width: 90%;
+    background-color: rgba(244, 217, 12, 0.8);
+    width: 100%;
     margin: 0 auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
     text-align: center;
     /* font-size: 20px; */
     font-size: 2.75vh;
-    color: white;
+    color: black;
     font-family: 'Barlow', 'san-serif';
-    font-weight: 400;
-    /* line-height: 1.4em; */
+    font-weight: 600;
+    border-radius: 20px;
 }
 
 .slick-dots {
@@ -87,6 +147,7 @@
     height: 15px;
     border-radius: 15px;
     background-color: rgba(200, 200, 200, 0.5);
+    background-color: yellow;
     font-size: 0;
     line-height: 0;
     display: block;
@@ -94,7 +155,7 @@
     height: 20px;
     padding: 5px;
     cursor: pointer;
-    color: white;
+    color: black;
     border: 0;
     outline: none;
     background: transparent;
@@ -123,6 +184,7 @@
     text-align: center;
     opacity: .25;
     color: white;
+    color: yellow;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -130,9 +192,11 @@
 .slick-dots li.slick-active button:before {
     opacity: .75;
     color: white;
+    color: yellow;
 }
 
 .services-background {
+    margin-top: 100px;
     width: 100%;
     background-color: rgb(240, 240, 240);
     padding-bottom: 50px;
@@ -180,31 +244,30 @@
 }
 
 .rehab {
-    /* background-color: #21e6c1; */
-    background-image: url(../../images/stock_aftercare1.jpg);
+    background-image: url(../../images/dp_home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
 }
 
 .aftercare {
-    /* background-color: #fcb1b1; */
-    background-image: url(../../images/stock_people1.jpg);
+    background-image: url(../../images/a_home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
 }
 
 .rental {
-    /* background-color: #f0f696; */
     background-image: url(../../images/stock_roomrental3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
 }
 
 .services-top {
     height: 60%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 .services-bottom {
@@ -362,10 +425,10 @@
       width: 400px;
     }
   
-    .services-container a div {
+    /* .services-container a div {
       width: 90%;
       margin: 0 20px;
-    }
+    } */
   
     .services-bottom {
       width: 100% !important;
@@ -382,6 +445,14 @@
   }
   
   @media only screen and (min-width: 768px){
+
+    .homepage-image-container {
+        top: 200px;
+    }
+
+    .background-slider {
+        margin-top: 220px;
+    }
   
     .mission-statement-heading{
       margin-top: 40px;
@@ -391,6 +462,7 @@
     .mission-statement-body{
       margin-top: 90px;
       font-size: 3vh;
+      padding: 30px 50px;
     }
   
     .video-background{
@@ -418,6 +490,17 @@
   
   
   @media only screen and (min-width: 1000px){
+
+    .background-slider {
+        width: 75%;
+    }
+    
+    .mission-statement-body{
+        margin-top: 90px;
+        font-size: 3vh;
+        padding: 30px 80px;
+      }
+    
     .sm-left{
         font-size: 1.7em;
     }
@@ -425,11 +508,24 @@
   
   
   @media only screen and (min-width: 1200px){
+
+    .homepage-image-container {
+        background-size: contain;
+        /* height: calc(100vh - 100px); */
+        /* background: url(../../images/TRPFrontEdit.png);
+        background-color: rgb(240, 240, 240);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        z-index: 1;
+        opacity: 1; */
+    }
   
     .background-slider {
-      width: 70%;
-      left: 15%;
-      /* width: 1000px; */
+      width: 800px;
     }
   
     @keyframes lightsOn3 {
@@ -438,15 +534,7 @@
         }
         to {opacity: 1;}
     }
-  
-    .mission-statement-heading {
-      margin-top: 100px;
-    }
-  
-    .mission-statement-body {
-      margin-bottom: 50px;
-    }
-  
+
     .sm-left{
       font-size: 2em;
       text-align: center;

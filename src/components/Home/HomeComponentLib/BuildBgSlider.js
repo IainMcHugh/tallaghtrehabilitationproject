@@ -14,7 +14,8 @@ function buildBgSlider() {
       };
 
     return (
-        <div className="homepage-image-container">
+        // <div className="homepage-image-container">
+        <div>
           <div className="background-slider">
             <Slider {...settings}>
               <div className="background-text">

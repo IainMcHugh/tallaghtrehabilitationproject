@@ -13,6 +13,7 @@ import BuildSocialMedia from "./HomeComponentLib/BuildSocialMedia";
 function Home() {
   return (
     <div>
+      <div className="homepage-image-container"></div>
       <BuildBgSlider />
       <div className="services-background">
         <h2 className="services-header">SERVICES WE OFFER</h2>
