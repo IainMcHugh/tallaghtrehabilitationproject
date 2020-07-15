@@ -322,6 +322,23 @@
     font-weight: 300;
 }
 
+.SM-selector-container {
+    height: 10%;
+    background-color: grey;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.SM-selector-container div {
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
 .video-background {
     width: 100%;
     /* background: url(images/water.jpg); */
@@ -350,8 +367,10 @@
     display: flex;
     /* width: 890px;
     height: 552px; */
-    width: 600px;
-    height: 400px;
+    width: 90%;
+    height: 30vh;
+    /* width: 600px; */
+    /* height: 400px; */
     margin: auto;
     position: relative;
     background-image: url(../../images/vid_thumbnail.jpg);
@@ -442,6 +461,10 @@
   .mission-statement-body{
     margin-top: 50px;
   }
+
+  .video_thumbnail {
+      height: 40vh;
+  }
   }
   
   @media only screen and (min-width: 768px){
@@ -469,6 +492,11 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
+    }
+
+    .video_thumbnail {
+      width: 600px;
+      height: 400px;
     }
   
     .sm-left{
