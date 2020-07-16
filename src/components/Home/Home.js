@@ -32,7 +32,7 @@ function Home() {
           />
           <BuildServicesOffer
             styleClass="rental"
-            title="Day Programme"
+            title="Room Rental"
             description="Click here to find out more about room rental and meetings."
             nav="/roomrental"
           />

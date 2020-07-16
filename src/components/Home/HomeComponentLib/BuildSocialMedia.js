@@ -20,7 +20,7 @@ function BuildSocialMedia() {
   return (
     <div>
       <Parallax
-        bgImage={require("../../../images/Moydrum_Castle_back_view_b.jpg")}
+        bgImage={require("../../../images/kiltalown_old.jpg")}
         strength={700}
       >
         <div style={{ height: 700}}>
