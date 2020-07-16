@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function BuildSMYoutube() {
+function BuildSMYoutube(props) {
   const [videoOverlay, setVideoOverlay] = useState(false);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ function BuildSMYoutube() {
   });
 
   return (
-    <div className="sm-left">
+    <div className={props.active ? "SM-embed-active" : "SM-embed-container"}>
       <div onClick={() => setVideoOverlay(1)} className="video_thumbnail">
         <img
           className="video-play-button"
