@@ -27,6 +27,10 @@ export class AppHolder extends Component {
                     <ScrollToTop>
                         <Navigation />
 
+                        <Route exact path='/tallaghtrehabilitationproject/' render={()=> (
+                        <Redirect to='/home' />
+                        )} />
+
                         <Route exact path='/' render={()=> (
                         <Redirect to='/home' />
                         )} />
