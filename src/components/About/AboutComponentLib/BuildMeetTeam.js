@@ -2,15 +2,16 @@ import React from "react";
 
 function BuildMeetTeam(props) {
   return (
-    <div className="team-1">
-      <img
-        id="about-subtext-show"
-        className="person-1-image"
-        src={require("../../../images/profile_default.png")}
-        alt="Profile"
-      />
-      <div className="person-1-text">
-        <h3>{props.pName}</h3>
+    <div className="team-member-container">
+      <div className="team_image_container">
+        <img
+          className="team-member-image"
+          src={props.pImg}
+          alt="Profile"
+        />
+      </div>
+      <div className="team-member-text">
+        <h2>{props.pName}</h2>
         <h4>{props.pPosition}</h4>
         <h5>{props.pDescription}</h5>
       </div>
