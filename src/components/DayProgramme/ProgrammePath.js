@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import BuildDPSection from "./DPComponentLib/BuildDPSection";
+import BuildDPTimeline from "./DPComponentLib/BuildDPTimeline";
 
 export class ProgrammePath extends Component {
     render() {
@@ -15,9 +16,11 @@ export class ProgrammePath extends Component {
                     <h2>Programme Path</h2>
                     <h4>
                     Following successful referral and assessment, the path of engagement on the programme is as follows:
+                    <br/><br/><br/><br/>
                     </h4>
                 </div>
-                <div className="aftercare-box">
+                <BuildDPTimeline />
+                {/* <div className="aftercare-box">
                     <h2>Induction</h2>
                     <h4>
                     The Introduction programme allows applicants become acclimatised to the nature and structure of the programme and allows the staff team to further assess the applicant’s suitability and readiness to engage in the rehabilitation process.
@@ -44,7 +47,7 @@ export class ProgrammePath extends Component {
                     TRP now provides a state of the art Aftercare building  for people from the Tallaght wide area who may have completed residential or day programme rehabilitation. This aftercare offers a comprehensive continuum of care for people in recovery. Please see aftercare page for more information.
                     <br /><br />
                     </h4>
-                </div>
+                </div> */}
             </div>
         )
     }

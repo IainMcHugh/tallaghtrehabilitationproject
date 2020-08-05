@@ -7,6 +7,7 @@ import DPTherapeuticIntervention from "./textBlocks/DPTherapeuticIntervention";
 import DPRecoveryAwareness from "./textBlocks/DPRecoveryAwareness";
 import DPRelapsePrevention from "./textBlocks/DPRelapsePrevention";
 import DPGroupTherapyProcess from "./textBlocks/DPGroupTherapyProcess";
+import BuildGrThSection from './DPComponentLib/BuildGrThSection'
 
 function TherapeuticIntervention() {
   return (
@@ -29,6 +30,7 @@ function TherapeuticIntervention() {
         title="Group Therapy Process"
         data={DPGroupTherapyProcess}
       />
+      <BuildGrThSection />
     </div>
   );
 }
