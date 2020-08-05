@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tallaghtrehabilitationproject/static/css/main.bb143763.chunk.css",
-    "main.js": "/tallaghtrehabilitationproject/static/js/main.5d2a0ade.chunk.js",
-    "main.js.map": "/tallaghtrehabilitationproject/static/js/main.5d2a0ade.chunk.js.map",
+    "main.css": "/tallaghtrehabilitationproject/static/css/main.ff8c4cc5.chunk.css",
+    "main.js": "/tallaghtrehabilitationproject/static/js/main.8430cd3e.chunk.js",
+    "main.js.map": "/tallaghtrehabilitationproject/static/js/main.8430cd3e.chunk.js.map",
     "runtime-main.js": "/tallaghtrehabilitationproject/static/js/runtime-main.50fb7dc2.js",
     "runtime-main.js.map": "/tallaghtrehabilitationproject/static/js/runtime-main.50fb7dc2.js.map",
-    "static/js/2.d3cb1475.chunk.js": "/tallaghtrehabilitationproject/static/js/2.d3cb1475.chunk.js",
-    "static/js/2.d3cb1475.chunk.js.map": "/tallaghtrehabilitationproject/static/js/2.d3cb1475.chunk.js.map",
+    "static/js/2.471f0281.chunk.js": "/tallaghtrehabilitationproject/static/js/2.471f0281.chunk.js",
+    "static/js/2.471f0281.chunk.js.map": "/tallaghtrehabilitationproject/static/js/2.471f0281.chunk.js.map",
     "index.html": "/tallaghtrehabilitationproject/index.html",
-    "precache-manifest.a0e1c6bcf6d348bdb69d042642d5c4b8.js": "/tallaghtrehabilitationproject/precache-manifest.a0e1c6bcf6d348bdb69d042642d5c4b8.js",
+    "precache-manifest.5f61166e2a7172d194751609c51f905a.js": "/tallaghtrehabilitationproject/precache-manifest.5f61166e2a7172d194751609c51f905a.js",
     "service-worker.js": "/tallaghtrehabilitationproject/service-worker.js",
-    "static/css/main.bb143763.chunk.css.map": "/tallaghtrehabilitationproject/static/css/main.bb143763.chunk.css.map",
-    "static/js/2.d3cb1475.chunk.js.LICENSE.txt": "/tallaghtrehabilitationproject/static/js/2.d3cb1475.chunk.js.LICENSE.txt",
+    "static/css/main.ff8c4cc5.chunk.css.map": "/tallaghtrehabilitationproject/static/css/main.ff8c4cc5.chunk.css.map",
+    "static/js/2.471f0281.chunk.js.LICENSE.txt": "/tallaghtrehabilitationproject/static/js/2.471f0281.chunk.js.LICENSE.txt",
     "static/media/Footer.css": "/tallaghtrehabilitationproject/static/media/LEMONMILK-Regular.be29f3c5.otf",
     "static/media/SocialProtection_MARK_MASTER_Std_Colour.jpg": "/tallaghtrehabilitationproject/static/media/SocialProtection_MARK_MASTER_Std_Colour.f17a165e.jpg",
     "static/media/Home.css": "/tallaghtrehabilitationproject/static/media/vid_thumbnail.8b424e8d.jpg",
@@ -28,6 +28,7 @@
     "static/media/annual_report_2015.pdf": "/tallaghtrehabilitationproject/static/media/annual_report_2015.b52c0670.pdf",
     "static/media/criteria_for_assessment_2019.pdf": "/tallaghtrehabilitationproject/static/media/criteria_for_assessment_2019.c231e85c.pdf",
     "static/media/day_programme_referral_2018.pdf": "/tallaghtrehabilitationproject/static/media/day_programme_referral_2018.9df893ae.pdf",
+    "static/media/full_logo.png": "/tallaghtrehabilitationproject/static/media/full_logo.edbff57c.png",
     "static/media/hse_logo_border_2016_web.jpg": "/tallaghtrehabilitationproject/static/media/hse_logo_border_2016_web.d7900140.jpg",
     "static/media/kiltalown_old.jpg": "/tallaghtrehabilitationproject/static/media/kiltalown_old.67b64d8f.jpg",
     "static/media/kim_kehoe.jpg": "/tallaghtrehabilitationproject/static/media/kim_kehoe.279ced69.jpg",
@@ -61,8 +62,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.50fb7dc2.js",
-    "static/js/2.d3cb1475.chunk.js",
-    "static/css/main.bb143763.chunk.css",
-    "static/js/main.5d2a0ade.chunk.js"
+    "static/js/2.471f0281.chunk.js",
+    "static/css/main.ff8c4cc5.chunk.css",
+    "static/js/main.8430cd3e.chunk.js"
   ]
 }
