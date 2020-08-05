@@ -9,7 +9,7 @@ export default [
     skills and on personal development.`,
     <br />,
     <br />,
-    `The project espouses the principles and practice of adult education with the
+    `The project demonstrates the principles and practice of adult education with the
     aim that the programme may be a starting point for participants in accessing
     and engaging in the process of Lifelong Learning. The programme works to
     assist and support participants to the point where they can access

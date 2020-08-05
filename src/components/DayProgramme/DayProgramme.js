@@ -9,17 +9,15 @@ import DPSummary from "./textBlocks/DPSummary";
 import DPWhoIsItFor from "./textBlocks/DPWhoIsItFor";
 import BuildDPNavSection from "./DPComponentLib/BuildDPNavSection";
 import BuildWhatNext from "./DPComponentLib/BuildWhatNext";
+import BuildDPTimeline from "./DPComponentLib/BuildDPTimeline";
 
 function DayProgramme() {
   return (
     <div>
       <div className="background-image-container"></div>
       <div class="dp-container">
-        <BuildDPSection
-          title="Summary"
-          
-          data={DPSummary}
-        />
+        <BuildDPSection title="Summary" data={DPSummary} />
+        <BuildDPTimeline />
         <BuildDPSection title="Who is it for" data={DPWhoIsItFor} />
         <BuildDPNavSection />
         <BuildWhatNext />

@@ -4,14 +4,6 @@ import BuildDPList from '../DPComponentLib/BuildDPList';
 import BuildDPSection from '../DPComponentLib/BuildDPSection';
 
 export default [
-    `At present the TRP programme provides 17 specialist rehabilitation
-    places. There are various therapeutic interventions and models　of
-    therapy provided and　delivered by the staff team. These include:`,
-    <br />,
-    <br />,
-    <BuildDPList />,
-    <br />,
-    <br />,
     `As a specialist rehabilitation programme, the primary focus and
     engagement for participants is on the therapeutic process of
     recovery. The programme offers a period of structured development
@@ -30,5 +22,11 @@ export default [
     assist them in their ongoing recovery process from self
     destructive addictive behaviour.`,
     <br />,
-    <br />
+    <br />,
+    `At present the TRP programme provides 21 specialist rehabilitation
+    places. There are various therapeutic interventions and models　of
+    therapy provided and　delivered by the staff team. These include:`,
+    <br />,
+    <br />,
+    <BuildDPList />
 ]

@@ -9,6 +9,7 @@
     margin: 40px auto;
     font-family: lemon-milk;
     border-radius: 0 5px 5px 5px;
+    z-index: 10;
 }
 
 .about-box h2 {
@@ -18,6 +19,7 @@
     color: #005987;
     border-radius: 0 5px 5px 0;
     font-size: 28px;
+    z-index: 10;
 }
 
 .about-box h3 {

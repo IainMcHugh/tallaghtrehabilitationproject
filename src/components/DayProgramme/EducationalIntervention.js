@@ -17,7 +17,8 @@ function EducationalIntervention() {
         </NavLink>
       </div>
       <BuildDPSection
-        title="Educational Intervention"
+        title="Education & Training"
+        subheading="Planning for Individual Learning"
         data={DPEducationIntervention}
       />
     </div>

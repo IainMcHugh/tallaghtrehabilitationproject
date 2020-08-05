@@ -16,7 +16,7 @@ function BuildMeetTeam(props) {
       ease: "power3",
       scrollTrigger: {
         trigger: tmRef.current,
-        start: "top 70%",
+        start: "top center",
       }
     })
   }, [])

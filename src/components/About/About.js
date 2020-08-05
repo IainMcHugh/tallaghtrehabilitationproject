@@ -11,6 +11,7 @@ import TRPHistory from "./textBlocks/TRPHistory";
 import BuildAboutNavSection from "./AboutComponentLib/BuildAboutNavSection";
 import BuildMeetTeam from "./AboutComponentLib/BuildMeetTeam";
 
+import bg from "../../images/full_logo.png";
 import patrick_daly from "../../images/Team/patrick_daly.jpg";
 import carla_whelan from "../../images/Team/carla_whelan.jpg";
 import christy_rankin from "../../images/Team/christy_rankin.jpg";
