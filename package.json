@@ -10,6 +10,7 @@
     "flipping-pages": "^2.1.3",
     "git": "^0.1.5",
     "google-maps-react": "^2.0.6",
+    "gsap": "^3.4.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-flip-page": "^1.6.2",

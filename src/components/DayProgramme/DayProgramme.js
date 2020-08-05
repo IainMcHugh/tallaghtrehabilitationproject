@@ -17,7 +17,7 @@ function DayProgramme() {
       <div class="dp-container">
         <BuildDPSection
           title="Summary"
-          subheading="About Heading"
+          
           data={DPSummary}
         />
         <BuildDPSection title="Who is it for" data={DPWhoIsItFor} />
