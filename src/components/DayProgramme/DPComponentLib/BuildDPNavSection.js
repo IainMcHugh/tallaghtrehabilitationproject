@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
 
+import InfoPack from '../../../referral_forms/information_brochure.pdf'
+
 function BuildDPNavSection() {
   return (
     <div class="dp-box">
@@ -9,18 +11,18 @@ function BuildDPNavSection() {
         <NavLink to="/dayprogramme/therapeutic_intervention">
           <div>Therapeutic Intervention</div>
         </NavLink>
-        <NavLink to="/dayprogramme/therapeutic_intervention">
+        <NavLink to="/dayprogramme/educational_intervention">
           <div>Educational Intervention</div>
         </NavLink>
-        <NavLink to="/dayprogramme/therapeutic_intervention">
+        <NavLink to="/dayprogramme/programme_path">
           <div>Programme Path</div>
         </NavLink>
-        <NavLink to="/dayprogramme/therapeutic_intervention">
+        <NavLink to="/dayprogramme/outreach">
           <div>Outreach</div>
         </NavLink>
-        <NavLink to="/dayprogramme/therapeutic_intervention">
+        <a href={InfoPack} target="_blank">
           <div>Information Pack</div>
-        </NavLink>
+        </a>
       </div>
     </div>
   );

@@ -326,6 +326,7 @@
 }
 
 .SM-embed-container {
+    display: none;
     /* height: 80%; */
     position: absolute;
     /* top: 50%; */

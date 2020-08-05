@@ -6,12 +6,12 @@ function BuildMeetTeam(props) {
   gsap.registerPlugin(ScrollTrigger);
   
   let tmRef = useRef(null);
-  let dir;
-  props.isEven ? dir = 1000 : dir = -1000;
+  // let dir;
+  // props.isEven ? dir = 1000 : dir = -1000;
   useEffect(() => {
     gsap.from(tmRef.current, {
-      x: dir,
-      duration: 0.8,
+      x: -1000,
+      duration: 0.4,
       opacity: 0,
       ease: "power3",
       scrollTrigger: {
@@ -19,7 +19,7 @@ function BuildMeetTeam(props) {
         start: "top center",
       }
     })
-  }, [])
+  }, [tmRef.current])
   return (
     <div className="team-member-container" ref={tmRef}>
       <div className="team_image_container">

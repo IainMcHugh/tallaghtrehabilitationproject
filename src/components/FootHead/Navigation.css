@@ -21,8 +21,8 @@
     height: 100vh;
     background-color: rgba(43, 43, 43, 0.97);
     display: block;
-    overflow: hidden;
-    z-index: 3;
+    /* overflow: hidden; */
+    z-index: 999;
 }
 
 .close-menu-button {
@@ -42,6 +42,7 @@
     flex-direction: column;
     list-style-type: none;
     justify-content: space-evenly;
+    z-index: 999;
 }
 
 .header-menu ul a {
