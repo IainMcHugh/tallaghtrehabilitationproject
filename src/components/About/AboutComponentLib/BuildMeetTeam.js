@@ -1,10 +1,10 @@
-import React, {useEffect, useRef} from "react";
-import { gsap } from 'gsap';
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-function BuildMeetTeam(props) {
+const BuildMeetTeam = (props) => {
   gsap.registerPlugin(ScrollTrigger);
-  
+
   let tmRef = useRef(null);
   // let dir;
   // props.isEven ? dir = 1000 : dir = -1000;
@@ -17,17 +17,13 @@ function BuildMeetTeam(props) {
       scrollTrigger: {
         trigger: tmRef.current,
         start: "top center",
-      }
-    })
-  }, [tmRef.current])
+      },
+    });
+  }, [tmRef.current]);
   return (
     <div className="team-member-container" ref={tmRef}>
       <div className="team_image_container">
-        <img
-          className="team-member-image"
-          src={props.pImg}
-          alt="Profile"
-        />
+        <img className="team-member-image" src={props.pImg} alt="Profile" />
       </div>
       <div className="team-member-text">
         <h2>{props.pName}</h2>
@@ -36,6 +32,6 @@ function BuildMeetTeam(props) {
       </div>
     </div>
   );
-}
+};
 
 export default BuildMeetTeam;
