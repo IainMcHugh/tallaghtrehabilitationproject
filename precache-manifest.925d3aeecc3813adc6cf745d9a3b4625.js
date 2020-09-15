@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "696d500f88de27cb127c79bfac248027",
+    "revision": "5ac2349fc6188c716ee4a4179ca3e9bc",
     "url": "/tallaghtrehabilitationproject/index.html"
   },
   {
-    "revision": "f8d74dec33510e64678f",
+    "revision": "1bfa13d2db42413a2fa7",
     "url": "/tallaghtrehabilitationproject/static/css/main.780ae65e.chunk.css"
   },
   {
-    "revision": "9818365a003f6dde2467",
-    "url": "/tallaghtrehabilitationproject/static/js/2.48d8bf37.chunk.js"
+    "revision": "c06d6ccefdd3725e2125",
+    "url": "/tallaghtrehabilitationproject/static/js/2.3ed02615.chunk.js"
   },
   {
     "revision": "4661d7c7259a6e1e67ead3477ff6dda4",
-    "url": "/tallaghtrehabilitationproject/static/js/2.48d8bf37.chunk.js.LICENSE.txt"
+    "url": "/tallaghtrehabilitationproject/static/js/2.3ed02615.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f8d74dec33510e64678f",
-    "url": "/tallaghtrehabilitationproject/static/js/main.0137e830.chunk.js"
+    "revision": "1bfa13d2db42413a2fa7",
+    "url": "/tallaghtrehabilitationproject/static/js/main.04162f76.chunk.js"
   },
   {
     "revision": "8fae1b833447484fc172",
@@ -94,10 +94,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "92bc8112adae33a734076fd0802720e3",
     "url": "/tallaghtrehabilitationproject/static/media/dp_home.92bc8112.jpg"
-  },
-  {
-    "revision": "edbff57ce66916ff16e55dbd586b1aee",
-    "url": "/tallaghtrehabilitationproject/static/media/full_logo.edbff57c.png"
   },
   {
     "revision": "d7900140864342e6f9da3f09bdfaecf6",
