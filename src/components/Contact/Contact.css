@@ -187,6 +187,7 @@
     /* margin: 0 auto; */
     justify-self: flex-end;
     align-self: flex-end;
+    cursor: pointer;
 }
 
 .donation-container {
@@ -196,6 +197,40 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.popup {
+    position: absolute;
+    width: 84%;
+    height: 40vh;
+    top: 30vh;
+    left: 8%;
+    background-color: #005987;
+    border-radius: 40px;
+    color: #f1d500;
+    box-shadow: 15px 15px 15px #44444499;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup > button {
+    background-color: #f1d500;
+    color: #005987;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+}
+
+.popup > button:hover {
+    transform: scale(1.1);
 }
 
 @media only screen and (min-width: 500px) {
@@ -233,6 +268,11 @@
 
     .contact-form-details-name input {
         font-size: 18px;
+    }
+    
+    .popup {
+        width: 68%;
+        left: 16%;
     }
 
 }
@@ -305,6 +345,11 @@
         flex-direction: column;
         width: 40%;
         margin: 20px auto;
+    }
+
+    .popup {
+        width: 50%;
+        left: 25%;
     }
 }
 

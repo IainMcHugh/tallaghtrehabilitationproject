@@ -506,6 +506,16 @@
     animation: overlayTransitionAnim 0.5s ease-in-out forwards;
 }
 
+.instagram_image {
+    width: 300px;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 @keyframes overlayTransitionAnim {
     from {
         opacity: 0;

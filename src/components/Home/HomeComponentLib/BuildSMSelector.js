@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import BuildSMFacebook from "./BuildSMFacebook";
 import BuildSMYoutube from "./BuildSMYoutube";
 import BuildSMTwitter from "./BuilSMTwitter";
+import BuildSMInstagram from "./BuildSMInstagram";
 
 function BuildSMSelector(props) {
   const [social, setSocial] = useState(0);
@@ -49,6 +50,7 @@ function BuildSMSelector(props) {
       <div className="SM-embeds-container">
         <BuildSMYoutube active={ytActive} handleClick={props.handleClick} />
         <BuildSMFacebook active={fbActive} />
+        <BuildSMInstagram active={igActive} />
         <BuildSMTwitter active={twActive} />
       </div>
       <div className="SM-selector-container">
