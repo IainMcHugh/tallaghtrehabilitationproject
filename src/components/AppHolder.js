@@ -17,6 +17,7 @@ import Contact from './Contact/Contact';
 import Donate from './Contact/Donate';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import Footer from './FootHead/Footer';
+import PrivacyPolicy from './utils/PrivacyPolicy';
 
 export class AppHolder extends Component {
 
@@ -49,6 +50,7 @@ export class AppHolder extends Component {
                         <Route path='/roomrental' exact component={RoomRental} />
                         <Route path='/contact' exact component={Contact} />
                         <Route path='/contact/donate' exact component={Donate} />
+                        <Route path='/contact/privacy-policy' exact component={PrivacyPolicy} />
 
                         <Footer />
                     </ScrollToTop>

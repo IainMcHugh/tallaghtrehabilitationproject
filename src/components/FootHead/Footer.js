@@ -85,7 +85,7 @@ function Footer() {
                 </NavLink>
               </h4>
               <h4>
-                <NavLink exact to="/contact/donate">
+                <NavLink exact to="/contact/privacy-policy">
                   Privacy Policy
                 </NavLink>
               </h4>
