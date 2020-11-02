@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/tallaghtrehabilitationproject/static/css/main.a8a71b17.chunk.css",
-    "main.js": "/tallaghtrehabilitationproject/static/js/main.e8e34b60.chunk.js",
-    "main.js.map": "/tallaghtrehabilitationproject/static/js/main.e8e34b60.chunk.js.map",
+    "main.css": "/tallaghtrehabilitationproject/static/css/main.95ca156d.chunk.css",
+    "main.js": "/tallaghtrehabilitationproject/static/js/main.abd80472.chunk.js",
+    "main.js.map": "/tallaghtrehabilitationproject/static/js/main.abd80472.chunk.js.map",
     "runtime-main.js": "/tallaghtrehabilitationproject/static/js/runtime-main.50fb7dc2.js",
     "runtime-main.js.map": "/tallaghtrehabilitationproject/static/js/runtime-main.50fb7dc2.js.map",
     "static/js/2.83511016.chunk.js": "/tallaghtrehabilitationproject/static/js/2.83511016.chunk.js",
     "static/js/2.83511016.chunk.js.map": "/tallaghtrehabilitationproject/static/js/2.83511016.chunk.js.map",
     "index.html": "/tallaghtrehabilitationproject/index.html",
-    "precache-manifest.665a7727cbcad3866bd17dd7841f9500.js": "/tallaghtrehabilitationproject/precache-manifest.665a7727cbcad3866bd17dd7841f9500.js",
+    "precache-manifest.7afc42716ea6672dc2e089ddc9771168.js": "/tallaghtrehabilitationproject/precache-manifest.7afc42716ea6672dc2e089ddc9771168.js",
     "service-worker.js": "/tallaghtrehabilitationproject/service-worker.js",
-    "static/css/main.a8a71b17.chunk.css.map": "/tallaghtrehabilitationproject/static/css/main.a8a71b17.chunk.css.map",
+    "static/css/main.95ca156d.chunk.css.map": "/tallaghtrehabilitationproject/static/css/main.95ca156d.chunk.css.map",
     "static/js/2.83511016.chunk.js.LICENSE.txt": "/tallaghtrehabilitationproject/static/js/2.83511016.chunk.js.LICENSE.txt",
-    "static/media/Footer.css": "/tallaghtrehabilitationproject/static/media/LEMONMILK-Regular.be29f3c5.otf",
+    "static/media/PrivacyPolicy.css": "/tallaghtrehabilitationproject/static/media/LEMONMILK-Regular.be29f3c5.otf",
     "static/media/SocialProtection_MARK_MASTER_Std_Colour.jpg": "/tallaghtrehabilitationproject/static/media/SocialProtection_MARK_MASTER_Std_Colour.f17a165e.jpg",
     "static/media/Home.css": "/tallaghtrehabilitationproject/static/media/vid_thumbnail.8b424e8d.jpg",
     "static/media/aftercare-referral-form.pdf": "/tallaghtrehabilitationproject/static/media/aftercare-referral-form.275bf374.pdf",
@@ -64,7 +64,7 @@
   "entrypoints": [
     "static/js/runtime-main.50fb7dc2.js",
     "static/js/2.83511016.chunk.js",
-    "static/css/main.a8a71b17.chunk.css",
-    "static/js/main.e8e34b60.chunk.js"
+    "static/css/main.95ca156d.chunk.css",
+    "static/js/main.abd80472.chunk.js"
   ]
 }
