@@ -1,14 +1,3 @@
-/* .homepage-image-container {
-    height: calc(100vh - 100px);
-    width: 100%;
-    background: url(../../images/TRPFrontFaded.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    opacity: 1;
-} */
-
 .homepage-image-container {
     height: calc(100vh - 100px);
     width: 100%;
@@ -24,28 +13,7 @@
     opacity: 1;
 }
 
-
-/* .background-slider {
-    background-color: rgb(200, 200, 0, 0.2);
-    position: absolute;
-    top: 100px;
-    left: 5%;
-    width: 90%;
-    height: calc(100vh - 230px);
-    margin: 10px auto;
-    overflow: hidden;
-    border-radius: 4px;
-    opacity: 0;
-    animation-name: lightsOn2;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
-    border-radius: 40px;
-} */
-
 .background-slider {
-    /* background-color: rgba(244, 217, 12, 0.8); */
-    /* background-image: linear-gradient(to top left, rgba(244, 217, 12, 0.5), rgb(244, 217, 12)); */
     position: relative;
     width: 90%;
     height: calc(100vh - 230px);
