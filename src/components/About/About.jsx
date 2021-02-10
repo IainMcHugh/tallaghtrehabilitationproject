@@ -13,7 +13,7 @@ const About = () => (
       <AboutSection title="About" data={text.aboutSection} />
       <AboutSection title="TRP History" data={text.TRPHistory} />
 
-      <div className="about-box">
+      {/* <div className="about-box">
         <h2 id="team-heading">Meet the team</h2>
         <div className="team-container" id="about-subtext-show">
           <MeetTeam
@@ -87,7 +87,7 @@ const About = () => (
             pDescription={text.sandraJohnson}
           />
         </div>
-      </div>
+      </div> */}
       <Navigation />
     </div>
   </div>

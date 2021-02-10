@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
     @font-face {
@@ -38,6 +38,16 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 10px;  
     background-color: transparent;
     overflow: overlay;
+    }
+
+    .background-image-container {
+        margin-top: 100px;
+    }
+
+    @media only screen and (min-width: 768px){
+        .background-image-container {
+        margin-top: 200px;
+    }
     }
 `;
 
