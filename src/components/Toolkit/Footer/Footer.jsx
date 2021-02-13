@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import FbLogo from "../../../images/fbLogo.png";
 import YtLogo from "../../../images/youtubeLogo.png";
+import IgLogo from "../../../images/instagramLogo.jpg";
 import TwLogo from "../../../images/twitterLogo.png";
 
 import "./Footer.css";
@@ -90,7 +91,12 @@ function Footer() {
                 </NavLink>
               </h4>
               <h4>
-                <a href="http://iainmchugh.com">Website Designer</a>
+                <a
+                  target="_blank"
+                  href="https://iainmchugh.github.io/portfolio/"
+                >
+                  Website Designer
+                </a>
               </h4>
             </div>
           </div>
@@ -98,8 +104,8 @@ function Footer() {
             <a href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/">
               <img src={FbLogo} />
             </a>
-            <a href="https://www.youtube.com/channel/UCosH3abcG2CkNj9v-LsWH6Q">
-              <img src={YtLogo} />
+            <a href="https://www.instagram.com/trp_tallaght_wide_aftercare/">
+              <img src={IgLogo} />
             </a>
             <a href="https://twitter.com/trpdublin?lang=en">
               <img src={TwLogo} />

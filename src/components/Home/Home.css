@@ -378,6 +378,7 @@
 }
 
 .SM-selector-container {
+  font-family: "Barlow", "san-serif";
   height: 10%;
   background-color: transparent;
   width: 100%;
@@ -389,15 +390,17 @@
 }
 
 .SM-selector-container div {
-  border-radius: 20px;
+  border-radius: 12px;
   background-color: rgb(244, 217, 12);
   color: rgb(0, 89, 135);
   padding: 10px;
   transition: transform 0.2s ease;
+  opacity: 0.75;
 }
 
 .SM-selector-container div:hover {
   transform: scale(1.2);
+  opacity: 1;
 }
 
 .video-background {
