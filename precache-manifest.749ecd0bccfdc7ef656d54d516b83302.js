@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83b373e93e4eb76c33209cfff44c54a7",
+    "revision": "d783f4f877c9631d867cdcd1b4892d3d",
     "url": "/tallaghtrehabilitationproject/index.html"
   },
   {
-    "revision": "e43519a28fdb4a874acc",
-    "url": "/tallaghtrehabilitationproject/static/css/main.6662c406.chunk.css"
+    "revision": "fe41a6c4ca6488249ab0",
+    "url": "/tallaghtrehabilitationproject/static/css/main.bf9cbb1f.chunk.css"
   },
   {
-    "revision": "ea209bcc6c34179664e6",
-    "url": "/tallaghtrehabilitationproject/static/js/2.657b2561.chunk.js"
+    "revision": "9ef80c044b35c1ca966e",
+    "url": "/tallaghtrehabilitationproject/static/js/2.2f25d3a5.chunk.js"
   },
   {
     "revision": "4661d7c7259a6e1e67ead3477ff6dda4",
-    "url": "/tallaghtrehabilitationproject/static/js/2.657b2561.chunk.js.LICENSE.txt"
+    "url": "/tallaghtrehabilitationproject/static/js/2.2f25d3a5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e43519a28fdb4a874acc",
-    "url": "/tallaghtrehabilitationproject/static/js/main.40e11e06.chunk.js"
+    "revision": "fe41a6c4ca6488249ab0",
+    "url": "/tallaghtrehabilitationproject/static/js/main.9a2160f0.chunk.js"
   },
   {
     "revision": "8fae1b833447484fc172",
@@ -106,6 +106,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4a7da80e03d65f7bbd12a3df7b1f891d",
     "url": "/tallaghtrehabilitationproject/static/media/instagram.4a7da80e.jpg"
+  },
+  {
+    "revision": "26b65b3c69220aba6edc015a20be9519",
+    "url": "/tallaghtrehabilitationproject/static/media/instagramLogo.26b65b3c.jpg"
   },
   {
     "revision": "67b64d8f6cd15eddd27aaffafd68ca64",
