@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tallaghtrehabilitationproject/precache-manifest.749ecd0bccfdc7ef656d54d516b83302.js"
+  "/tallaghtrehabilitationproject/precache-manifest.ea2d2cfec237d94ec0b794c31cbb2f18.js"
 );
 
 self.addEventListener('message', (event) => {
