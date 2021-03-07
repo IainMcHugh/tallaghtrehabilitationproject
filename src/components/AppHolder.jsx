@@ -15,13 +15,13 @@ import AfterCare from "./Aftercare/AfterCare";
 import RoomRental from "./RoomRental/RoomRental";
 import Contact from "./Contact/Contact";
 import Donate from "./Contact/Donate";
-import { BrowserRouter as Router, Redirect, Route } from "react-router-dom";
 import Footer from "./Toolkit/Footer/Footer";
 import PrivacyPolicy from "./utils/PrivacyPolicy";
+import { BrowserRouter as Router, Redirect, Route, HashRouter } from "react-router-dom";
 
 const AppHolder = () => (
   <div>
-    <Router>
+    <HashRouter basename='/'>
       <ScrollToTop>
         <Header />
         {/* <Route
@@ -67,7 +67,7 @@ const AppHolder = () => (
         <Route path="/contact/privacy-policy" exact component={PrivacyPolicy} />
         <Footer />
       </ScrollToTop>
-    </Router>
+    </HashRouter>
   </div>
 );
 
