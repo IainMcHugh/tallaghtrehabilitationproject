@@ -1,8 +1,15 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import { NavLink } from "react-router-dom";
 
 const boardOfManagement = () => (
   <div>
+    <Helmet>
+      <title>Board of Management</title>
+      <meta name='description' content='The board of directors is made up of representatives from a range of
+        statutory, voluntary and community agencies/groups based in the Tallaght
+        area who freely volunteer their time and expertise.' />
+    </Helmet>
     <div className="background-image-container"></div>
     <div className="back-to-about">
       <NavLink to="/about">

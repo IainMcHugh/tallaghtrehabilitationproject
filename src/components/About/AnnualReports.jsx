@@ -1,9 +1,14 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 import { NavLink } from "react-router-dom";
 import * as reports from "./reports";
 
 const AnnualReports = () => (
   <div>
+    <Helmet>
+      <title>Annual Reports</title>
+      <meta name='description' content='The annual reports for Tallaght Rehabilitation Project.' />
+    </Helmet>
     <div className="background-image-container"></div>
     <div className="back-to-about">
       <NavLink to="/about">

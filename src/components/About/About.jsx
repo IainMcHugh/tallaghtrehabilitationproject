@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from 'react-helmet';
 
 import "./About.css";
 
@@ -8,6 +9,10 @@ import * as imgs from "./photos";
 
 const About = () => (
   <div>
+    <Helmet>
+      <title>About Us</title>
+      <meta name='description' content='Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area.' />
+    </Helmet>
     <div className="background-image-container"></div>
     <div className="about-container">
       <AboutSection title="About" data={text.aboutSection} />

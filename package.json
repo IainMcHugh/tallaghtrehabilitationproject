@@ -18,6 +18,7 @@
     "react-facebook": "^8.1.4",
     "react-flip-page": "^1.6.2",
     "react-ga": "^3.3.0",
+    "react-helmet": "^6.1.0",
     "react-parallax": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.0",

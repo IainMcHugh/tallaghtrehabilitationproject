@@ -24,13 +24,13 @@ const AppHolder = () => (
     <Router>
       <ScrollToTop>
         <Header />
-        <Route
+        {/* <Route
           exact
           path="/tallaghtrehabilitationproject/"
           render={() => <Redirect to="/home" />}
-        />
-        <Route exact path="/" render={() => <Redirect to="/home" />} />
-        <Route path="/home" exact component={Home} />
+        /> */}
+        {/* <Route exact path="/" render={() => <Redirect to="/home" />} /> */}
+        <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route
           path="/about/board_of_management"
