@@ -99,7 +99,7 @@ const PrivacyPolicy = () => (
           accessible from{" "}
           <a
             href="http://www.tallaghtrehabproject.ie/"
-            rel="external nofollow noopener"
+            rel="noopener noreferrer"
             target="_blank"
           >
             http://www.tallaghtrehabproject.ie/
@@ -180,7 +180,7 @@ const PrivacyPolicy = () => (
         deleting local shared objects?&quot; available at{" "}
         <a
           href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
-          rel="external nofollow noopener"
+          rel="noopener noreferrer"
           target="_blank"
         >
           https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
@@ -201,7 +201,7 @@ const PrivacyPolicy = () => (
       Persistent Cookies remain on Your personal computer or mobile device when
       You go offline, while Session Cookies are deleted as soon as You close
       Your web browser. Learn more about cookies:{" "}
-      <a href="https://www.freeprivacypolicy.com/blog/cookies/" target="_blank">
+      <a href="https://www.freeprivacypolicy.com/blog/cookies/" target="_blank" rel="noopener noreferrer">
         Cookies: What Do They Do?
       </a>
       .
@@ -474,7 +474,7 @@ const PrivacyPolicy = () => (
         By visiting this page on our website:{" "}
         <a
           href="http://www.tallaghtrehabproject.ie/contact"
-          rel="external nofollow noopener"
+          rel="noopener noreferrer"
           target="_blank"
         >
           http://www.tallaghtrehabproject.ie/contact

@@ -1,14 +1,16 @@
 @font-face {
-    font-family: lemon-milk;
-    src: url(../../fonts/LEMONMILK-Regular.otf);
-  }
-
-#privacy-policy {
-    width: 90%;
-    margin: 250px auto;
-    font-family: 'Barlow', 'sans-serif';
+  font-family: lemon-milk;
+  src: url(../../fonts/LEMONMILK-Regular.otf);
 }
 
-#privacy-policy > h1, h2, h3 {
-    margin: 20px 0;
+#privacy-policy {
+  width: 90%;
+  margin: 250px auto;
+  font-family: 'Barlow', 'sans-serif';
+}
+
+#privacy-policy > h1,
+h2,
+h3 {
+  margin: 20px 0;
 }

@@ -6,6 +6,7 @@ const SMInstagram = ({ active }) => {
       <a
         href="https://www.instagram.com/trp_tallaght_wide_aftercare/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img
           className="instagram_image"

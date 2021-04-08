@@ -94,7 +94,7 @@ function Header2() {
                 </a>
               </li>
               <li>
-                <a href={ACCriteria} target="_blank">
+                <a href={ACCriteria} target="_blank" rel="noopener noreferrer">
                   Open Criteria Form
                 </a>
               </li>
@@ -106,7 +106,7 @@ function Header2() {
             </NavLink>
             <ul className="drop-down-menu">
               <li>
-                <a href={RRLeaflet} target="_blank">
+                <a href={RRLeaflet} target="_blank" rel="noopener noreferrer">
                   Open Room Rental Booklet
                 </a>
               </li>

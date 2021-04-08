@@ -141,11 +141,11 @@ function ContactForm() {
           information on our services.
         </FormPreText>
         <Form onSubmit={sendEmail}>
-          <Label for='name'>Name</Label>
+          <Label htmlFor='name'>Name</Label>
           <Input name='name' ref={inputName} />
-          <Label for='email'>Email</Label>
+          <Label htmlFor='email'>Email</Label>
           <Input name='email' ref={inputEmail} />
-          <Label for='message'>Message</Label>
+          <Label htmlFor='message'>Message</Label>
           <Textarea
             ref={inputMessage}
             id='message'

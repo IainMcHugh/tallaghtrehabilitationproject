@@ -15,7 +15,7 @@ const Contact = () => (
     <ContactForm />
     <div className="aftercare-box" id="about-subtext-show">
       <h2>Donation</h2>
-      <button class="referral-button">
+      <button className="referral-button">
         <NavLink to="/contact/donate">Donate</NavLink>
       </button>
     </div>

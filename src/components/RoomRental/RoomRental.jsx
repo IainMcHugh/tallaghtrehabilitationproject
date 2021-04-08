@@ -14,7 +14,7 @@ const RoomRental = () => (
       <meta name='description' content='Kiltalown House is an 18th Century House beautifully restored, and is the ideal setting not only for rehabilitation but for training, counselling and holistic treatments.' />
     </Helmet>
     <div className="background-image-container"></div>
-    <div class="rr-container">
+    <div className="rr-container">
       <RRSection title="Summary" data={RRSummary} />
       <RRBooklet />
       <RRSection title="Contact Information" data={RRMoreInfo} />

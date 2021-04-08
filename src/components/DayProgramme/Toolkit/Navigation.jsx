@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import InfoPack from "../../../documents/referral_forms/information_brochure.pdf";
 
 const Navigation = () => (
-  <div class="dp-box">
+  <div className="dp-box">
     <h2>Services Available</h2>
     <div className="dayprogramme-services-container">
       <NavLink to="/dayprogramme/therapeutic_intervention">
@@ -19,7 +19,7 @@ const Navigation = () => (
       <NavLink to="/dayprogramme/outreach">
         <div>Outreach</div>
       </NavLink>
-      <a href={InfoPack} target="_blank">
+      <a href={InfoPack} target="_blank" rel="noopener noreferrer">
         <div>Information Pack</div>
       </a>
     </div>

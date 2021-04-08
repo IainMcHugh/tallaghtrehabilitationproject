@@ -79,7 +79,7 @@ const volunteerSection2 = [
     please forward a short cover letter and a C.V. to `,
   <a href="mailto:evelynmc@tallaghtrehabproject.ie">Evelyn McCall</a>,
   ` @evelynmc@tallaghtrehabproject.ie. You can also sign up with `,
-  <a target="_blank" href="https://www.volunteer.ie">
+  <a target="_blank" href="https://www.volunteer.ie" rel="noopener noreferrer">
     Volunteer Ireland
   </a>,
 ];

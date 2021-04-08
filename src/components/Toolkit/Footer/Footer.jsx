@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import FbLogo from "../../../images/fbLogo.png";
-import YtLogo from "../../../images/youtubeLogo.png";
+// import YtLogo from "../../../images/youtubeLogo.png";
 import IgLogo from "../../../images/instagramLogo.jpg";
 import TwLogo from "../../../images/twitterLogo.png";
 
@@ -19,19 +19,19 @@ function Footer() {
         <div className="gov-agencies-container">
           <img
             src={require("../../../images/tallaght_drug_and_alcohol_task_force_logo.jpg")}
-            alt="image"
+            alt="tallaght drug and alcohol task force logo"
           />
           <img
             src={require("../../../images/SocialProtection_MARK_MASTER_Std_Colour.jpg")}
-            alt="image"
+            alt="SocialProtection"
           />
           <img
             src={require("../../../images/hse_logo_border_2016_web.jpg")}
-            alt="image"
+            alt="HSE Logo"
           />
           <img
             src={require("../../../images/south-dublin-county-council.png")}
-            alt="image"
+            alt="South Dublin County Council"
           />
         </div>
         <div className="footer-charity-info">
@@ -93,6 +93,7 @@ function Footer() {
               <h4>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://iainmchugh.github.io/portfolio/"
                 >
                   Website Designer
@@ -102,13 +103,13 @@ function Footer() {
           </div>
           <div className="footer-b">
             <a href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/">
-              <img src={FbLogo} />
+              <img src={FbLogo} alt="Facebook" />
             </a>
             <a href="https://www.instagram.com/trp_tallaght_wide_aftercare/">
-              <img src={IgLogo} />
+              <img src={IgLogo} alt="Instagram" />
             </a>
             <a href="https://twitter.com/trpdublin?lang=en">
-              <img src={TwLogo} />
+              <img src={TwLogo} alt="Twitter" />
             </a>
           </div>
         </div>

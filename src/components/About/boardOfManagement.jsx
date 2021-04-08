@@ -14,7 +14,7 @@ const boardOfManagement = () => (
     <div className="back-to-about">
       <NavLink to="/about">
         <button>
-          <i class="material-icons">arrow_back</i>
+          <i className="material-icons">arrow_back</i>
         </button>
       </NavLink>
     </div>

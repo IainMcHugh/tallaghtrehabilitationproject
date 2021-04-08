@@ -14,7 +14,7 @@ function MobileHeader({ callback }) {
       </button>
       <ul className="switch-menu">
         <li onClick={() => callback()}>
-          <NavLink exact activeClassName="header-menu-active" to="/home">
+          <NavLink exact activeClassName="header-menu-active" to="/">
             Home
           </NavLink>
         </li>

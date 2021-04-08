@@ -13,7 +13,7 @@ const DayProgramme = () => (
       <meta name='description' content='TRP is a dedicated specialist rehabilitation project in the Tallaght area providing a community based day-programme for people in recovery with addiction problems.' />
     </Helmet>
     <div className="background-image-container"></div>
-    <div class="dp-container">
+    <div className="dp-container">
       <DPSection title="Summary" data={DPSummary} />
       <DPSection title="Who is it for" data={DPWhoIsItFor} />
       <Navigation />

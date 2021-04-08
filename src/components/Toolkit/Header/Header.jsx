@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../LogoIcon";
-import ACReferralForm from "../../../documents/referral_forms/aftercare_referral_form_2021.pdf";
-import ACCriteria from "../../../documents/referral_forms/aftercare-referral-form.pdf";
+import ACReferralForm from "../../../documents/referral_forms/Aftercare_referral_form.pdf";
+import ACCriteria from "../../../documents/referral_forms/aftercare-criteria-form.pdf";
 import RRLeaflet from "../../../documents/referral_forms/room_rental_booklet.pdf";
 
 import MobileHeader from "./MobileHeader";
@@ -65,7 +65,6 @@ function Header() {
                 exact
                 activeClassName="menu-active"
                 to="/about"
-                //   onClick={this.notHomePage}
               >
                 About
               </NavLink>
@@ -90,7 +89,6 @@ function Header() {
                 exact
                 activeClassName="menu-active"
                 to="/dayprogramme"
-                //   onClick={this.notHomePage}
               >
                 Day Programme
               </NavLink>
@@ -120,7 +118,6 @@ function Header() {
                 exact
                 activeClassName="menu-active"
                 to="/aftercare"
-                //   onClick={this.notHomePage}
               >
                 Aftercare
               </NavLink>
@@ -131,7 +128,7 @@ function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href={ACCriteria} target="_blank">
+                  <a href={ACCriteria} target="_blank" rel="noopener noreferrer">
                     Open Criteria Form
                   </a>
                 </li>
@@ -141,13 +138,12 @@ function Header() {
               <NavLink
                 activeClassName="menu-active"
                 to="/roomrental"
-                //   onClick={this.notHomePage}
               >
                 Room Rental
               </NavLink>
               <ul className="drop-down-menu">
                 <li>
-                  <a href={RRLeaflet} target="_blank">
+                  <a href={RRLeaflet} target="_blank" rel="noopener noreferrer">
                     Open Room Rental Booklet
                   </a>
                 </li>
@@ -158,7 +154,6 @@ function Header() {
                 exact
                 activeClassName="menu-active"
                 to="/contact"
-                //   onClick={this.notHomePage}
               >
                 Contact
               </NavLink>

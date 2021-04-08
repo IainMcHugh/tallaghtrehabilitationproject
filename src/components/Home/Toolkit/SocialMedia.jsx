@@ -27,11 +27,11 @@ function SocialMedia() {
         </div>
       </Parallax>
       {videoOverlay ? (
-        <div class="overlay-video">
-          <div class="overlay-video-container">
+        <div className="overlay-video">
+          <div className="overlay-video-container">
             <button onClick={() => setVideoOverlay(0)} id="close-overlay">
               <i
-                class="material-icons"
+                className="material-icons"
                 style={{
                   fontSize: "36px",
                   backgroundColor: "transparent",
@@ -42,6 +42,7 @@ function SocialMedia() {
               </i>
             </button>
             <iframe
+            title="Youtube video"
               src="https://www.youtube.com/embed/oFr4Ch_insg"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

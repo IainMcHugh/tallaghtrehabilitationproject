@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
-import ACReferralForm from "../../documents/referral_forms/aftercare_referral_form_2021.pdf";
-import ACCriteria from "../../documents/referral_forms/aftercare-referral-form.pdf";
+import ACReferralForm from "../../documents/referral_forms/Aftercare_referral_form.pdf";
+import ACCriteria from "../../documents/referral_forms/aftercare-criteria-form.pdf";
 
 import "./Aftercare.css";
 
@@ -17,7 +17,7 @@ const AfterCare = () => (
       <meta name='description' content='Tallaght Wide Aftercare Service is a post rehabilitation service that seeks to positively reinforce the gains that people make during early recovery and in turn seeks to support people who wish to continue on the journey of recovery from addiction.' />
     </Helmet>
     <div className="background-image-container"></div>
-    <div class="aftercare-container">
+    <div className="aftercare-container">
       <Section
         title="Aftercare"
         subheading="Aftercare should not be an afterthought"
@@ -27,12 +27,12 @@ const AfterCare = () => (
       <Section title="Who is it for?" data={AftercareWhoFor} />
       <Activities />
       <Section title="What to do Next" data={AftercareWhatNext} />
-      <div class="aftercare-box">
+      <div className="aftercare-box">
         <a href={ACReferralForm} download>
-          <button class="referral-button">Download Referral Form</button>
+          <button className="referral-button">Download Referral Form</button>
         </a>
-        <a href={ACCriteria} target="_blank">
-          <button class="referral-button">Open Criteria Form</button>
+        <a href={ACCriteria} target="_blank" rel="noopener noreferrer">
+          <button className="referral-button">Open Criteria Form</button>
         </a>
       </div>
     </div>

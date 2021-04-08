@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default [
   `This module addresses people who are in the early stages of recovery. The

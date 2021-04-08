@@ -3,9 +3,11 @@ import { Helmet } from 'react-helmet';
 
 import "./About.css";
 
-import { AboutSection, Navigation, MeetTeam } from "./Toolkit";
+import { AboutSection, Navigation 
+  // MeetTeam
+ } from "./Toolkit";
 import * as text from "./text";
-import * as imgs from "./photos";
+// import * as imgs from "./photos";
 
 const About = () => (
   <div>

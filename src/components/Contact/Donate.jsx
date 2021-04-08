@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import { Section, DonateBtn } from './Toolkit';
+import { Section 
+  // DonateBtn
+ } from './Toolkit';
 // import CDonate from "./text/CDonate";
 import DonateTemp from './text/DonateTemp';
 
