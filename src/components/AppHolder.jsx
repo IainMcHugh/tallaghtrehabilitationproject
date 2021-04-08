@@ -17,11 +17,11 @@ import Contact from "./Contact/Contact";
 import Donate from "./Contact/Donate";
 import Footer from "./Toolkit/Footer/Footer";
 import PrivacyPolicy from "./utils/PrivacyPolicy";
-import { BrowserRouter as Router, Redirect, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter as Router, Redirect, Route } from "react-router-dom";
 
 const AppHolder = () => (
   <div>
-    <HashRouter basename='/'>
+    <Router>
       <ScrollToTop>
         <Header />
         {/* <Route
@@ -67,7 +67,7 @@ const AppHolder = () => (
         <Route path="/contact/privacy-policy" exact component={PrivacyPolicy} />
         <Footer />
       </ScrollToTop>
-    </HashRouter>
+    </Router>
   </div>
 );
 
