@@ -28,7 +28,7 @@ footer {
   font-size: 20px;
   margin: 10px 0;
   padding: 5px;
-  font-family: "Barlow", "san-serif";
+  font-family: 'Barlow', 'san-serif';
   color: #005987;
 }
 
@@ -74,7 +74,7 @@ footer div h5 {
   margin: 20px auto;
   background-color: rgb(31, 31, 31);
   color: #f4d90c;
-  font-family: "Barlow", "san-serif";
+  font-family: 'Barlow', 'san-serif';
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -86,7 +86,7 @@ footer div h5 {
   margin: 0 auto;
   background-color: rgb(31, 31, 31);
   color: #f4d90c;
-  font-family: "Barlow", "san-serif";
+  font-family: 'Barlow', 'san-serif';
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -115,7 +115,7 @@ footer div h5 {
 .footer-a-1 h4 a {
   text-decoration: none;
   color: #f4d90c;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 
 .footer-a-1 h4 a:hover {

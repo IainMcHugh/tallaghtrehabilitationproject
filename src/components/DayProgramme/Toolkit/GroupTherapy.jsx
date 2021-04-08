@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function GroupTherapy() {
   gsap.registerPlugin(ScrollTrigger);
@@ -12,19 +12,19 @@ function GroupTherapy() {
     gsap.from(gtpRef1.current, {
       x: -2000,
       duration: 1,
-      ease: "power3",
+      ease: 'power3',
       scrollTrigger: {
         trigger: gtpRef1.current,
-        start: "top center",
+        start: 'top center',
       },
     });
     gsap.from(gtpRef2.current, {
       x: -2000,
       duration: 1,
-      ease: "power3",
+      ease: 'power3',
       scrollTrigger: {
         trigger: gtpRef2.current,
-        start: "top center",
+        start: 'top center',
       },
     });
   }, []);

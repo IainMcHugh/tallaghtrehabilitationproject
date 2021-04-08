@@ -1,7 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
 
-import "../Home.css";
+import '../Home.css';
 
 function BgSlider() {
   const settings = {

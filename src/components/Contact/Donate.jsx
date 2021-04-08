@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import { Section 
+import {
+  Section,
   // DonateBtn
- } from './Toolkit';
+} from './Toolkit';
 // import CDonate from "./text/CDonate";
 import DonateTemp from './text/DonateTemp';
 
@@ -13,14 +14,14 @@ const Donate = () => (
     <Helmet>
       <title>Donate</title>
       <meta
-        name='description'
-        content='Would you consider making a donation today? Your contribution will be acknowledged on our website and on our annual report and on social media if you so wish.'
+        name="description"
+        content="Would you consider making a donation today? Your contribution will be acknowledged on our website and on our annual report and on social media if you so wish."
       />
     </Helmet>
-    <div className='background-image-container'></div>
+    <div className="background-image-container"></div>
     <Section
-      title='Donate'
-      subheading='Would you consider making a donation today?'
+      title="Donate"
+      subheading="Would you consider making a donation today?"
       data={DonateTemp}
     />
     {/* Re add this when donations set up */}

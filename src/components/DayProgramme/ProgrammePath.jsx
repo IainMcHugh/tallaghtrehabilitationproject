@@ -1,14 +1,17 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
-import { Timeline } from "./Toolkit";
+import { Timeline } from './Toolkit';
 
 const ProgrammePath = () => (
   <div>
     <Helmet>
       <title>Programme Path</title>
-      <meta name='description' content='The Programme Path outlines the path of engagement over a 12 month period.' />
+      <meta
+        name="description"
+        content="The Programme Path outlines the path of engagement over a 12 month period."
+      />
     </Helmet>
     <div className="background-image-container"></div>
     <div className="back-to-about">

@@ -1,12 +1,15 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Outreach = () => (
   <div>
     <Helmet>
       <title>Outreach</title>
-      <meta name='description' content='Alongside offering an outreach service to our programme participants,Tallaght Rehabilitation Project also offers an outreach service to a wide range of organisations, such as prisons or stabilization programmes who may have clients interested in taking the next step in rehabilitation.' />
+      <meta
+        name="description"
+        content="Alongside offering an outreach service to our programme participants,Tallaght Rehabilitation Project also offers an outreach service to a wide range of organisations, such as prisons or stabilization programmes who may have clients interested in taking the next step in rehabilitation."
+      />
     </Helmet>
     <div className="background-image-container"></div>
     <div className="back-to-about">

@@ -1,7 +1,7 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import InfoPack from "../../../documents/referral_forms/information_brochure.pdf";
+import InfoPack from '../../../documents/referral_forms/information_brochure.pdf';
 
 const Navigation = () => (
   <div className="dp-box">

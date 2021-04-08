@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Parallax } from "react-parallax";
+import React, { useState, useEffect } from 'react';
+import { Parallax } from 'react-parallax';
 
-import { SMSelector } from ".";
+import { SMSelector } from '.';
 
 function SocialMedia() {
   const [videoOverlay, setVideoOverlay] = useState(false);
 
   useEffect(() => {
     videoOverlay
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "initial");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'initial');
   });
 
   function handleClick(value) {
@@ -19,7 +19,7 @@ function SocialMedia() {
   return (
     <div>
       <Parallax
-        bgImage={require("../../../images/kiltalown_old.jpg")}
+        bgImage={require('../../../images/kiltalown_old.jpg')}
         strength={700}
       >
         <div style={{ height: 700 }}>
@@ -33,16 +33,16 @@ function SocialMedia() {
               <i
                 className="material-icons"
                 style={{
-                  fontSize: "36px",
-                  backgroundColor: "transparent",
-                  color: "#f4d90c",
+                  fontSize: '36px',
+                  backgroundColor: 'transparent',
+                  color: '#f4d90c',
                 }}
               >
                 close
               </i>
             </button>
             <iframe
-            title="Youtube video"
+              title="Youtube video"
               src="https://www.youtube.com/embed/oFr4Ch_insg"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

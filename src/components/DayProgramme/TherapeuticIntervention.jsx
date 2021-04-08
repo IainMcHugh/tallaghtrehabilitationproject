@@ -1,18 +1,21 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
-import DPTherapeuticIntervention from "./text/DPTherapeuticIntervention";
-import DPRecoveryAwareness from "./text/DPRecoveryAwareness";
-import DPRelapsePrevention from "./text/DPRelapsePrevention";
-import DPGroupTherapyProcess from "./text/DPGroupTherapyProcess";
-import { DPSection, GroupTherapy } from "./Toolkit";
+import DPTherapeuticIntervention from './text/DPTherapeuticIntervention';
+import DPRecoveryAwareness from './text/DPRecoveryAwareness';
+import DPRelapsePrevention from './text/DPRelapsePrevention';
+import DPGroupTherapyProcess from './text/DPGroupTherapyProcess';
+import { DPSection, GroupTherapy } from './Toolkit';
 
 const TherapeuticIntervention = () => (
   <div>
     <Helmet>
       <title>Therapeutic Intervention</title>
-      <meta name='description' content='The Therapeutic component of the programme, forms the core around which all other sessions are interwoven.' />
+      <meta
+        name="description"
+        content="The Therapeutic component of the programme, forms the core around which all other sessions are interwoven."
+      />
     </Helmet>
     <div className="background-image-container"></div>
     <div className="back-to-about">

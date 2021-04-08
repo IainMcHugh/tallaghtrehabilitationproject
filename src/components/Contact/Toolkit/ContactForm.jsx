@@ -112,7 +112,7 @@ function ContactForm() {
         'service_vn22g6f',
         'template_vo70d49',
         e.target,
-        'user_mdBtBK5Kar7Eiqyu7l8M0'
+        'user_mdBtBK5Kar7Eiqyu7l8M0',
       )
       .then(
         (_result) => {
@@ -123,7 +123,7 @@ function ContactForm() {
         },
         (_error) => {
           alert('There was an error sending your email.');
-        }
+        },
       );
   }
 
@@ -133,7 +133,7 @@ function ContactForm() {
   }
 
   return (
-    <div className='aftercare-box' id='about-subtext-show'>
+    <div className="aftercare-box" id="about-subtext-show">
       <h2>Contact Us</h2>
       <ContactFormContainer>
         <FormPreText>
@@ -141,24 +141,24 @@ function ContactForm() {
           information on our services.
         </FormPreText>
         <Form onSubmit={sendEmail}>
-          <Label htmlFor='name'>Name</Label>
-          <Input name='name' ref={inputName} />
-          <Label htmlFor='email'>Email</Label>
-          <Input name='email' ref={inputEmail} />
-          <Label htmlFor='message'>Message</Label>
+          <Label htmlFor="name">Name</Label>
+          <Input name="name" ref={inputName} />
+          <Label htmlFor="email">Email</Label>
+          <Input name="email" ref={inputEmail} />
+          <Label htmlFor="message">Message</Label>
           <Textarea
             ref={inputMessage}
-            id='message'
-            name='message'
-            placeholder='...'
-            cols='30'
-            rows='10'
+            id="message"
+            name="message"
+            placeholder="..."
+            cols="30"
+            rows="10"
           />
-          <Button type='submit'>Send</Button>
+          <Button type="submit">Send</Button>
         </Form>
       </ContactFormContainer>
       {popup && (
-        <div className='popup'>
+        <div className="popup">
           <h1>Thank you {name}!</h1>
           <h4>Your message has been sent successfully.</h4>
           <button onClick={handlePopup}>OK</button>

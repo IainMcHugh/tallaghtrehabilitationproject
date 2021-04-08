@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function DPRPList() {
   gsap.registerPlugin(ScrollTrigger);
@@ -10,10 +10,10 @@ function DPRPList() {
     gsap.from(dprRef.current, {
       scale: 0,
       duration: 1,
-      ease: "power3",
+      ease: 'power3',
       scrollTrigger: {
         trigger: dprRef.current,
-        start: "top 70%",
+        start: 'top 70%',
       },
     });
   }, []);

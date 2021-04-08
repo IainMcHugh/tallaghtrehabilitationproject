@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function MobileHeader({ callback }) {
   return (
@@ -7,7 +7,7 @@ function MobileHeader({ callback }) {
       <button onClick={() => callback()} className="close-menu-button">
         <i
           className="material-icons"
-          style={{ fontSize: "36px", color: "white" }}
+          style={{ fontSize: '36px', color: 'white' }}
         >
           close
         </i>
@@ -52,9 +52,9 @@ function MobileHeader({ callback }) {
             <i
               className="material-icons"
               style={{
-                fontSize: "36px",
-                color: "#f4d90c",
-                margin: "0 15px",
+                fontSize: '36px',
+                color: '#f4d90c',
+                margin: '0 15px',
               }}
             >
               phone

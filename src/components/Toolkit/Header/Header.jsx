@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import Logo from "../../LogoIcon";
-import ACReferralForm from "../../../documents/referral_forms/Aftercare_referral_form.pdf";
-import ACCriteria from "../../../documents/referral_forms/aftercare-criteria-form.pdf";
-import RRLeaflet from "../../../documents/referral_forms/room_rental_booklet.pdf";
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import Logo from '../../LogoIcon';
+import ACReferralForm from '../../../documents/referral_forms/Aftercare_referral_form.pdf';
+import ACCriteria from '../../../documents/referral_forms/aftercare-criteria-form.pdf';
+import RRLeaflet from '../../../documents/referral_forms/room_rental_booklet.pdf';
 
-import MobileHeader from "./MobileHeader";
+import MobileHeader from './MobileHeader';
 
-import "./Header.css";
+import './Header.css';
 
 function Header() {
   const [smallMenu, setSmallMenu] = useState(false);
 
   useEffect(() => {
     smallMenu
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "initial");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'initial');
   }, [smallMenu]);
 
   return (
@@ -44,9 +44,9 @@ function Header() {
               <i
                 className="material-icons"
                 style={{
-                  fontSize: "36px",
-                  color: "#f4d90c",
-                  margin: "0 15px",
+                  fontSize: '36px',
+                  color: '#f4d90c',
+                  margin: '0 15px',
                 }}
               >
                 phone
@@ -61,11 +61,7 @@ function Header() {
         <nav className="header-items-container">
           <ul className="header-items">
             <li>
-              <NavLink
-                exact
-                activeClassName="menu-active"
-                to="/about"
-              >
+              <NavLink exact activeClassName="menu-active" to="/about">
                 About
               </NavLink>
               <ul className="drop-down-menu">
@@ -85,11 +81,7 @@ function Header() {
               </ul>
             </li>
             <li>
-              <NavLink
-                exact
-                activeClassName="menu-active"
-                to="/dayprogramme"
-              >
+              <NavLink exact activeClassName="menu-active" to="/dayprogramme">
                 Day Programme
               </NavLink>
               <ul className="drop-down-menu">
@@ -114,11 +106,7 @@ function Header() {
               </ul>
             </li>
             <li>
-              <NavLink
-                exact
-                activeClassName="menu-active"
-                to="/aftercare"
-              >
+              <NavLink exact activeClassName="menu-active" to="/aftercare">
                 Aftercare
               </NavLink>
               <ul className="drop-down-menu">
@@ -128,17 +116,18 @@ function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href={ACCriteria} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={ACCriteria}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Open Criteria Form
                   </a>
                 </li>
               </ul>
             </li>
             <li>
-              <NavLink
-                activeClassName="menu-active"
-                to="/roomrental"
-              >
+              <NavLink activeClassName="menu-active" to="/roomrental">
                 Room Rental
               </NavLink>
               <ul className="drop-down-menu">
@@ -150,11 +139,7 @@ function Header() {
               </ul>
             </li>
             <li>
-              <NavLink
-                exact
-                activeClassName="menu-active"
-                to="/contact"
-              >
+              <NavLink exact activeClassName="menu-active" to="/contact">
                 Contact
               </NavLink>
               <ul className="drop-down-menu">
@@ -168,7 +153,7 @@ function Header() {
         <button onClick={() => setSmallMenu(true)} className="menu-button">
           <i
             className="material-icons"
-            style={{ fontSize: "36px", color: "#f4d90c" }}
+            style={{ fontSize: '36px', color: '#f4d90c' }}
           >
             menu
           </i>

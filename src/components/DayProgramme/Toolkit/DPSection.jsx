@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const DPSection = ({ title, subheading, data }) => (
   <div className="dp-box">

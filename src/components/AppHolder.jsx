@@ -1,28 +1,28 @@
-import React from "react";
-import Header from "./Toolkit/Header/Header";
-import ScrollToTop from "./ScrollToTop";
-import Home from "./Home/Home";
-import About from "./About/About";
-import BoardOfManagement from "./About/boardOfManagement";
-import StudentPlacement from "./About/StudentPlacement";
-import AnnualReports from "./About/AnnualReports";
-import DayProgramme from "./DayProgramme/DayProgramme";
-import TherapeuticIntervention from "./DayProgramme/TherapeuticIntervention";
-import EducationalIntervention from "./DayProgramme/EducationalIntervention";
-import ProgrammePath from "./DayProgramme/ProgrammePath";
-import Outreach from "./DayProgramme/Outreach";
-import AfterCare from "./Aftercare/AfterCare";
-import RoomRental from "./RoomRental/RoomRental";
-import Contact from "./Contact/Contact";
-import Donate from "./Contact/Donate";
-import Footer from "./Toolkit/Footer/Footer";
-import PrivacyPolicy from "./utils/PrivacyPolicy";
-import { BrowserRouter as Router, Redirect, Route } from "react-router-dom";
+import React from 'react';
+import Header from './Toolkit/Header/Header';
+import ScrollToTop from './ScrollToTop';
+import Home from './Home/Home';
+import About from './About/About';
+import BoardOfManagement from './About/boardOfManagement';
+import StudentPlacement from './About/StudentPlacement';
+import AnnualReports from './About/AnnualReports';
+import DayProgramme from './DayProgramme/DayProgramme';
+import TherapeuticIntervention from './DayProgramme/TherapeuticIntervention';
+import EducationalIntervention from './DayProgramme/EducationalIntervention';
+import ProgrammePath from './DayProgramme/ProgrammePath';
+import Outreach from './DayProgramme/Outreach';
+import AfterCare from './Aftercare/AfterCare';
+import RoomRental from './RoomRental/RoomRental';
+import Contact from './Contact/Contact';
+import Donate from './Contact/Donate';
+import Footer from './Toolkit/Footer/Footer';
+import PrivacyPolicy from './utils/PrivacyPolicy';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const AppHolder = () => (
   <div>
     <Router>
-      <ScrollToTop>
+      <ScrollToTop />
         <Header />
         {/* <Route
           exact
@@ -66,7 +66,6 @@ const AppHolder = () => (
         <Route path="/contact/donate" exact component={Donate} />
         <Route path="/contact/privacy-policy" exact component={PrivacyPolicy} />
         <Footer />
-      </ScrollToTop>
     </Router>
   </div>
 );

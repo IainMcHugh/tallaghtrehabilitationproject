@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function SMYoutube({ active, handleClick }) {
   const updateVideoOverlay = (value) => {
@@ -6,11 +6,11 @@ function SMYoutube({ active, handleClick }) {
   };
 
   return (
-    <div className={active ? "SM-embed-active" : "SM-embed-container"}>
+    <div className={active ? 'SM-embed-active' : 'SM-embed-container'}>
       <div onClick={() => updateVideoOverlay(true)} className="video_thumbnail">
         <img
           className="video-play-button"
-          src={require("../../../images/play_button_out.png")}
+          src={require('../../../images/play_button_out.png')}
           alt="Play Button"
         />
       </div>

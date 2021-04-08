@@ -1,12 +1,12 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import FbLogo from "../../../images/fbLogo.png";
+import FbLogo from '../../../images/fbLogo.png';
 // import YtLogo from "../../../images/youtubeLogo.png";
-import IgLogo from "../../../images/instagramLogo.jpg";
-import TwLogo from "../../../images/twitterLogo.png";
+import IgLogo from '../../../images/instagramLogo.jpg';
+import TwLogo from '../../../images/twitterLogo.png';
 
-import "./Footer.css";
+import './Footer.css';
 
 function Footer() {
   return (
@@ -18,19 +18,19 @@ function Footer() {
         </h5>
         <div className="gov-agencies-container">
           <img
-            src={require("../../../images/tallaght_drug_and_alcohol_task_force_logo.jpg")}
+            src={require('../../../images/tallaght_drug_and_alcohol_task_force_logo.jpg')}
             alt="tallaght drug and alcohol task force logo"
           />
           <img
-            src={require("../../../images/SocialProtection_MARK_MASTER_Std_Colour.jpg")}
+            src={require('../../../images/SocialProtection_MARK_MASTER_Std_Colour.jpg')}
             alt="SocialProtection"
           />
           <img
-            src={require("../../../images/hse_logo_border_2016_web.jpg")}
+            src={require('../../../images/hse_logo_border_2016_web.jpg')}
             alt="HSE Logo"
           />
           <img
-            src={require("../../../images/south-dublin-county-council.png")}
+            src={require('../../../images/south-dublin-county-council.png')}
             alt="South Dublin County Council"
           />
         </div>

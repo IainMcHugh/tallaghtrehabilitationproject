@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { List } from "../Toolkit";
+import { List } from '../Toolkit';
 
 export default [
   `As a specialist rehabilitation programme, the primary focus and
@@ -11,8 +11,8 @@ export default [
     personal growth and development. The eventual goal for
     participants is successful reintegration into family and community
     and preparation for further education or employment.`,
-  <br />,
-  <br />,
+  <br key={'1'} />,
+  <br key={'2'} />,
   `TRP operates a referral system in relation to participant
     placement involving a range of agencies this includes both
     statutory community and voluntary organisation working together
@@ -20,12 +20,12 @@ export default [
     opportunities for clients to develop a range of skills, which will
     assist them in their ongoing recovery process from self
     destructive addictive behaviour.`,
-  <br />,
-  <br />,
+  <br key={'3'} />,
+  <br key={'4'} />,
   `At present the TRP programme provides 21 specialist rehabilitation
-    places. There are various therapeutic interventions and models　of
-    therapy provided and　delivered by the staff team. These include:`,
-  <br />,
-  <br />,
-  <List />,
+    places. There are various therapeutic interventions and models of
+    therapy provided and delivered by the staff team. These include:`,
+  <br key={'5'} />,
+  <br key={'6'} />,
+  <List key={'7'} />,
 ];

@@ -1,14 +1,17 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { BgSlider, ServicesOffer, SocialMedia } from "./Toolkit";
-import "./Home.css";
+import { BgSlider, ServicesOffer, SocialMedia } from './Toolkit';
+import './Home.css';
 
 function Home() {
   return (
     <div>
       <Helmet>
         <title>Tallaght Rehabilitation Project</title>
-        <meta name="description" content="From all Staff, Participants, and Board of Management&nbsp;we would like to welcome you to the Tallaght Rehabilitation Project website." />
+        <meta
+          name="description"
+          content="From all Staff, Participants, and Board of Management&nbsp;we would like to welcome you to the Tallaght Rehabilitation Project website."
+        />
       </Helmet>
       <div className="homepage-image-container"></div>
       <BgSlider />

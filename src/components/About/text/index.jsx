@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const aboutSection = [
   `Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area. The programme was developed as a ‘continuum of care’ to assist those who have become drug or alcohol free or who are stable in treatment on prescribed methadone.`,

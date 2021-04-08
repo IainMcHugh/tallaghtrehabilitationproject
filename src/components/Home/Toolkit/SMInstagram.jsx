@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const SMInstagram = ({ active }) => {
   return (
-    <div className={active ? "SM-embed-active" : "SM-embed-container"}>
+    <div className={active ? 'SM-embed-active' : 'SM-embed-container'}>
       <a
         href="https://www.instagram.com/trp_tallaght_wide_aftercare/"
         target="_blank"
@@ -10,7 +10,7 @@ const SMInstagram = ({ active }) => {
       >
         <img
           className="instagram_image"
-          src={require("../../../images/instagram.jpg")}
+          src={require('../../../images/instagram.jpg')}
           alt="Instagram"
         />
       </a>

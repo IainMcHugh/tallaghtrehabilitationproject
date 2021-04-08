@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   SMFacebook,
   // SMYoutube,
   SMTwitter,
   SMInstagram,
-} from ".";
+} from '.';
 
 function SMSelector({ handleClick }) {
   // const [ytActive, setYtActive] = useState(0);
@@ -20,19 +20,19 @@ function SMSelector({ handleClick }) {
       //   setIgActive(0);
       //   setTwActive(0);
       //   break;
-      case "fb":
+      case 'fb':
         // setYtActive(0);
         setFbActive(1);
         setIgActive(0);
         setTwActive(0);
         break;
-      case "ig":
+      case 'ig':
         // setYtActive(0);
         setFbActive(0);
         setIgActive(1);
         setTwActive(0);
         break;
-      case "tw":
+      case 'tw':
         // setYtActive(0);
         setFbActive(0);
         setIgActive(0);
@@ -58,13 +58,13 @@ function SMSelector({ handleClick }) {
         {/* <div id="SM-selector-youtube" onClick={() => updateActiveSM("yt")}>
           Youtube
         </div> */}
-        <div id="SM-selector-facebook" onClick={() => updateActiveSM("fb")}>
+        <div id="SM-selector-facebook" onClick={() => updateActiveSM('fb')}>
           Facebook
         </div>
-        <div id="SM-selector-instagram" onClick={() => updateActiveSM("ig")}>
+        <div id="SM-selector-instagram" onClick={() => updateActiveSM('ig')}>
           Instagram
         </div>
-        <div id="SM-selector-twitter" onClick={() => updateActiveSM("tw")}>
+        <div id="SM-selector-twitter" onClick={() => updateActiveSM('tw')}>
           Twitter
         </div>
         <div id="SM-selector-hide" onClick={() => updateActiveSM()}>

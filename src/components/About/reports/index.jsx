@@ -1,13 +1,13 @@
-import ar2007 from "../../../documents/annual_reports/annual_report_2007.pdf";
-import ar2008 from "../../../documents/annual_reports/annual_report_2008.pdf";
-import ar2009 from "../../../documents/annual_reports/annual_report_2009.pdf";
-import ar2010 from "../../../documents/annual_reports/annual_report_2010.pdf";
-import ar2011 from "../../../documents/annual_reports/annual_report_2011.pdf";
-import ar2012 from "../../../documents/annual_reports/annual_report_2012.pdf";
-import ar2013 from "../../../documents/annual_reports/annual_report_2013.pdf";
-import ar2014 from "../../../documents/annual_reports/annual_report_2014.pdf";
-import ar2015 from "../../../documents/annual_reports/annual_report_2015.pdf";
-import ar2018 from "../../../documents/annual_reports/trp_2018_annual_review.pdf";
+import ar2007 from '../../../documents/annual_reports/annual_report_2007.pdf';
+import ar2008 from '../../../documents/annual_reports/annual_report_2008.pdf';
+import ar2009 from '../../../documents/annual_reports/annual_report_2009.pdf';
+import ar2010 from '../../../documents/annual_reports/annual_report_2010.pdf';
+import ar2011 from '../../../documents/annual_reports/annual_report_2011.pdf';
+import ar2012 from '../../../documents/annual_reports/annual_report_2012.pdf';
+import ar2013 from '../../../documents/annual_reports/annual_report_2013.pdf';
+import ar2014 from '../../../documents/annual_reports/annual_report_2014.pdf';
+import ar2015 from '../../../documents/annual_reports/annual_report_2015.pdf';
+import ar2018 from '../../../documents/annual_reports/trp_2018_annual_review.pdf';
 
 export {
   ar2007,

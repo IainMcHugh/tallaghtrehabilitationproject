@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Section = ({ title, subheading, data }) => (
   <div className="contact-box" id="about-subtext-show">

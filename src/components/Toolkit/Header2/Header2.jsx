@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import Logo from "../../LogoIcon";
-import ACReferralForm from "../../../documents/referral_forms/aftercare_referral_2018.pdf";
-import ACCriteria from "../../../documents/referral_forms/aftercare-referral-form.pdf";
-import RRLeaflet from "../../../documents/referral_forms/room_rental_booklet.pdf";
-import MobileHeader from "../Header/MobileHeader";
+import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import Logo from '../../LogoIcon';
+import ACReferralForm from '../../../documents/referral_forms/aftercare_referral_2018.pdf';
+import ACCriteria from '../../../documents/referral_forms/aftercare-referral-form.pdf';
+import RRLeaflet from '../../../documents/referral_forms/room_rental_booklet.pdf';
+import MobileHeader from '../Header/MobileHeader';
 
-import "./Header2.css";
+import './Header2.css';
 
 function Header2() {
   const [smallMenu, setSmallMenu] = useState(false);
 
   useEffect(() => {
     smallMenu
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "initial");
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'initial');
   }, [smallMenu]);
 
   return (
@@ -132,9 +132,9 @@ function Header2() {
             <i
               className="material-icons"
               style={{
-                fontSize: "36px",
-                color: "#f4d90c",
-                margin: "0 15px",
+                fontSize: '36px',
+                color: '#f4d90c',
+                margin: '0 15px',
               }}
             >
               phone
@@ -151,7 +151,7 @@ function Header2() {
       <button onClick={() => setSmallMenu(true)} className="menu-button">
         <i
           className="material-icons"
-          style={{ fontSize: "36px", color: "#f4d90c" }}
+          style={{ fontSize: '36px', color: '#f4d90c' }}
         >
           menu
         </i>

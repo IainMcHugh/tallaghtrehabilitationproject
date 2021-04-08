@@ -26,7 +26,7 @@
   width: 70%;
   margin: 30px auto;
   padding: 10px 0;
-  font-family: "Barlow", "san-serif";
+  font-family: 'Barlow', 'san-serif';
   font-style: italic;
   font-size: 22px;
   font-weight: 500;
@@ -37,7 +37,7 @@
 }
 
 .about-box h4 {
-  font-family: "Barlow", "san-serif";
+  font-family: 'Barlow', 'san-serif';
   margin: 10px 5px;
   font-weight: 300;
   font-size: 16px;
@@ -203,7 +203,7 @@
 }
 
 .team-member-text h5 {
-  font-family: "Barlow", "san-serif";
+  font-family: 'Barlow', 'san-serif';
   font-weight: 400;
   font-size: 16px;
 }

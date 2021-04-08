@@ -1,19 +1,24 @@
-import React from "react";
+import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import "./About.css";
+import './About.css';
 
-import { AboutSection, Navigation 
+import {
+  AboutSection,
+  Navigation,
   // MeetTeam
- } from "./Toolkit";
-import * as text from "./text";
+} from './Toolkit';
+import * as text from './text';
 // import * as imgs from "./photos";
 
 const About = () => (
   <div>
     <Helmet>
       <title>About Us</title>
-      <meta name='description' content='Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area.' />
+      <meta
+        name="description"
+        content="Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area."
+      />
     </Helmet>
     <div className="background-image-container"></div>
     <div className="about-container">

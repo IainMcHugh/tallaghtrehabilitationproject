@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import DPReferralForm from "../../../documents/referral_forms/Day_Programme_referral_form.pdf";
-import DPCriteria from "../../../documents/referral_forms/criteria_for_assessment_2019.pdf";
+import DPReferralForm from '../../../documents/referral_forms/Day_Programme_referral_form.pdf';
+import DPCriteria from '../../../documents/referral_forms/criteria_for_assessment_2019.pdf';
 
 const WhatNext = () => (
   <div className="dp-box">

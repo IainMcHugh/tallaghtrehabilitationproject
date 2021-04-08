@@ -1,5 +1,5 @@
-import React from "react";
-import "./PrivacyPolicy.css";
+import React from 'react';
+import './PrivacyPolicy.css';
 
 const PrivacyPolicy = () => (
   <div id="privacy-policy">
@@ -96,7 +96,7 @@ const PrivacyPolicy = () => (
       <li>
         <p>
           <strong>Website</strong> refers to Tallaght Rehabilitation Project,
-          accessible from{" "}
+          accessible from{' '}
           <a
             href="http://www.tallaghtrehabproject.ie/"
             rel="noopener noreferrer"
@@ -177,7 +177,7 @@ const PrivacyPolicy = () => (
         are not managed by the same browser settings as those used for Browser
         Cookies. For more information on how You can delete Flash Cookies,
         please read &quot;Where can I change the settings for disabling, or
-        deleting local shared objects?&quot; available at{" "}
+        deleting local shared objects?&quot; available at{' '}
         <a
           href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
           rel="noopener noreferrer"
@@ -200,8 +200,12 @@ const PrivacyPolicy = () => (
       Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies.
       Persistent Cookies remain on Your personal computer or mobile device when
       You go offline, while Session Cookies are deleted as soon as You close
-      Your web browser. Learn more about cookies:{" "}
-      <a href="https://www.freeprivacypolicy.com/blog/cookies/" target="_blank" rel="noopener noreferrer">
+      Your web browser. Learn more about cookies:{' '}
+      <a
+        href="https://www.freeprivacypolicy.com/blog/cookies/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Cookies: What Do They Do?
       </a>
       .
@@ -471,7 +475,7 @@ const PrivacyPolicy = () => (
     </p>
     <ul>
       <li>
-        By visiting this page on our website:{" "}
+        By visiting this page on our website:{' '}
         <a
           href="http://www.tallaghtrehabproject.ie/contact"
           rel="noopener noreferrer"
