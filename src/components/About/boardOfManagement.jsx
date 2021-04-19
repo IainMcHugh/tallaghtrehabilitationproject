@@ -30,16 +30,16 @@ const boardOfManagement = () => (
       </h4>
       <ul className="bom-ul">
         <li>
-          Mr. Seamus Massey (Jobstown School Principal Retired) Chairperson
+          Mr. Seamus Massey (Jobstown School Principal Retired) Director & Chairperson
         </li>
-        <li>Mr. Cathal King (Sinn Fein Councillor for SDCC) Company Sectary</li>
-        <li>Fr. Val Martin (Parish Priest Jobstown Retired) Treasurer</li>
-        <li>Mr. Charles O'Connor (Fianna Fail TD)</li>
+        <li>Mr. Cathal King (Sinn Fein Councillor for SDCC) Director</li>
+        <li>Fr. Val Martin (Parish Priest Jobstown Retired) Director & Treasurer</li>
+        <li>Mr. Charles O'Connor (Fianna Fail TD) Director</li>
         <li>Mr. Pat Daly (Manager TRP)</li>
         <li>Ms. Joan P Cleere-Neville (Staff Member TRP)</li>
-        <li>Mr. Frank Sage (Volunteer)</li>
-        <li>Mr. Patrick Doyle (Teacher)</li>
-        <li>Ms. Ann Marie Wall (Volunteer)</li>
+        <li>Mr. Frank Sage (Volunteer) Director</li>
+        <li>Mr. Patrick Doyle (Teacher) Director</li>
+        <li>Ms. Ann Marie Wall (Volunteer) Secretary</li>
       </ul>
     </div>
   </div>
