@@ -69,8 +69,48 @@ const AnnualReports = () => (
           </a>
         </div>
         <div>
+          <a href={reports.ar2017} download>
+            TRP-Annual Report-2015
+          </a>
+        </div>
+        <div>
           <a href={reports.ar2018} download>
             TRP-Annual Report-2018
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2019} download>
+            TRP-Annual Report-2015
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="about-box">
+      <h2>Audited Accounts</h2>
+      <div className="about-subsection">
+        <div>
+          <a href={reports.aa2015} download>
+            TRP-Audited Accounts-2015
+          </a>
+        </div>
+        <div>
+          <a href={reports.aa2016} download>
+            TRP-Audited Accounts-2016
+          </a>
+        </div>
+        <div>
+          <a href={reports.aa2017} download>
+            TRP-Audited Accounts-2017
+          </a>
+        </div>
+        <div>
+          <a href={reports.aa2018} download>
+            TRP-Audited Accounts-2018
+          </a>
+        </div>
+        <div>
+          <a href={reports.aa2019} download>
+            TRP-Audited Accounts-2019
           </a>
         </div>
       </div>

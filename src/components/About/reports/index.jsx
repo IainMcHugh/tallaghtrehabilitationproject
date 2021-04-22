@@ -7,7 +7,15 @@ import ar2012 from '../../../documents/annual_reports/annual_report_2012.pdf';
 import ar2013 from '../../../documents/annual_reports/annual_report_2013.pdf';
 import ar2014 from '../../../documents/annual_reports/annual_report_2014.pdf';
 import ar2015 from '../../../documents/annual_reports/annual_report_2015.pdf';
+import ar2017 from '../../../documents/annual_reports/annual_report_2017.pdf';
 import ar2018 from '../../../documents/annual_reports/trp_2018_annual_review.pdf';
+import ar2019 from '../../../documents/annual_reports/annual_report_2019.pdf';
+
+import aa2015 from '../../../documents/audited_accounts/audited_accounts_2015.pdf';
+import aa2016 from '../../../documents/audited_accounts/audited_accounts_2016.pdf';
+import aa2017 from '../../../documents/audited_accounts/audited_accounts_2017.pdf';
+import aa2018 from '../../../documents/audited_accounts/audited_accounts_2018.pdf';
+import aa2019 from '../../../documents/audited_accounts/audited_accounts_2019.pdf';
 
 export {
   ar2007,
@@ -19,5 +27,12 @@ export {
   ar2013,
   ar2014,
   ar2015,
+  ar2017,
   ar2018,
+  ar2019,
+  aa2015,
+  aa2016,
+  aa2017,
+  aa2018,
+  aa2019,
 };

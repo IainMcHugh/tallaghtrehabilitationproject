@@ -35,8 +35,11 @@ function Footer() {
           />
         </div>
         <div className="footer-charity-info">
+          <div>Tallaght Rehabilitation Project CLG</div>
+        </div>
+        <div className="footer-charity-info">
           <div>Registration No: 292608</div>
-          <div>Registered Charity No: 13829</div>
+          <div>Registered Charity No: 20044060</div>
         </div>
         <div className="footer-contact-container">
           <div className="footer-a">
