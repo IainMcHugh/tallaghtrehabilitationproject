@@ -2,6 +2,8 @@
   width: 100%;
   background-color: white;
   padding-top: 20px;
+  position: relative;
+  z-index: 9900;
 }
 
 .about-box {

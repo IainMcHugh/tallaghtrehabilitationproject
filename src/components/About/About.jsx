@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 import './About.css';
@@ -11,21 +12,81 @@ import {
 import * as text from './text';
 // import * as imgs from "./photos";
 
-const About = () => (
-  <div>
-    <Helmet>
-      <title>About Us</title>
-      <meta
-        name="description"
-        content="Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area."
-      />
-    </Helmet>
-    <div className="background-image-container"></div>
-    <div className="about-container">
-      <AboutSection title="About" data={text.aboutSection} />
-      <AboutSection title="TRP History" data={text.TRPHistory} />
+const BannerContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-      {/* <div className="about-box">
+  @media only screen and (min-width: 768px) {
+    height: 400px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    height: 500px;
+  }
+`;
+
+const BannerImage = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+  filter: brightness(1.2);
+  opacity: 0.8;
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const Image = styled.img`
+  height: auto;
+  width: 100%;
+`;
+
+function About() {
+  return (
+    <div>
+      <Helmet>
+        <title>About Us</title>
+        <meta
+          name="description"
+          content="Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area."
+        />
+      </Helmet>
+      <div className="background-image-container"></div>
+      <BannerContainer>
+        <BannerImage
+          src={require('../../images/Team/group2.jpg')}
+          alt="Team photo"
+        />
+      </BannerContainer>
+      <div className="about-container">
+        <AboutSection title="About" data={text.aboutSection} />
+        <AboutSection title="TRP History" data={text.TRPHistory} />
+        <div className="about-box">
+          <h2 id="team-heading">Meet the team</h2>
+          <ImageContainer>
+            <Image
+              src={require('../../images/Team/group1.png')}
+              alt="Team photo"
+            />
+          </ImageContainer>
+        </div>
+        <Navigation />
+      </div>
+    </div>
+  );
+}
+
+export default About;
+
+{
+  /* <div className="about-box">
         <h2 id="team-heading">Meet the team</h2>
         <div className="team-container" id="about-subtext-show">
           <MeetTeam
@@ -99,10 +160,5 @@ const About = () => (
             pDescription={text.sandraJohnson}
           />
         </div>
-      </div> */}
-      <Navigation />
-    </div>
-  </div>
-);
-
-export default About;
+      </div> */
+}
