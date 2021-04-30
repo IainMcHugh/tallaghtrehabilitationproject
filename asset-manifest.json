@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6a14e8e.chunk.css",
-    "main.js": "/static/js/main.6c18cf76.chunk.js",
-    "main.js.map": "/static/js/main.6c18cf76.chunk.js.map",
+    "main.css": "/static/css/main.71db3f71.chunk.css",
+    "main.js": "/static/js/main.9bcade49.chunk.js",
+    "main.js.map": "/static/js/main.9bcade49.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.eede87aa.js",
     "runtime-main.js.map": "/static/js/runtime-main.eede87aa.js.map",
-    "static/js/2.860def33.chunk.js": "/static/js/2.860def33.chunk.js",
-    "static/js/2.860def33.chunk.js.map": "/static/js/2.860def33.chunk.js.map",
+    "static/js/2.5e169253.chunk.js": "/static/js/2.5e169253.chunk.js",
+    "static/js/2.5e169253.chunk.js.map": "/static/js/2.5e169253.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2b49c11d4a1f346b724a1de98ef29b9e.js": "/precache-manifest.2b49c11d4a1f346b724a1de98ef29b9e.js",
+    "precache-manifest.483414ac9d2af1634a5ae783bddc63bd.js": "/precache-manifest.483414ac9d2af1634a5ae783bddc63bd.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.e6a14e8e.chunk.css.map": "/static/css/main.e6a14e8e.chunk.css.map",
-    "static/js/2.860def33.chunk.js.LICENSE.txt": "/static/js/2.860def33.chunk.js.LICENSE.txt",
+    "static/css/main.71db3f71.chunk.css.map": "/static/css/main.71db3f71.chunk.css.map",
+    "static/js/2.5e169253.chunk.js.LICENSE.txt": "/static/js/2.5e169253.chunk.js.LICENSE.txt",
     "static/media/Aftercare_referral_form.pdf": "/static/media/Aftercare_referral_form.579bb875.pdf",
     "static/media/Day_Programme_referral_form.pdf": "/static/media/Day_Programme_referral_form.81ef547d.pdf",
     "static/media/PrivacyPolicy.css": "/static/media/LEMONMILK-Regular.be29f3c5.otf",
@@ -35,6 +35,8 @@
     "static/media/audited_accounts_2018.pdf": "/static/media/audited_accounts_2018.26f3b339.pdf",
     "static/media/audited_accounts_2019.pdf": "/static/media/audited_accounts_2019.cb29c92a.pdf",
     "static/media/criteria_for_assessment_2019.pdf": "/static/media/criteria_for_assessment_2019.c231e85c.pdf",
+    "static/media/group1.png": "/static/media/group1.a42b2ec3.png",
+    "static/media/group2.jpg": "/static/media/group2.629f3a59.jpg",
     "static/media/hse_logo_border_2016_web.jpg": "/static/media/hse_logo_border_2016_web.d7900140.jpg",
     "static/media/information_brochure.pdf": "/static/media/information_brochure.9facc3bb.pdf",
     "static/media/instagram.jpg": "/static/media/instagram.4a7da80e.jpg",
@@ -65,8 +67,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.eede87aa.js",
-    "static/js/2.860def33.chunk.js",
-    "static/css/main.e6a14e8e.chunk.css",
-    "static/js/main.6c18cf76.chunk.js"
+    "static/js/2.5e169253.chunk.js",
+    "static/css/main.71db3f71.chunk.css",
+    "static/js/main.9bcade49.chunk.js"
   ]
 }
