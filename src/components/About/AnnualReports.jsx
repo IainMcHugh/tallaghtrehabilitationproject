@@ -70,7 +70,7 @@ const AnnualReports = () => (
         </div>
         <div>
           <a href={reports.ar2017} download>
-            TRP-Annual Report-2015
+            TRP-Annual Report-2017
           </a>
         </div>
         <div>
@@ -80,7 +80,7 @@ const AnnualReports = () => (
         </div>
         <div>
           <a href={reports.ar2019} download>
-            TRP-Annual Report-2015
+            TRP-Annual Report-2019
           </a>
         </div>
       </div>
