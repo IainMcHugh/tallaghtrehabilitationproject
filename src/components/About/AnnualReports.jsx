@@ -24,53 +24,13 @@ const AnnualReports = () => (
       <h2>Annual Reports</h2>
       <div className="about-subsection">
         <div>
-          <a href={reports.ar2007} download>
-            TRP-Annual Report-2007
+          <a href={reports.ar2020} download>
+            TRP-Annual Report-2020
           </a>
         </div>
         <div>
-          <a href={reports.ar2008} download>
-            TRP-Annual Report-2008
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2009} download>
-            TRP-Annual Report-2009
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2010} download>
-            TRP-Annual Report-2010
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2011} download>
-            TRP-Annual Report-2011
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2012} download>
-            TRP-Annual Report-2012
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2013} download>
-            TRP-Annual Report-2013
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2014} download>
-            TRP-Annual Report-2014
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2015} download>
-            TRP-Annual Report-2015
-          </a>
-        </div>
-        <div>
-          <a href={reports.ar2017} download>
-            TRP-Annual Report-2017
+          <a href={reports.ar2019} download>
+            TRP-Annual Report-2019
           </a>
         </div>
         <div>
@@ -79,8 +39,53 @@ const AnnualReports = () => (
           </a>
         </div>
         <div>
-          <a href={reports.ar2019} download>
-            TRP-Annual Report-2019
+          <a href={reports.ar2017} download>
+            TRP-Annual Report-2017
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2015} download>
+            TRP-Annual Report-2015
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2014} download>
+            TRP-Annual Report-2014
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2013} download>
+            TRP-Annual Report-2013
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2012} download>
+            TRP-Annual Report-2012
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2011} download>
+            TRP-Annual Report-2011
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2010} download>
+            TRP-Annual Report-2010
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2009} download>
+            TRP-Annual Report-2009
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2008} download>
+            TRP-Annual Report-2008
+          </a>
+        </div>
+        <div>
+          <a href={reports.ar2007} download>
+            TRP-Annual Report-2007
           </a>
         </div>
       </div>
@@ -89,18 +94,8 @@ const AnnualReports = () => (
       <h2>Audited Accounts</h2>
       <div className="about-subsection">
         <div>
-          <a href={reports.aa2015} download>
-            TRP-Audited Accounts-2015
-          </a>
-        </div>
-        <div>
-          <a href={reports.aa2016} download>
-            TRP-Audited Accounts-2016
-          </a>
-        </div>
-        <div>
-          <a href={reports.aa2017} download>
-            TRP-Audited Accounts-2017
+          <a href={reports.aa2019} download>
+            TRP-Audited Accounts-2019
           </a>
         </div>
         <div>
@@ -109,8 +104,18 @@ const AnnualReports = () => (
           </a>
         </div>
         <div>
-          <a href={reports.aa2019} download>
-            TRP-Audited Accounts-2019
+          <a href={reports.aa2017} download>
+            TRP-Audited Accounts-2017
+          </a>
+        </div>
+        <div>
+          <a href={reports.aa2016} download>
+            TRP-Audited Accounts-2016
+          </a>
+        </div>
+        <div>
+          <a href={reports.aa2015} download>
+            TRP-Audited Accounts-2015
           </a>
         </div>
       </div>

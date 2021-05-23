@@ -10,6 +10,7 @@ import ar2015 from '../../../documents/annual_reports/annual_report_2015.pdf';
 import ar2017 from '../../../documents/annual_reports/annual_report_2017.pdf';
 import ar2018 from '../../../documents/annual_reports/trp_2018_annual_review.pdf';
 import ar2019 from '../../../documents/annual_reports/annual_report_2019.pdf';
+import ar2020 from '../../../documents/annual_reports/annual_report_2020.pdf';
 
 import aa2015 from '../../../documents/audited_accounts/audited_accounts_2015.pdf';
 import aa2016 from '../../../documents/audited_accounts/audited_accounts_2016.pdf';
@@ -30,6 +31,7 @@ export {
   ar2017,
   ar2018,
   ar2019,
+  ar2020,
   aa2015,
   aa2016,
   aa2017,
