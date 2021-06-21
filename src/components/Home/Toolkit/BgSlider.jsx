@@ -8,13 +8,12 @@ function BgSlider() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 30000,
     dots: true,
     arrows: false,
   };
 
   return (
-    // <div className="homepage-image-container">
     <div>
       <div className="background-slider">
         <Slider {...settings}>

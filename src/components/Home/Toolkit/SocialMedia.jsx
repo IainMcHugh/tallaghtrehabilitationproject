@@ -20,7 +20,7 @@ function SocialMedia() {
     <div>
       <Parallax
         bgImage={require('../../../images/kiltalown_old.jpg')}
-        strength={700}
+        strength={200}
       >
         <div style={{ height: 700 }}>
           <SMSelector handleClick={handleClick} />
@@ -44,9 +44,9 @@ function SocialMedia() {
             <iframe
               title="Youtube video"
               src="https://www.youtube.com/embed/oFr4Ch_insg"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>

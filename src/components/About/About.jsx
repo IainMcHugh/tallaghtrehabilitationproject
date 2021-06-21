@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { usePrismic } from '../../services/prismic';
+import { RichText } from 'prismic-reactjs';
 
 import './About.css';
 
-import {
-  AboutSection,
-  Navigation,
-  // MeetTeam
-} from './Toolkit';
-import * as text from './text';
-// import * as imgs from "./photos";
+import { Navigation } from './Toolkit';
+import { Section } from '../Toolkit/Section/Section';
 
 const BannerContainer = styled.div`
   position: relative;
@@ -49,6 +46,19 @@ const Image = styled.img`
 `;
 
 function About() {
+  const [doc, setDoc] = useState(null);
+  const prismic = usePrismic();
+
+  var ids = ['YND1_BAAACQAXI4z', 'YND2qBAAACIAXJE1'];
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await prismic.getByIDs(ids);
+      response && setDoc(response.results);
+    };
+
+    fetchData();
+  }, []);
   return (
     <div>
       <Helmet>
@@ -59,6 +69,7 @@ function About() {
         />
       </Helmet>
       <div className="background-image-container"></div>
+      {console.log(doc)}
       <BannerContainer>
         <BannerImage
           src={require('../../images/Team/group2.jpg')}
@@ -66,8 +77,14 @@ function About() {
         />
       </BannerContainer>
       <div className="about-container">
-        <AboutSection title="About" data={text.aboutSection} />
-        <AboutSection title="TRP History" data={text.TRPHistory} />
+        {doc &&
+          doc.map((d, index) => (
+            <Section
+              key={index}
+              title={<RichText render={d.data.title} />}
+              data={<RichText render={d.data.paragraph} />}
+            />
+          ))}
         <div className="about-box">
           <h2 id="team-heading">Meet the team</h2>
           <ImageContainer>
