@@ -18,16 +18,18 @@ function DPRPList() {
     });
   }, []);
   return (
-    <div className="dp-list-container">
-      <ul ref={dprRef}>
-        <li>Tips for Slips’</li>
-        <li>Healthy Relationships</li>
-        <li>Managing stress </li>
-        <li>Managing dangerous and stressful situations</li>
-        <li>Recovery Capital</li>
-        <li>Trap doors</li>
-        <li>First 90 days of Recovery</li>
-      </ul>
+    <div className="about-box">
+      <div className="dp-list-container">
+        <ul ref={dprRef}>
+          <li>Tips for Slips’</li>
+          <li>Healthy Relationships</li>
+          <li>Managing stress </li>
+          <li>Managing dangerous and stressful situations</li>
+          <li>Recovery Capital</li>
+          <li>Trap doors</li>
+          <li>First 90 days of Recovery</li>
+        </ul>
+      </div>
     </div>
   );
 }

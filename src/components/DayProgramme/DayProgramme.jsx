@@ -4,16 +4,14 @@ import './DayProgramme.css';
 import { usePrismic } from '../../services/prismic';
 import { RichText } from 'prismic-reactjs';
 
-import DPSummary from './text/DPSummary';
-import DPWhoIsItFor from './text/DPWhoIsItFor';
-import { Navigation, WhatNext, DPSection } from './Toolkit';
+import { Navigation, WhatNext, List } from './Toolkit';
 import { Section } from '../Toolkit/Section/Section';
 
 function DayProgramme() {
   const [doc, setDoc] = useState(null);
   const prismic = usePrismic();
 
-  var ids = ['YND9hRAAACMAXK_o', 'YND2qBAAACIAXJE1'];
+  var ids = ['YND9hRAAACMAXK_o', 'YNGLUxAAACMAXyGq'];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,9 +32,6 @@ function DayProgramme() {
       </Helmet>
       <div className="background-image-container"></div>
       <div className="dp-container">
-        {/* <DPSection title="Summary" data={DPSummary} /> */}
-        <DPSection title="Who is it for" data={DPWhoIsItFor} />
-        {/* NEED TO ADD THE ABOVE */}
         {doc &&
           doc.map((d, index) => (
             <Section
@@ -45,6 +40,7 @@ function DayProgramme() {
               data={<RichText render={d.data.paragraph} />}
             />
           ))}
+        <List />
         <Navigation />
         <WhatNext />
       </div>
