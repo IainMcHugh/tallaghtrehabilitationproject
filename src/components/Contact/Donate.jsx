@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { usePrismic } from '../../services/prismic';
 import { RichText } from 'prismic-reactjs';
@@ -7,6 +8,13 @@ import { Section } from '../Toolkit/Section/Section';
 // import { DonateBtn } from './Toolkit';
 // import CDonate from "./text/CDonate";
 import DonateTemp from './text/DonateTemp';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function Donate() {
   const [doc, setDoc] = useState(null);
@@ -33,7 +41,7 @@ function Donate() {
       </Helmet>
       <div className="background-image-container"></div>
       <div id="about-subtext-show">
-        {doc &&
+        {doc ? (
           doc.map((d, index) => (
             <Section
               key={index}
@@ -41,15 +49,13 @@ function Donate() {
               subheading={<RichText render={d.data.subtitle} />}
               data={<RichText render={d.data.paragraph} />}
             />
-          ))}
+          ))
+        ) : (
+          <SpinnerContainer>
+            <Spinner />
+          </SpinnerContainer>
+        )}
       </div>
-      {/* Re add this when donations set up */}
-      {/* <Section
-      title="Donate"
-      subheading="Would you consider making a donation today?"
-      data={CDonate}
-    />
-    <DonateBtn /> */}
     </div>
   );
 }

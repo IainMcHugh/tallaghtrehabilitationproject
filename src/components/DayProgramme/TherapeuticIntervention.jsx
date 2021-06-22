@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { RichText } from 'prismic-reactjs';
@@ -7,6 +8,13 @@ import { usePrismic } from '../../services/prismic';
 import { GroupTherapy } from './Toolkit';
 import { DPRPList } from './Toolkit';
 import { Section } from '../Toolkit/Section/Section';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function TherapeuticIntervention() {
   const [doc, setDoc] = useState(null);
@@ -44,7 +52,7 @@ function TherapeuticIntervention() {
           </button>
         </NavLink>
       </div>
-      {doc &&
+      {doc ? (
         doc.map((d, index) => (
           <>
             <Section
@@ -54,7 +62,12 @@ function TherapeuticIntervention() {
             />
             {index === 2 && <DPRPList />}
           </>
-        ))}
+        ))
+      ) : (
+        <SpinnerContainer>
+          <Spinner />
+        </SpinnerContainer>
+      )}
       <GroupTherapy />
     </div>
   );

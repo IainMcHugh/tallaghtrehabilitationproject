@@ -8,6 +8,13 @@ import './About.css';
 
 import { Navigation } from './Toolkit';
 import { Section } from '../Toolkit/Section/Section';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const BannerContainer = styled.div`
   position: relative;
@@ -77,14 +84,19 @@ function About() {
         />
       </BannerContainer>
       <div className="about-container">
-        {doc &&
+        {doc ? (
           doc.map((d, index) => (
             <Section
               key={index}
               title={<RichText render={d.data.title} />}
               data={<RichText render={d.data.paragraph} />}
             />
-          ))}
+          ))
+        ) : (
+          <SpinnerContainer>
+            <Spinner />
+          </SpinnerContainer>
+        )}
         <div className="about-box">
           <h2 id="team-heading">Meet the team</h2>
           <ImageContainer>

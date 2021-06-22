@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { usePrismic } from '../../services/prismic';
 import { RichText } from 'prismic-reactjs';
 
 import { Section } from '../Toolkit/Section/Section';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function Outreach() {
   const [doc, setDoc] = useState(null);
@@ -38,7 +46,7 @@ function Outreach() {
           </button>
         </NavLink>
       </div>
-      {doc &&
+      {doc ? (
         doc.map((d, index) => (
           <Section
             key={index}
@@ -46,7 +54,12 @@ function Outreach() {
             subheading={<RichText render={d.data.subtitle} />}
             data={<RichText render={d.data.paragraph} />}
           />
-        ))}
+        ))
+      ) : (
+        <SpinnerContainer>
+          <Spinner />
+        </SpinnerContainer>
+      )}
     </div>
   );
 }

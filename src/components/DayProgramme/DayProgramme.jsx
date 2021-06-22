@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import './DayProgramme.css';
+import styled from 'styled-components';
 import { usePrismic } from '../../services/prismic';
 import { RichText } from 'prismic-reactjs';
 
 import { Navigation, WhatNext, List } from './Toolkit';
 import { Section } from '../Toolkit/Section/Section';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function DayProgramme() {
   const [doc, setDoc] = useState(null);
@@ -32,14 +40,19 @@ function DayProgramme() {
       </Helmet>
       <div className="background-image-container"></div>
       <div className="dp-container">
-        {doc &&
+        {doc ? (
           doc.map((d, index) => (
             <Section
               key={index}
               title={<RichText render={d.data.title} />}
               data={<RichText render={d.data.paragraph} />}
             />
-          ))}
+          ))
+        ) : (
+          <SpinnerContainer>
+            <Spinner />
+          </SpinnerContainer>
+        )}
         <List />
         <Navigation />
         <WhatNext />

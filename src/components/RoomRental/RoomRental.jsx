@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { RichText } from 'prismic-reactjs';
+import styled from 'styled-components';
+
 import './RoomRental.css';
 import { usePrismic } from '../../services/prismic';
-import { RichText } from 'prismic-reactjs';
-
 import { Section } from '../Toolkit/Section/Section';
 import RRBooklet from './Toolkit/RRBooklet';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function RoomRental() {
   const [doc, setDoc] = useState(null);
@@ -45,7 +53,9 @@ function RoomRental() {
             </>
           ))
         ) : (
-          <p>Load...</p>
+          <SpinnerContainer>
+            <Spinner />
+          </SpinnerContainer>
         )}
       </div>
     </div>

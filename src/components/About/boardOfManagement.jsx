@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
-// import { AboutSection } from './Toolkit';
+
 import { Section } from '../Toolkit/Section/Section';
 import { usePrismic } from '../../services/prismic';
 import { RichText } from 'prismic-reactjs';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function BoardOfManagement() {
   const [doc, setDoc] = useState(null);
@@ -39,8 +47,7 @@ function BoardOfManagement() {
           </button>
         </NavLink>
       </div>
-      {/* <div className="about-box"> */}
-      {doc &&
+      {doc ? (
         doc.map((d, index) => (
           <Section
             key={index}
@@ -48,30 +55,12 @@ function BoardOfManagement() {
             subheading={<RichText render={d.data.subtitle} />}
             data={<RichText render={d.data.paragraph} />}
           />
-        ))}
-      {/* <h2>Board of Management</h2>
-        <h4>
-          The board of directors is made up of representatives from a range of
-          statutory, voluntary and community agencies/groups based in the
-          Tallaght area who freely volunteer their time and expertise.
-        </h4>
-        <ul className="bom-ul">
-          <li>
-            Mr. Seamus Massey (Jobstown School Principal Retired) Director &
-            Chairperson
-          </li>
-          <li>Mr. Cathal King (Sinn Fein Councillor for SDCC) Director</li>
-          <li>
-            Fr. Val Martin (Parish Priest Jobstown Retired) Director & Treasurer
-          </li>
-          <li>Mr. Charles O'Connor (Fianna Fail TD) Director</li>
-          <li>Mr. Pat Daly (Manager TRP)</li>
-          <li>Ms. Joan P Cleere-Neville (Staff Member TRP)</li>
-          <li>Mr. Frank Sage (Volunteer) Director</li>
-          <li>Mr. Patrick Doyle (Teacher) Director</li>
-          <li>Ms. Ann Marie Wall (Volunteer) Secretary</li>
-        </ul> */}
-      {/* </div> */}
+        ))
+      ) : (
+        <SpinnerContainer>
+          <Spinner />
+        </SpinnerContainer>
+      )}
     </div>
   );
 }

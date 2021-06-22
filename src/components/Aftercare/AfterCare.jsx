@@ -1,13 +1,21 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
+import { RichText } from 'prismic-reactjs';
+
 import ACReferralForm from '../../documents/referral_forms/Aftercare_referral_form.pdf';
 import ACCriteria from '../../documents/referral_forms/aftercare-criteria-form.pdf';
 import { usePrismic } from '../../services/prismic';
-import { RichText } from 'prismic-reactjs';
-
 import { Section } from '../Toolkit/Section/Section';
 import './Aftercare.css';
 import { Activities } from './Toolkit';
+import { Spinner } from '../Toolkit/Spinner/Spinner';
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function AfterCare() {
   const [doc, setDoc] = useState(null);
@@ -34,7 +42,7 @@ function AfterCare() {
       </Helmet>
       <div className="background-image-container"></div>
       <div className="aftercare-container">
-        {doc &&
+        {doc ? (
           doc.map((d, index) => (
             <>
               <Section
@@ -45,7 +53,12 @@ function AfterCare() {
               />
               {index === 1 && <Activities />}
             </>
-          ))}
+          ))
+        ) : (
+          <SpinnerContainer>
+            <Spinner />
+          </SpinnerContainer>
+        )}
         <div className="aftercare-box">
           <a href={ACReferralForm} download>
             <button className="referral-button">Download Referral Form</button>
