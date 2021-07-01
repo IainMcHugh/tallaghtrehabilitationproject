@@ -94,6 +94,11 @@ const AnnualReports = () => (
       <h2>Audited Accounts</h2>
       <div className="about-subsection">
         <div>
+          <a href={reports.aa2020} download>
+            TRP-Audited Accounts-2020
+          </a>
+        </div>
+        <div>
           <a href={reports.aa2019} download>
             TRP-Audited Accounts-2019
           </a>

@@ -17,6 +17,7 @@ import aa2016 from '../../../documents/audited_accounts/audited_accounts_2016.pd
 import aa2017 from '../../../documents/audited_accounts/audited_accounts_2017.pdf';
 import aa2018 from '../../../documents/audited_accounts/audited_accounts_2018.pdf';
 import aa2019 from '../../../documents/audited_accounts/audited_accounts_2019.pdf';
+import aa2020 from '../../../documents/audited_accounts/audited_accounts_2020.pdf';
 
 export {
   ar2007,
@@ -37,4 +38,5 @@ export {
   aa2017,
   aa2018,
   aa2019,
+  aa2020,
 };
