@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../LogoIcon';
 import ACReferralForm from '../../../documents/referral_forms/Aftercare_referral_form.pdf';
-import ACCriteria from '../../../documents/referral_forms/aftercare-criteria-form.pdf';
+// import ACCriteria from '../../../documents/referral_forms/aftercare-criteria-form.pdf';
 import RRLeaflet from '../../../documents/referral_forms/room_rental_booklet.pdf';
+import DPReferralForm from '../../../documents/referral_forms/Day_programme_referral_form.pdf';
+import DPCriteria from '../../../documents/referral_forms/criteria_for_assessment_2019.pdf';
 
 import MobileHeader from './MobileHeader';
 
@@ -103,6 +105,20 @@ function Header() {
                 <li>
                   <NavLink to="/dayprogramme/outreach">Outreach</NavLink>
                 </li>
+                <li>
+                  <a
+                    href={DPCriteria}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Criteria for Assessment
+                  </a>
+                </li>
+                <li>
+                  <a href={DPReferralForm} download>
+                    Download Referral Form
+                  </a>
+                </li>
               </ul>
             </li>
             <li>
@@ -115,7 +131,7 @@ function Header() {
                     Download Referral Form
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     href={ACCriteria}
                     target="_blank"
@@ -123,7 +139,7 @@ function Header() {
                   >
                     Open Criteria Form
                   </a>
-                </li>
+                </li> */}
               </ul>
             </li>
             <li>

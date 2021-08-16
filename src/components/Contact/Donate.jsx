@@ -7,7 +7,7 @@ import { RichText } from 'prismic-reactjs';
 import { Section } from '../Toolkit/Section/Section';
 // import { DonateBtn } from './Toolkit';
 // import CDonate from "./text/CDonate";
-import DonateTemp from './text/DonateTemp';
+// import DonateTemp from './text/DonateTemp';
 import { Spinner } from '../Toolkit/Spinner/Spinner';
 
 const SpinnerContainer = styled.div`

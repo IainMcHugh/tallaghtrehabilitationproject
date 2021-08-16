@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { RichText } from 'prismic-reactjs';
 
 import ACReferralForm from '../../documents/referral_forms/Aftercare_referral_form.pdf';
-import ACCriteria from '../../documents/referral_forms/aftercare-criteria-form.pdf';
+// import ACCriteria from '../../documents/referral_forms/aftercare-criteria-form.pdf';
 import { usePrismic } from '../../services/prismic';
 import { Section } from '../Toolkit/Section/Section';
 import './Aftercare.css';
@@ -63,9 +63,9 @@ function AfterCare() {
           <a href={ACReferralForm} download>
             <button className="referral-button">Download Referral Form</button>
           </a>
-          <a href={ACCriteria} target="_blank" rel="noopener noreferrer">
+          {/* <a href={ACCriteria} target="_blank" rel="noopener noreferrer">
             <button className="referral-button">Open Criteria Form</button>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
