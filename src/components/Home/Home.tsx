@@ -1,6 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BgSlider, ServicesOffer, SocialMedia } from './Toolkit';
+
 import './Home.css';
 
 function Home() {

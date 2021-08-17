@@ -9,6 +9,8 @@ import DPCriteria from '../../../documents/referral_forms/criteria_for_assessmen
 
 import MobileHeader from './MobileHeader';
 
+// import About from 'components/About/About.jsx';
+
 import './Header.css';
 
 function Header() {
