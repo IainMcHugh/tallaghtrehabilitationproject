@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactGa from 'react-ga';
 import { ThemeProvider } from 'styled-components';
 
-import AppHolder from 'components/AppHolder';
+import { Routing } from 'components/Routing';
 import { theme } from 'styles/theme';
 import GlobalStyles from 'styles/Global';
 
@@ -14,7 +14,7 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <AppHolder />
+      <Routing />
       <GlobalStyles />
     </ThemeProvider>
   );

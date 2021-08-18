@@ -9,7 +9,7 @@ const ContactFormContainer = styled.div`
   align-items: center;
   border-radius: 8px;
   background-color: #fefefe;
-  box-shadow: ${({ theme }) => theme.dropShadow.main};
+  box-shadow: ${({ theme }) => theme.shadow.drop};
 
   @media only screen and (min-width: 1000px) {
     width: 750px;

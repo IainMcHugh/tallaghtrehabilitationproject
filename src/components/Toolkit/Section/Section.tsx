@@ -2,6 +2,8 @@ import React from 'react';
 import type { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
+
 const Container = styled.div`
   width: 90%;
   margin: 40px auto;
@@ -112,7 +114,7 @@ interface ISection {
 
 const Section = ({ title, subheading, data }: ISection) => (
   <Container>
-    <Title>{title}</Title>
+    <SectionHeading>{title}</SectionHeading>
     <SubTitle>{subheading}</SubTitle>
     {/* <h4 className="about-subtext-show">{data}</h4> */}
     <Paragraph>{data}</Paragraph>

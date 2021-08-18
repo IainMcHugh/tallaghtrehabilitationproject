@@ -1,21 +1,56 @@
-export const theme = {
+import { DefaultTheme } from 'styled-components';
+
+export const theme: DefaultTheme = {
   colors: {
     BLUE: '#005987',
     BLUE_LIGHT: '##0090d8',
-    BLUE_OPAQUE: '##005a87f3',
+    BLUE_LIGHTER: '##005a87f3',
     YELLOW: '#f4d90c',
     YELLOW_LIGHT: '#ffe100',
-    YELLOW_DARK: '',
+    YELLOW_LIGHTER: '#ddAF00',
+    GREY: '#000000',
+    GREY_LIGHT: '#bbbbbb',
+    GREY_LIGHTER: '#eeeeee',
+    GREY_DARK: '#666666',
+    GREY_DARKER: '#222222',
+    WHITE: '#ffffff',
+    BLACK: '#000000',
+    OFFWHITE: '#f2f2f2',
   },
-  fontSizes: {
-    sm: '10px',
-    md: '12px',
-    lg: '16px',
-    xl: '20px',
-    xxl: '24px',
+  fontSize: {
+    F1016: 'font-size: 10px; line-height: 16px;',
+    F1216: 'font-size: 12px; line-height: 16px;',
+    F1616: 'font-size: 16px; line-height: 16px;',
+    F1624: 'font-size: 16px; line-height: 24px;',
+    F1824: 'font-size: 18px; line-height: 24px;',
+    F2424: 'font-size: 24px; line-height: 24px;',
   },
-  dropShadow: {
-    main:
-      '0 1px 2.2px rgba(0, 0, 0, 0.017), 0 1px 5.3px rgba(0, 0, 0, 0.02), 0 1px 10px rgba(0, 0, 0, 0.03), 0 2px 10px rgba(0, 0, 0, 0.03), 0 4px 10px rgba(0, 0, 0, 0.03), 0 10px 10px rgba(0, 0, 0, 0.05)',
+  spacing: {
+    S2: '2px',
+    S4: '4px',
+    S8: '8px',
+    S12: '12px',
+    S16: '16px',
+    S20: '20px',
+    S24: '24px',
+    S28: '28px',
+    S32: '32px',
+    S36: '36px',
+    S40: '40px',
+    S48: '48px',
+    S56: '56px',
+    S64: '64px',
+    S72: '72px',
+    S80: '80px',
+  },
+  borderRadius: {
+    default: '4px',
+  },
+  fontWeight: {
+    regular: 400,
+    bold: 700,
+  },
+  shadow: {
+    drop: '0 1px 2.2px rgba(0, 0, 0, 0.017), 0 1px 5.3px rgba(0, 0, 0, 0.02), 0 1px 10px rgba(0, 0, 0, 0.03), 0 2px 10px rgba(0, 0, 0, 0.03), 0 4px 10px rgba(0, 0, 0, 0.03), 0 10px 10px rgba(0, 0, 0, 0.05)',
   },
 };
