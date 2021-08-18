@@ -1,5 +1,12 @@
 import React from 'react';
+import type { ReactNode } from 'react';
 import styled from 'styled-components';
+
+interface ISection {
+  title: string | ReactNode;
+  subheading?: string | ReactNode;
+  data?: string | ReactNode;
+}
 
 const Paragraph = styled.div`
   & > h4,
@@ -38,7 +45,7 @@ const Paragraph = styled.div`
   }
 `;
 
-const AboutSection = ({ title, subheading, data }) => (
+const AboutSection = ({ title, subheading, data }: ISection) => (
   <div className="about-box">
     {title && title}
     {subheading && subheading}

@@ -106,7 +106,7 @@ const Paragraph = styled.div`
 
 interface ISection {
   title: string | ReactNode;
-  subheading: string | ReactNode;
+  subheading?: string | ReactNode;
   data: string | ReactNode;
 }
 

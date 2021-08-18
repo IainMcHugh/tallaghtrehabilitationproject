@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 import './Aftercare.css';
 import { usePrismic } from 'services/prismic';
@@ -18,14 +19,18 @@ const SpinnerContainer = styled.div`
 `;
 
 function AfterCare() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  var ids = ['YNGRyhAAACMAXz5e', 'YNGTOhAAACQAX0S8', 'YNGUCxAAACIAX0hl'];
+  const ids: string[] = [
+    'YNGRyhAAACMAXz5e',
+    'YNGTOhAAACQAX0S8',
+    'YNGUCxAAACIAX0hl',
+  ];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

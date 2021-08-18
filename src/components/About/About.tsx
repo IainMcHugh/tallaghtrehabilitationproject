@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 import './About.css';
 import { usePrismic } from 'services/prismic';
@@ -52,14 +53,14 @@ const Image = styled.img`
 `;
 
 function About() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  var ids = ['YND1_BAAACQAXI4z', 'YND2qBAAACIAXJE1'];
+  const ids: string[] = ['YND1_BAAACQAXI4z', 'YND2qBAAACIAXJE1'];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 
@@ -112,81 +113,3 @@ function About() {
 }
 
 export default About;
-
-{
-  /* <div className="about-box">
-        <h2 id="team-heading">Meet the team</h2>
-        <div className="team-container" id="about-subtext-show">
-          <MeetTeam
-            isEven={false}
-            pImg={imgs.patrick_daly}
-            pName="Patrick Daly"
-            pPosition="Manager"
-            pDescription={text.patrickDaly}
-          />
-          <MeetTeam
-            isEven={true}
-            pImg={imgs.sonya_dillon}
-            pName="Sonya Dillon"
-            pPosition="Team Leader"
-            pDescription={text.sonyaDillon}
-          />
-          <MeetTeam
-            isEven={false}
-            pImg={imgs.carla_whelan}
-            pName="Carla Whelan"
-            pPosition="Senior Project Worker"
-            pDescription={text.carlaWhelan}
-          />
-          <MeetTeam
-            isEven={true}
-            pImg={imgs.dawn_brown}
-            pName="Dawn Brown"
-            pPosition="Senior Project Worker"
-            pDescription={text.dawnBrown}
-          />
-          <MeetTeam
-            isEven={false}
-            pImg={imgs.patrick_maxwell}
-            pName="Patrick Maxwell"
-            pPosition="Project Worker"
-            pDescription={text.patrickMaxwell}
-          />
-          <MeetTeam
-            isEven={true}
-            pImg={imgs.joan_cleere_neville}
-            pName="Joan Cleere Neville"
-            pPosition="Financial Administrator"
-            pDescription={text.joanCleereNeville}
-          />
-          <MeetTeam
-            isEven={true}
-            pImg={imgs.sonja_dunne}
-            pName="Sonja Dunne"
-            pPosition="Community Employment Supervisor"
-            pDescription={text.sonjaDunne}
-          />
-          <MeetTeam
-            isEven={false}
-            pImg={imgs.sonya_dillon}
-            pName="Evelyn McCall"
-            pPosition="Community Employment Interim Supervisor"
-            pDescription={text.sonyaDillon}
-          />
-          <MeetTeam
-            isEven={true}
-            pImg={imgs.kim_kehoe}
-            pName="Kim Kehoe"
-            pPosition="Health & Safety Officer, Fire Officer & Senior Housekeeper"
-            pDescription={text.kimKehoe}
-          />
-          <MeetTeam
-            isEven={true}
-            pImg={imgs.sandra_johnson}
-            pName="Sandra Johnson"
-            pPosition="Project Worker"
-            pDescription={text.sandraJohnson}
-          />
-        </div>
-      </div> */
-}

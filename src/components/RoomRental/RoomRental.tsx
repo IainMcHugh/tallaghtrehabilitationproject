@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { RichText } from 'prismic-reactjs';
-import styled from 'styled-components';
+import type { Document } from '@prismicio/client/types/documents';
 
 import './RoomRental.css';
 import { usePrismic } from 'services/prismic';
@@ -16,14 +17,14 @@ const SpinnerContainer = styled.div`
 `;
 
 function RoomRental() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  var ids = ['YNGUjRAAACIAX0qm', 'YNGVVBAAACMAX04X'];
+  const ids: string[] = ['YNGUjRAAACIAX0qm', 'YNGVVBAAACMAX04X'];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

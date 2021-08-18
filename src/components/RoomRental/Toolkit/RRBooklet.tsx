@@ -169,8 +169,8 @@ function RRBooklet() {
     }
   }
 
-  const changePage = (e) => {
-    if (e.target.innerText === 'keyboard_arrow_right') {
+  const changePage = (e: React.MouseEvent<HTMLElement>) => {
+    if (e.currentTarget.innerText === 'keyboard_arrow_right') {
       setActivePage(activePage + 1);
     } else {
       setActivePage(activePage - 1);

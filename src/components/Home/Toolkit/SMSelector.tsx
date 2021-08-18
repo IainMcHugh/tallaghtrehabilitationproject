@@ -7,47 +7,48 @@ import {
 } from 'components/Home/Toolkit';
 
 type SocialMedia = 'fb' | 'tw' | 'ig';
-interface ISMSelector {
-  handleClick: (t: boolean) => void;
-}
+// interface ISMSelector {
+//   handleClick: (t: boolean) => void;
+// }
 
-function SMSelector({ handleClick }: ISMSelector) {
-  // const [ytActive, setYtActive] = useState(0);
-  const [fbActive, setFbActive] = useState(0);
-  const [igActive, setIgActive] = useState(0);
-  const [twActive, setTwActive] = useState(0);
+function SMSelector() {
+  // { handleClick }: ISMSelector
+  // const [ytActive, setYtActive] = useState(false);
+  const [fbActive, setFbActive] = useState<boolean>(false);
+  const [igActive, setIgActive] = useState<boolean>(false);
+  const [twActive, setTwActive] = useState<boolean>(false);
 
   function updateActiveSM(activeSM?: SocialMedia) {
     switch (activeSM) {
       // case "yt":
-      //   setYtActive(1);
-      //   setFbActive(0);
-      //   setIgActive(0);
-      //   setTwActive(0);
+      //   setYtActive(true);
+      //   setFbActive(false);
+      //   setIgActive(false);
+      //   setTwActive(false);
       //   break;
       case 'fb':
-        // setYtActive(0);
-        setFbActive(1);
-        setIgActive(0);
-        setTwActive(0);
+        // setYtActive(false);
+        setFbActive(true);
+        setIgActive(false);
+        setTwActive(false);
         break;
       case 'ig':
-        // setYtActive(0);
-        setFbActive(0);
-        setIgActive(1);
-        setTwActive(0);
+        // setYtActive(false);
+        setFbActive(false);
+        setIgActive(true);
+        setTwActive(false);
         break;
       case 'tw':
-        // setYtActive(0);
-        setFbActive(0);
-        setIgActive(0);
-        setTwActive(1);
+        // setYtActive(false);
+        setFbActive(false);
+        setIgActive(false);
+        setTwActive(true);
         break;
       default:
-        // setYtActive(0);
-        setFbActive(0);
-        setIgActive(0);
-        setTwActive(0);
+        // setYtActive(false);
+        setFbActive(false);
+        setIgActive(false);
+        setTwActive(false);
     }
   }
 

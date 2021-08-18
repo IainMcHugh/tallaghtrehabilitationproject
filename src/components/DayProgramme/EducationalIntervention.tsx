@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 import { Section } from 'components/Toolkit/Section/Section';
 import { Spinner } from 'components/Toolkit/Spinner/Spinner';
@@ -15,14 +16,14 @@ const SpinnerContainer = styled.div`
 `;
 
 function EducationalIntervention() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  var ids = ['YNGMqRAAACEAXyer'];
+  const ids: string[] = ['YNGMqRAAACEAXyer'];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

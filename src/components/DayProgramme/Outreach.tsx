@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 import { usePrismic } from 'services/prismic';
 import { Section } from 'components/Toolkit/Section/Section';
@@ -15,14 +16,14 @@ const SpinnerContainer = styled.div`
 `;
 
 function Outreach() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  const ids = ['YNGQ4hAAACMAXzpc'];
+  const ids: string[] = ['YNGQ4hAAACMAXzpc'];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

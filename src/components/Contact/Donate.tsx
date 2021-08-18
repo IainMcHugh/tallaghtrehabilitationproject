@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 // import { DonateBtn } from './Toolkit';
 // import CDonate from "./text/CDonate";
@@ -17,14 +18,14 @@ const SpinnerContainer = styled.div`
 `;
 
 function Donate() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
   const ids = ['YNGVwxAAACQAX1AN'];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 import { usePrismic } from 'services/prismic';
 import { DPRPList, GroupTherapy } from 'components/DayProgramme/Toolkit';
@@ -16,10 +17,10 @@ const SpinnerContainer = styled.div`
 `;
 
 function TherapeuticIntervention() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  var ids = [
+  const ids: string[] = [
     'YNGLshAAACEAXyNQ',
     'YNGMEBAAACEAXyT0',
     'YNGMQBAAACMAXyXX',
@@ -28,7 +29,7 @@ function TherapeuticIntervention() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

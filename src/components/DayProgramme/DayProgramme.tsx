@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import './DayProgramme.css';
 import styled from 'styled-components';
 import { RichText } from 'prismic-reactjs';
+import type { Document } from '@prismicio/client/types/documents';
 
 import { Navigation, WhatNext, List } from 'components/DayProgramme/Toolkit';
 import { usePrismic } from 'services/prismic';
@@ -16,14 +17,14 @@ const SpinnerContainer = styled.div`
 `;
 
 function DayProgramme() {
-  const [doc, setDoc] = useState(null);
+  const [doc, setDoc] = useState<Document[] | null>(null);
   const prismic = usePrismic();
 
-  var ids = ['YND9hRAAACMAXK_o', 'YNGLUxAAACMAXyGq'];
+  const ids: string[] = ['YND9hRAAACMAXK_o', 'YNGLUxAAACMAXyGq'];
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await prismic.getByIDs(ids);
+      const response = await prismic.getByIDs(ids, {});
       response && setDoc(response.results);
     };
 

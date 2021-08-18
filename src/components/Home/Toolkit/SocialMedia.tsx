@@ -12,15 +12,17 @@ function SocialMedia() {
       : (document.body.style.overflow = 'initial');
   });
 
-  function handleClick(value: boolean) {
-    setVideoOverlay(value);
-  }
+  // function handleClick(value: boolean) {
+  //   setVideoOverlay(value);
+  // }
 
   return (
     <div>
       <Parallax bgImage={require('images/kiltalown_old.jpg')} strength={200}>
         <div style={{ height: 700 }}>
-          <SMSelector handleClick={handleClick} />
+          <SMSelector
+          //  handleClick={handleClick}
+          />
         </div>
       </Parallax>
       {videoOverlay ? (
