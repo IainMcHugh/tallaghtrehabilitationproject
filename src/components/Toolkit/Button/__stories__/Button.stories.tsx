@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Story, Meta } from '@storybook/react/types-6-0';
-import { Smile, Phone } from 'react-feather';
+import { CreditCard, Phone } from 'react-feather';
 
 import { Button } from '../Button';
 import type { IButton } from '../Button';
@@ -14,7 +14,7 @@ export const PrimaryButtonDefault: Story<IButton> = Button.bind({});
 
 PrimaryButtonDefault.args = {
   children: 'Donate',
-  icon: <Smile />,
+  icon: <CreditCard />,
   variant: 'PRIMARY',
 };
 

@@ -18,7 +18,6 @@ const Container = styled.button<{ variant: Variant }>`
   align-items: center;
   width: 100%;
   height: 40px;
-  padding: 1px;
   border: none;
   background-color: ${({ theme, variant }) => {
     switch (variant) {
@@ -31,6 +30,9 @@ const Container = styled.button<{ variant: Variant }>`
   border-radius: ${({ theme }) => theme.borderRadius.drop4};
   box-shadow: ${({ theme }) => theme.shadow.drop};
   cursor: pointer;
+
+  ${({ theme, variant }) =>
+    variant === 'SECONDARY' && `border: 1px solid ${theme.colors.YELLOW};`}
 `;
 
 const IconContainer = styled.span<{ variant: Variant }>`
@@ -39,7 +41,7 @@ const IconContainer = styled.span<{ variant: Variant }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.WHITE};
+  background-color: ${({ theme }) => `${theme.colors.WHITE}66`};
   border-radius: ${({ theme }) => theme.borderRadius.drop4};
 
   & > svg {
@@ -68,7 +70,6 @@ const TextContainer = styled.p<{ variant: Variant }>`
         return theme.colors.YELLOW;
     }
   }};
-  /* font-weight: ${({ theme }) => theme.fontWeight.bold}; */
 `;
 
 function Button({ children, icon, variant = 'PRIMARY', ...args }: IButton) {

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
-import { Phone, Smile } from 'react-feather';
+import { Phone, CreditCard } from 'react-feather';
 
 import { breakpoints } from 'styles/breakpoints';
 import { useDimensions } from 'hooks/useDimensions';
@@ -142,8 +142,8 @@ const DesktopList = styled.ul`
   justify-content: space-around;
   align-items: flex-end;
   width: 100%;
+  max-width: 1000px;
   height: 100%;
-  /* padding: 24px 0; */
   box-sizing: border-box;
   margin: 0 auto;
   list-style: none;
@@ -185,11 +185,42 @@ function NewHeader() {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const listItems = [
-    { displayText: 'About', href: '#' },
-    { displayText: 'Day Programme', href: '#' },
-    { displayText: 'Aftercare', href: '#' },
-    { displayText: 'Room Rental', href: '#' },
-    { displayText: 'Contact', href: '#' },
+    {
+      displayText: 'About',
+      href: '#',
+      subListItems: [
+        { displayText: 'Board Of Management', href: '#' },
+        { displayText: 'Student Placement', href: '#' },
+        { displayText: 'Annual Reports', href: '#' },
+      ],
+    },
+    {
+      displayText: 'Day Programme',
+      href: '#',
+      subListItems: [
+        { displayText: 'Therapeutic Intervention', href: '#' },
+        { displayText: 'Educational Intervention', href: '#' },
+        { displayText: 'Programme Path', href: '#' },
+        { displayText: 'Outreach', href: '#' },
+        { displayText: 'Criteria for Assessment', href: '#' },
+        { displayText: 'Download Referral Form', href: '#' },
+      ],
+    },
+    {
+      displayText: 'Aftercare',
+      href: '#',
+      subListItems: [{ displayText: 'Download Referral Form', href: '#' }],
+    },
+    {
+      displayText: 'Room Rental',
+      href: '#',
+      subListItems: [{ displayText: 'Room Rental Booklet', href: '#' }],
+    },
+    {
+      displayText: 'Contact',
+      href: '#',
+      subListItems: [{ displayText: 'Make a Donation', href: '#' }],
+    },
   ];
 
   const sidebar = {
@@ -265,7 +296,7 @@ function NewHeader() {
             </SMobileMenuItem>
           ))}
           <ButtonContainer variants={buttonVariants}>
-            <SButton icon={<Smile />}>Donate</SButton>
+            <SButton icon={<CreditCard />}>Donate</SButton>
             <Button icon={<Phone />} variant="SECONDARY">
               Call Us
             </Button>
@@ -274,16 +305,18 @@ function NewHeader() {
       </MotionNav>
       <DesktopNav>
         <DesktopList>
-          {listItems.map(({ displayText, href }, index) => (
+          {listItems.map(({ displayText, href, subListItems }, index) => (
             <DesktopListItem key={index}>
-              <Link href={href}>{displayText}</Link>
-              <SDesktopMenu items={[]} />
+              <Link href={href} variant="THICK">
+                {displayText}
+              </Link>
+              <SDesktopMenu items={subListItems} />
             </DesktopListItem>
           ))}
         </DesktopList>
       </DesktopNav>
       <DesktopButtonContainer>
-        <Button icon={<Smile />}>Donate</Button>
+        <Button icon={<CreditCard />}>Donate</Button>
         <Button icon={<Phone />} variant="SECONDARY">
           Call Us
         </Button>

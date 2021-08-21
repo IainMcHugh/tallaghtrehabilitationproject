@@ -5,6 +5,7 @@ export const theme: DefaultTheme = {
     BLUE: '#005987',
     BLUE_LIGHT: '#006ca3',
     BLUE_LIGHTER: '#005a87f3',
+    BLUE_DARK: '#02537c',
     YELLOW: '#f4d90c',
     YELLOW_LIGHT: '#ffe100',
     YELLOW_LIGHTER: '#ddAF00',
