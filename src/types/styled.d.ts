@@ -54,6 +54,8 @@ declare module 'styled-components' {
       all8: string;
       bottom4: string;
       bottom8: string;
+      top4: string;
+      top8: string;
       drop4: string;
       drop8: string;
     };
