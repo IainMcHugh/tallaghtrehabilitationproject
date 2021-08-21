@@ -43,6 +43,7 @@ declare module 'styled-components' {
       F1016: string;
       F1216: string;
       F1616: string;
+      F1818: string;
       F1624: string;
       F1824: string;
       F2424: string;

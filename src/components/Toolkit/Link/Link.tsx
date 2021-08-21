@@ -2,26 +2,26 @@ import React from 'react';
 import type { ReactNode, AnchorHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-interface ILink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ILink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
+  className?: string;
 }
 
 const Container = styled.a`
   ${({ theme }) => theme.fontSize.F1824}
-  width: 100%;
-  height: 40px;
-  padding: ${({ theme }) => theme.spacing.S8};
+  font-weight: ${({ theme }) => theme.fontWeight.light};
   border: none;
-  background-color: ${({ theme }) => theme.colors.YELLOW};
-  color: ${({ theme }) => theme.colors.BLUE};
-  border-radius: ${({ theme }) => theme.borderRadius.drop4};
-  box-shadow: ${({ theme }) => theme.shadow.drop};
+  color: ${({ theme }) => theme.colors.YELLOW};
   cursor: pointer;
   text-decoration: none;
 `;
 
-function Link({ children, ...args }: ILink) {
-  return <Container {...args}>{children}</Container>;
+function Link({ children, className, ...args }: ILink) {
+  return (
+    <Container className={className} {...args}>
+      {children}
+    </Container>
+  );
 }
 
 export { Link };

@@ -68,7 +68,7 @@ const TextContainer = styled.p<{ variant: Variant }>`
         return theme.colors.YELLOW;
     }
   }};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  /* font-weight: ${({ theme }) => theme.fontWeight.bold}; */
 `;
 
 function Button({ children, icon, variant = 'PRIMARY', ...args }: IButton) {
