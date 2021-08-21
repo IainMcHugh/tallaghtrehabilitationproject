@@ -15,7 +15,7 @@ const Container = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   text-transform: uppercase;
   border-radius: ${({ theme }) =>
-    `0 ${theme.borderRadius.default} ${theme.borderRadius.default} 0`};
+    `0 ${theme.borderRadius.all4} ${theme.borderRadius.all4} 0`};
 `;
 
 function SectionHeading({ children }: ISectionHeading) {

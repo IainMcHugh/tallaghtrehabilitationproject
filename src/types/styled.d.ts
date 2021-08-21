@@ -48,10 +48,16 @@ declare module 'styled-components' {
       F2424: string;
     };
     borderRadius: {
-      default: string;
+      all4: string;
+      all8: string;
+      bottom4: string;
+      bottom8: string;
+      drop4: string;
+      drop8: string;
     };
     fontWeight: {
-      regular: 400;
+      light: 300;
+      medium: 400;
       bold: 700;
     };
     shadow: {

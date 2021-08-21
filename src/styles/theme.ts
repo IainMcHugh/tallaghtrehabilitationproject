@@ -3,8 +3,8 @@ import { DefaultTheme } from 'styled-components';
 export const theme: DefaultTheme = {
   colors: {
     BLUE: '#005987',
-    BLUE_LIGHT: '##0090d8',
-    BLUE_LIGHTER: '##005a87f3',
+    BLUE_LIGHT: '#006ca3',
+    BLUE_LIGHTER: '#005a87f3',
     YELLOW: '#f4d90c',
     YELLOW_LIGHT: '#ffe100',
     YELLOW_LIGHTER: '#ddAF00',
@@ -15,7 +15,7 @@ export const theme: DefaultTheme = {
     GREY_DARKER: '#222222',
     WHITE: '#ffffff',
     BLACK: '#000000',
-    OFFWHITE: '#f2f2f2',
+    OFFWHITE: '#f0f0f0',
   },
   fontSize: {
     F1016: 'font-size: 10px; line-height: 16px;',
@@ -44,10 +44,16 @@ export const theme: DefaultTheme = {
     S80: '80px',
   },
   borderRadius: {
-    default: '4px',
+    all4: '4px',
+    all8: '8px',
+    bottom4: '0 0 4px 4px',
+    bottom8: '0 0 8px 8px',
+    drop4: '0 4px 4px 4px',
+    drop8: '0 8px 8px 8px',
   },
   fontWeight: {
-    regular: 400,
+    light: 300,
+    medium: 400,
     bold: 700,
   },
   shadow: {

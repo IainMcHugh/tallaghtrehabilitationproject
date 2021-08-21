@@ -14,7 +14,7 @@ const Container = styled.a`
   border: none;
   background-color: ${({ theme }) => theme.colors.YELLOW};
   color: ${({ theme }) => theme.colors.BLUE};
-  border-radius: ${({ theme }) => theme.borderRadius.default};
+  border-radius: ${({ theme }) => theme.borderRadius.drop4};
   box-shadow: ${({ theme }) => theme.shadow.drop};
   cursor: pointer;
   text-decoration: none;
