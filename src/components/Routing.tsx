@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Header from 'components/Toolkit/Header/Header';
-import ScrollToTop from 'components/ScrollToTop';
+// import Header from 'components/Toolkit/Header/Header';
+// import ScrollToTop from 'components/ScrollToTop';
 import Home from 'components/Home/Home';
 import About from 'components/About/About';
 import BoardOfManagement from 'components/About/boardOfManagement';
@@ -17,15 +17,17 @@ import AfterCare from 'components/Aftercare/AfterCare';
 import RoomRental from 'components/RoomRental/RoomRental';
 import Contact from 'components/Contact/Contact';
 import Donate from 'components/Contact/Donate';
-import Footer from 'components/Toolkit/Footer/Footer';
+// import Footer from 'components/Toolkit/Footer/Footer';
 import PrivacyPolicy from 'components/utils/PrivacyPolicy';
+
+import { HomePage } from 'pages/HomePage/HomePage';
 
 function Routing() {
   return (
     <div>
       <Router>
-        <ScrollToTop />
-        <Header />
+        {/* <ScrollToTop />
+        <Header /> */}
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route
@@ -61,7 +63,8 @@ function Routing() {
         <Route path="/contact" exact component={Contact} />
         <Route path="/contact/donate" exact component={Donate} />
         <Route path="/contact/privacy-policy" exact component={PrivacyPolicy} />
-        <Footer />
+        <Route path="/test" exact component={HomePage} />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

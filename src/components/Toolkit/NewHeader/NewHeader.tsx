@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
@@ -264,6 +264,14 @@ function NewHeader() {
       transition: { stiffness: 10 },
     },
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'scroll';
+    }
+  }, [isOpen]);
 
   return (
     <Container>

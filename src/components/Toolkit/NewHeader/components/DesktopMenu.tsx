@@ -13,7 +13,7 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.BLUE_LIGHT};
   border-radius: ${({ theme }) => theme.borderRadius.drop8};
   padding: ${({ theme }) => `${theme.spacing.S16} 0`};
-  width: 214px;
+  width: 244px;
 `;
 
 const ListItem = styled.div`
