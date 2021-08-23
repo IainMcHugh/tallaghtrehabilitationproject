@@ -5,8 +5,14 @@ type TCarouselData = { title: string; body: string };
 export interface ICarousel {
   items: TCarouselData[];
   width: number;
+  speed: number;
   className?: string;
 }
+
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Wrapper = styled.div<{ width: number }>`
   width: ${({ width }) => `${width}px`};
@@ -17,9 +23,14 @@ const Wrapper = styled.div<{ width: number }>`
   }
 `;
 
-const Container = styled.div<{ count: number; carouselGap: number }>`
+const Container = styled.div<{
+  count: number;
+  carouselGap: number;
+  width: number;
+}>`
   display: grid;
-  grid-template-columns: ${({ count }) => `repeat(${count}, 100%)`};
+  grid-template-columns: ${({ count, width }) =>
+    `repeat(${count}, ${width}px)`};
   column-gap: ${({ carouselGap }) => `${carouselGap}px`};
 `;
 
@@ -48,7 +59,6 @@ const BodyContainer = styled.div`
 `;
 
 const ButtonContainer = styled.div<{ width: number }>`
-  position: fixed;
   width: ${({ width }) => `${width}px`};
 `;
 
@@ -69,7 +79,7 @@ const Circle = styled.div<{ active: boolean }>`
   cursor: pointer;
 `;
 
-function Carousel({ items, width, className }: ICarousel) {
+function Carousel({ items, width, speed, className }: ICarousel) {
   const count = items.length;
   const carouselGap = 8;
   const scrollPositions: number[] = [];
@@ -84,7 +94,7 @@ function Carousel({ items, width, className }: ICarousel) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((active) => (active === count - 1 ? 0 : active + 1));
-    }, 2000);
+    }, speed);
 
     return () => clearInterval(interval);
   }, []);
@@ -101,15 +111,17 @@ function Carousel({ items, width, className }: ICarousel) {
   }
 
   return (
-    <Wrapper className={className} width={width} ref={carouselRef}>
-      <Container className={className} count={count} carouselGap={carouselGap}>
-        {items.map(({ title, body }, index) => (
-          <CarouselItem key={index}>
-            <HeadingContainer>{title}</HeadingContainer>
-            <BodyContainer>{body}</BodyContainer>
-          </CarouselItem>
-        ))}
-      </Container>
+    <Box className={className}>
+      <Wrapper width={width} ref={carouselRef}>
+        <Container width={width} count={count} carouselGap={carouselGap}>
+          {items.map(({ title, body }, index) => (
+            <CarouselItem key={index}>
+              <HeadingContainer>{title}</HeadingContainer>
+              <BodyContainer>{body}</BodyContainer>
+            </CarouselItem>
+          ))}
+        </Container>
+      </Wrapper>
       <ButtonContainer width={width}>
         <ButtonWrapper>
           {items.map((_item, index) => (
@@ -121,7 +133,7 @@ function Carousel({ items, width, className }: ICarousel) {
           ))}
         </ButtonWrapper>
       </ButtonContainer>
-    </Wrapper>
+    </Box>
   );
 }
 
