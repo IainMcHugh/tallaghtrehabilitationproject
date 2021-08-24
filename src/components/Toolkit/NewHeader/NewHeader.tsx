@@ -155,6 +155,7 @@ const DesktopListItem = styled.li`
   display: flex;
   align-items: flex-end;
   padding-bottom: 16px;
+  z-index: 9999;
   & > div {
     display: none;
   }

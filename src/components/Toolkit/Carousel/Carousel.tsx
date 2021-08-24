@@ -75,7 +75,7 @@ const Circle = styled.div<{ active: boolean }>`
   width: 12px;
   border-radius: 50%;
   background-color: ${({ theme, active }) =>
-    active ? theme.colors.YELLOW : `${theme.colors.YELLOW}BF`};
+    active ? theme.colors.YELLOW : `${theme.colors.YELLOW_LIGHTER}BF`};
   cursor: pointer;
 `;
 

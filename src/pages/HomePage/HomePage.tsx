@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Carousel } from 'components/Toolkit/Carousel/Carousel';
+import { Card } from 'components/Toolkit/Card/Card';
 
 const HomepageWrapper = styled.div`
   display: flex;
@@ -39,7 +40,30 @@ const HeroContainer = styled.div`
   left: 0;
   right: 0;
   height: 300px;
-  z-index: 9999;
+  z-index: 9900;
+`;
+
+const ServicesSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: ${({ theme }) => `0 ${theme.spacing.S8}`};
+`;
+
+const ServicesHeader = styled.h2`
+  ${({ theme }) => theme.fontSize.F1824}
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  color: ${({ theme }) => theme.colors.GREY_DARK};
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+`;
+
+const SCard = styled(Card)`
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Skeleton = styled.div`
@@ -57,6 +81,27 @@ function HomePage() {
               <Carousel width={292} items={data} speed={8000} />
             </HeroContainer>
           </HeroSection>
+          <ServicesSection>
+            <ServicesHeader>Services we offer</ServicesHeader>
+            <SCard
+              imageUrl={require('images/dp_home.jpg')}
+              imageAlt="test"
+              heading="Day Programme"
+              subheading="Click here to find out about our Day Programme"
+            />
+            <SCard
+              imageUrl={require('images/dp_home.jpg')}
+              imageAlt="test"
+              heading="Aftercare"
+              subheading="Find out more about our Aftercare services"
+            />
+            <SCard
+              imageUrl={require('images/dp_home.jpg')}
+              imageAlt="test"
+              heading="Room Rental"
+              subheading="Learn more about our room rentals and meetings"
+            />
+          </ServicesSection>
           <Skeleton />
         </HomepageWrapper>
       </DefaultLayout>
