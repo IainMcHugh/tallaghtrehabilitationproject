@@ -43,11 +43,16 @@ declare module 'styled-components' {
     fontSize: {
       F1016: string;
       F1216: string;
+      F1416: string;
       F1616: string;
+      F1418: string;
+      F1618: string;
       F1818: string;
       F1624: string;
       F1824: string;
       F2424: string;
+      F2428: string;
+      F2828: string;
     };
     borderRadius: {
       all4: string;

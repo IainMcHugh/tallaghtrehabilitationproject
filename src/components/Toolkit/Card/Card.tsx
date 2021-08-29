@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoints } from 'styles/breakpoints';
 
 export interface ICard {
   imageUrl: string;
@@ -20,10 +21,15 @@ const Container = styled.div`
 const Image = styled.img`
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: ${({ theme }) => theme.borderRadius.all8};
   box-shadow: ${({ theme }) => theme.shadow.drop};
   margin-bottom: ${({ theme }) => theme.spacing.S12};
+
+  ${breakpoints.large} {
+    height: 80%;
+    width: auto;
+  }
 `;
 
 const Data = styled.div`

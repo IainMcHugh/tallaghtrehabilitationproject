@@ -74,6 +74,7 @@ const MotionNav = styled(motion.nav)`
   right: 16px;
   bottom: 0;
   width: 100vw;
+  z-index: 9999;
 
   ${breakpoints.large} {
     display: none;

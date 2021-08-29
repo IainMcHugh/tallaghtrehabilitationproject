@@ -21,11 +21,16 @@ export const theme: DefaultTheme = {
   fontSize: {
     F1016: 'font-size: 10px; line-height: 16px;',
     F1216: 'font-size: 12px; line-height: 16px;',
+    F1416: 'font-size: 14px; line-height: 16px;',
     F1616: 'font-size: 16px; line-height: 16px;',
+    F1418: 'font-size: 14px; line-height: 18px;',
+    F1618: 'font-size: 16px; line-height: 18px;',
     F1818: 'font-size: 18px; line-height: 18px',
     F1624: 'font-size: 16px; line-height: 24px;',
     F1824: 'font-size: 18px; line-height: 24px;',
     F2424: 'font-size: 24px; line-height: 24px;',
+    F2428: 'font-size: 24px; line-height: 28px;',
+    F2828: 'font-size: 28px; line-height: 28px;',
   },
   spacing: {
     S2: '2px',

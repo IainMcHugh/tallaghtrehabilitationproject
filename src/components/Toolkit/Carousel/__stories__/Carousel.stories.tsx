@@ -25,5 +25,5 @@ CarouselDefault.args = {
       body: 'The Tallaght Rehabilitation Project Organisation is committed to providing quality services for people who are in recovery from drug and alcohol addiction. Our organisation and programmes strive to provide quality based services which are evidence based and promote good corporate governance in order to be a leader in local community based therapeutic rehabilitation.',
     },
   ],
-  width: 320,
+  width: [320, 320, 320],
 };

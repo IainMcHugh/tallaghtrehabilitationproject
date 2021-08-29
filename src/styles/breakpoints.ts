@@ -3,4 +3,6 @@ const breakpoints = {
   large: '@media only screen and (min-width: 1000px)',
 };
 
-export { breakpoints };
+const breakpointValues = { medium: 768, large: 1000 };
+
+export { breakpoints, breakpointValues };

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Facebook, Instagram, Twitter } from 'react-feather';
 
+import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Carousel } from 'components/Toolkit/Carousel/Carousel';
 import { Card } from 'components/Toolkit/Card/Card';
@@ -14,11 +16,11 @@ const HomepageWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const HeroSection = styled.div`
+const HeroSection = styled.section`
   position: relative;
   width: 100%;
   height: 80vh;
-  overflow-y: hidden;
+  overflow: hidden;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -39,7 +41,7 @@ const HeroContainer = styled.div`
   top: ${({ theme }) => theme.spacing.S48};
   left: 0;
   right: 0;
-  height: 300px;
+  height: 400px;
   z-index: 9900;
 `;
 
@@ -49,6 +51,9 @@ const ServicesSection = styled.section`
   justify-content: center;
   align-items: center;
   padding: ${({ theme }) => `0 ${theme.spacing.S8}`};
+  margin-bottom: ${({ theme }) => theme.spacing.S48};
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const ServicesHeader = styled.h2`
@@ -56,18 +61,108 @@ const ServicesHeader = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.colors.GREY_DARK};
   margin-bottom: ${({ theme }) => theme.spacing.S24};
+
+  ${breakpoints.large} {
+    ${({ theme }) => theme.fontSize.F2424};
+  }
+`;
+
+const ServicesCardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ${breakpoints.large} {
+    flex-direction: row;
+    height: 250px;
+    width: 100%;
+  }
 `;
 
 const SCard = styled(Card)`
+  width: 100%;
   margin-bottom: ${({ theme }) => theme.spacing.S24};
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  ${breakpoints.large} {
+    width: 30%;
+    height: 100%;
+    margin-bottom: 0;
+    margin-right: ${({ theme }) => theme.spacing.S20};
+    flex: 1 1 0px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
 
-const Skeleton = styled.div`
-  height: 100vh;
+const SocialMediaSection = styled.section`
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  margin: ${({ theme }) => `0 auto ${theme.spacing.S24}`};
+
+  ${breakpoints.large} {
+    margin-bottom: ${({ theme }) => theme.spacing.S48};
+    border-radius: ${({ theme }) => theme.borderRadius.all8};
+  }
+`;
+
+const SocialMediaImage = styled.img`
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: ${({ theme }) => theme.shadow.drop};
+  border-radius: ${({ theme }) => theme.borderRadius.all8};
+`;
+
+const SocialMediaData = styled.div`
+  position: absolute;
+  top: ${({ theme }) => theme.spacing.S24};
+  bottom: ${({ theme }) => theme.spacing.S24};
+  left: ${({ theme }) => theme.spacing.S8};
+  right: ${({ theme }) => theme.spacing.S8};
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  ${breakpoints.large} {
+    top: ${({ theme }) => theme.spacing.S48};
+    bottom: ${({ theme }) => theme.spacing.S48};
+    left: ${({ theme }) => theme.spacing.S80};
+    right: ${({ theme }) => theme.spacing.S80};
+  }
+`;
+
+const SocialMediaHeading = styled.h2`
+  ${({ theme }) => theme.fontSize.F1824};
+  color: ${({ theme }) => theme.colors.GREY_DARK};
+  font-weight: ${({ theme }) => theme.fontWeight.light};
+  margin-bottom: ${({ theme }) => theme.spacing.S16};
+
+  ${breakpoints.large} {
+    ${({ theme }) => theme.fontSize.F2424};
+  }
+`;
+
+const SocialMediaIcons = styled.div`
+  display: grid;
+  grid-template-columns: ${({ theme }) => `repeat(3, ${theme.spacing.S48})`};
+  column-gap: ${({ theme }) => theme.spacing.S8};
+`;
+
+const SocialMediaIcon = styled.button`
+  border: none;
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.GREY_DARK};
 `;
 
 function HomePage() {
@@ -78,31 +173,54 @@ function HomePage() {
           <HeroSection>
             <HeroImage src={require('images/TRPFrontEdit.png')} alt="hero" />
             <HeroContainer>
-              <Carousel width={292} items={data} speed={8000} />
+              <Carousel width={[304, 304, 500]} items={data} speed={8000} />
             </HeroContainer>
           </HeroSection>
           <ServicesSection>
             <ServicesHeader>Services we offer</ServicesHeader>
-            <SCard
-              imageUrl={require('images/dp_home.jpg')}
-              imageAlt="test"
-              heading="Day Programme"
-              subheading="Click here to find out about our Day Programme"
-            />
-            <SCard
-              imageUrl={require('images/dp_home.jpg')}
-              imageAlt="test"
-              heading="Aftercare"
-              subheading="Find out more about our Aftercare services"
-            />
-            <SCard
-              imageUrl={require('images/dp_home.jpg')}
-              imageAlt="test"
-              heading="Room Rental"
-              subheading="Learn more about our room rentals and meetings"
-            />
+            <ServicesCardContainer>
+              <SCard
+                imageUrl={require('images/dp_home.jpg')}
+                imageAlt="test"
+                heading="Day Programme"
+                subheading="Click here to find out about our Day Programme"
+              />
+              <SCard
+                imageUrl={require('images/a_home.jpg')}
+                imageAlt="test"
+                heading="Aftercare"
+                subheading="Find out more about our Aftercare services"
+              />
+              <SCard
+                imageUrl={require('images/stock_roomrental3.jpg')}
+                imageAlt="test"
+                heading="Room Rental"
+                subheading="Learn more about our room rentals and meetings"
+              />
+            </ServicesCardContainer>
           </ServicesSection>
-          <Skeleton />
+          <SocialMediaSection>
+            <SocialMediaImage
+              src={require('images/kiltalown_old.jpg')}
+              alt="Kiltalown old"
+            />
+            <SocialMediaData>
+              <SocialMediaHeading>
+                Follow us on Social Media!
+              </SocialMediaHeading>
+              <SocialMediaIcons>
+                <SocialMediaIcon>
+                  <Facebook size={32} />
+                </SocialMediaIcon>
+                <SocialMediaIcon>
+                  <Instagram size={32} />
+                </SocialMediaIcon>
+                <SocialMediaIcon>
+                  <Twitter size={32} />
+                </SocialMediaIcon>
+              </SocialMediaIcons>
+            </SocialMediaData>
+          </SocialMediaSection>
         </HomepageWrapper>
       </DefaultLayout>
     </>
