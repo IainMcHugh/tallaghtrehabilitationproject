@@ -1,5 +1,4 @@
 import React from 'react';
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 interface ISMYoutube {
   active: boolean;
@@ -8,12 +7,19 @@ interface ISMYoutube {
 function SMTwitter({ active }: ISMYoutube) {
   return (
     <div className={active ? 'SM-embed-active' : 'SM-embed-container'}>
-      <TwitterTimelineEmbed
-        sourceType="profile"
-        screenName="trpdublin"
-        theme="dark"
-        options={{ height: 500 }}
-      />
+      <a
+        className="twitter-timeline"
+        data-height="500"
+        data-theme="dark"
+        href="https://twitter.com/TRPDublin?ref_src=twsrc%5Etfw"
+      >
+        Tweets by TRPDublin
+      </a>{' '}
+      {/* <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charSet="utf-8"
+      ></script> */}
     </div>
   );
 }
