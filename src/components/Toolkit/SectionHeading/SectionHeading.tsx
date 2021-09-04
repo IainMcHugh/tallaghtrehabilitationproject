@@ -2,24 +2,24 @@ import React from 'react';
 import type { ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface ISectionHeading {
+export interface ISectionHeading {
   children: ReactNode;
+  className?: string;
 }
 
 const Container = styled.h3`
-  ${({ theme }) => theme.fontSize.F1824}
-  padding: ${({ theme }) => `${theme.spacing.S4} ${theme.spacing.S24}`};
-  border-left: ${({ theme }) => `12px solid ${theme.colors.BLUE}`};
+  ${({ theme }) => theme.fontSize.F2424}
+  padding: ${({ theme }) => theme.spacing.S12};
   background-color: ${({ theme }) => theme.colors.YELLOW};
-  color: ${({ theme }) => theme.colors.BLUE};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  text-transform: uppercase;
-  border-radius: ${({ theme }) =>
-    `0 ${theme.borderRadius.all4} ${theme.borderRadius.all4} 0`};
+  color: ${({ theme }) => theme.colors.GREY_DARK};
+  text-align: center;
+  font-weight: ${({ theme }) => theme.fontWeight.medium};
+  border-radius: ${({ theme }) => theme.borderRadius.all8};
+  box-shadow: ${({ theme }) => theme.shadow.drop};
 `;
 
-function SectionHeading({ children }: ISectionHeading) {
-  return <Container>{children}</Container>;
+function SectionHeading({ children, className }: ISectionHeading) {
+  return <Container className={className}>{children}</Container>;
 }
 
 export { SectionHeading };

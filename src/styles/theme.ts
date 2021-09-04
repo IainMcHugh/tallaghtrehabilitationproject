@@ -4,7 +4,7 @@ export const theme: DefaultTheme = {
   colors: {
     BLUE: '#005987',
     BLUE_LIGHT: '#006ca3',
-    BLUE_LIGHTER: '#005a87f3',
+    BLUE_LIGHTER: '#DBE2E6',
     BLUE_DARK: '#02537c',
     YELLOW: '#f4d90c',
     YELLOW_LIGHT: '#ffe100',
