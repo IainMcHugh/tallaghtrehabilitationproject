@@ -3,6 +3,7 @@ import styled, { useTheme } from 'styled-components';
 import { ChevronRight } from 'react-feather';
 
 import { Link } from 'components/Toolkit/Link/Link';
+import { breakpoints } from 'styles/breakpoints';
 
 type TCrumbs = {
   display: string;
@@ -16,11 +17,14 @@ export interface IBreadcrumbs {
 
 const Wrapper = styled.div`
   display: flex;
-  /* height: 40px; */
   padding: ${({ theme }) => theme.spacing.S12};
   border-radius: ${({ theme }) => theme.borderRadius.all8};
   background-color: ${({ theme }) => theme.colors.BLUE_LIGHTER};
   box-shadow: ${({ theme }) => theme.shadow.drop};
+
+  ${breakpoints.large} {
+    width: fit-content;
+  }
 `;
 
 const Crumb = styled.div`
@@ -30,6 +34,7 @@ const Crumb = styled.div`
 
 const SLink = styled(Link)`
   margin-right: ${({ theme }) => theme.spacing.S8};
+  font-weight: bold;
 
   &:last-child {
     margin-right: 0;

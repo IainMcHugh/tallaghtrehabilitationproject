@@ -17,6 +17,15 @@ const shimmer = keyframes`
     }
 `;
 
+const Hat = styled.div`
+  height: 40px;
+  width: 50%;
+  background-color: ${({ theme }) => theme.colors.GREY_LIGHT};
+  border-radius: ${({ theme }) => theme.borderRadius.all8};
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+  animation: ${shimmer} 3s ease infinite;
+`;
+
 const Skull = styled.div`
   height: 48px;
   background-color: ${({ theme }) => theme.colors.GREY_LIGHT};
@@ -43,7 +52,7 @@ const Ribs = styled.div`
 function Skeleton() {
   return (
     <Wrapper>
-      <Skull />
+      <Hat />
       <Skull />
       <RibCage>
         {[...Array(10)].map((e) => (
