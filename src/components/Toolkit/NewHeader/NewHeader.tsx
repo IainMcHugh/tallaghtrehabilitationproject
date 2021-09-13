@@ -67,14 +67,15 @@ const Bold = styled.span`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;
 
-const MotionNav = styled(motion.nav)`
+const MotionNav = styled(motion.nav)<{ isOpen: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
   right: 16px;
-  bottom: 0;
   width: 100vw;
   z-index: 9999;
+  ${({ isOpen }) => (isOpen ? 'bottom: 0;' : 'height: 72px;')}
+  /* bottom: 0; */
 
   ${breakpoints.large} {
     display: none;
@@ -101,7 +102,7 @@ const SMenuToggle = styled(MenuToggle)`
   cursor: pointer;
 `;
 
-const MobileMenuContainer = styled(motion.ul)`
+const MobileMenuContainer = styled(motion.ul)<{ isOpen: boolean }>`
   position: absolute;
   left: 32px;
   right: 32px;
@@ -111,6 +112,7 @@ const MobileMenuContainer = styled(motion.ul)`
   flex-direction: column;
   z-index: 9999;
   list-style: none;
+  ${({ isOpen }) => !isOpen && 'display: none;'};
 `;
 
 const SMobileMenuItem = styled(MobileMenuItem)`
@@ -296,10 +298,11 @@ function NewHeader() {
         animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
+        isOpen={isOpen}
       >
         <MotionDiv variants={sidebar} />
         <SMenuToggle toggle={() => toggleOpen()} />
-        <MobileMenuContainer variants={variants}>
+        <MobileMenuContainer variants={variants} isOpen={isOpen}>
           {listItems.map(({ displayText, href }, index) => (
             <SMobileMenuItem key={index}>
               <Link href={href}>{displayText}</Link>

@@ -9,7 +9,7 @@ import BoardOfManagement from 'components/About/boardOfManagement';
 import StudentPlacement from 'components/About/StudentPlacement';
 import AnnualReports from 'components/About/AnnualReports';
 // import DayProgramme from 'components/DayProgramme/DayProgramme';
-import TherapeuticIntervention from 'components/DayProgramme/TherapeuticIntervention';
+// import TherapeuticIntervention from 'components/DayProgramme/TherapeuticIntervention';
 import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
 import ProgrammePath from 'components/DayProgramme/ProgrammePath';
 import Outreach from 'components/DayProgramme/Outreach';
@@ -22,6 +22,7 @@ import PrivacyPolicy from 'components/utils/PrivacyPolicy';
 
 import { HomePage } from 'pages/HomePage/HomePage';
 import { DayProgramme } from 'pages/DayProgramme/DayProgramme';
+import { TherapeuticIntervention } from 'pages/TherapeuticIntervention/TherapeuticIntervention';
 
 function Routing() {
   return (

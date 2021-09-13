@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius.all8};
   background-color: ${({ theme }) => theme.colors.BLUE_LIGHTER};
   box-shadow: ${({ theme }) => theme.shadow.drop};
+  overflow-x: scroll;
 
   ${breakpoints.large} {
     width: fit-content;
@@ -33,6 +34,7 @@ const Crumb = styled.div`
 `;
 
 const SLink = styled(Link)`
+  white-space: nowrap;
   margin-right: ${({ theme }) => theme.spacing.S8};
   font-weight: bold;
 

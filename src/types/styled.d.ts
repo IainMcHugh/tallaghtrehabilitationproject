@@ -13,6 +13,8 @@ declare module 'styled-components' {
       YELLOW: string;
       YELLOW_LIGHT: string;
       YELLOW_LIGHTER: string;
+      YELLOW_DARK: string;
+      YELLOW_DARKER: string;
       GREY: string;
       GREY_LIGHT: string;
       GREY_LIGHTER: string;

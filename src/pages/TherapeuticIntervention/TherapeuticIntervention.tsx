@@ -13,7 +13,7 @@ import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
 import { NavigatorBlock } from 'components/Toolkit/NavigatorBlock/NavigatorBlock';
 import { Button } from 'components/Toolkit/Button/Button';
 
-const DayProgrammeWrapper = styled.div`
+const TherapeuticInterventionWrapper = styled.div`
   padding: ${({ theme }) =>
     `${theme.spacing.S8} ${theme.spacing.S8} ${theme.spacing.S48}`};
 
@@ -56,46 +56,30 @@ const SSimpleList = styled(SimpleList)`
   }
 `;
 
-const SNavigatorBlock = styled(NavigatorBlock)`
-  margin: ${({ theme }) => `${theme.spacing.S32} ${theme.spacing.S16}`};
-
-  ${breakpoints.large} {
-    margin-bottom: ${({ theme }) => theme.spacing.S48};
-  }
+const Calendar = styled.div`
+  border: 1px solid red;
+  box-shadow: ${({ theme }) => theme.shadow.drop};
+  border-radius: ${({ theme }) => theme.borderRadius.all4};
 `;
 
-const ButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: ${({ theme }) => theme.spacing.S16};
-
-  ${breakpoints.large} {
-    flex-direction: row;
-    padding: ${({ theme }) => `${theme.spacing.S16} ${theme.spacing.S48}`};
-  }
-`;
-
-const SButton = styled(Button)`
-  margin-bottom: ${({ theme }) => theme.spacing.S16};
-
-  ${breakpoints.large} {
-    margin-bottom: 0;
-    margin-right: ${({ theme }) => theme.spacing.S16};
-  }
-`;
-
-function DayProgramme() {
+function TherapeuticIntervention() {
   const crumbs = [
     { display: 'Home', href: '/test' },
     { display: 'Day Programme', href: '/dayprogramme' },
+    {
+      display: 'Therapeutic Intervention',
+      href: '/dayprogramme/therapeutic_intervention',
+    },
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
 
   const ids: string[] = [
-    'YND9hRAAACMAXK_o',
-    'YNGLUxAAACMAXyGq',
-    'YTjyghAAACQAaaF_',
+    'YNGLshAAACEAXyNQ',
+    'YNGMEBAAACEAXyT0',
+    'YNGMQBAAACMAXyXX',
+    'YT_AwBAAACQA5MbM',
+    'YNGMeBAAACQAXybO',
   ];
 
   useEffect(() => {
@@ -110,7 +94,7 @@ function DayProgramme() {
 
   return (
     <DefaultLayout>
-      <DayProgrammeWrapper>
+      <TherapeuticInterventionWrapper>
         {document ? (
           <>
             <SBreadcrumbs crumbs={crumbs} />
@@ -125,30 +109,14 @@ function DayProgramme() {
                 {data.list && <SSimpleList items={data.list} />}
               </Fragment>
             ))}
-            <SSectionHeading>Services Available</SSectionHeading>
-            <SNavigatorBlock
-              links={[
-                { href: '#', displayValue: 'Therapeutic Intervention' },
-                { href: '#', displayValue: 'Educational Intervention' },
-                { href: '#', displayValue: 'Programme Path' },
-                { href: '#', displayValue: 'Outreach' },
-                { href: '#', displayValue: 'Information Pack' },
-              ]}
-            />
-            <SSectionHeading>What to do next</SSectionHeading>
-            <ButtonWrapper>
-              <SButton icon={<List />}>Criteria for assessment</SButton>
-              <Button variant="SECONDARY" icon={<Download />}>
-                Download Referral form
-              </Button>
-            </ButtonWrapper>
+            <Calendar></Calendar>
           </>
         ) : (
           <Skeleton />
         )}
-      </DayProgrammeWrapper>
+      </TherapeuticInterventionWrapper>
     </DefaultLayout>
   );
 }
 
-export { DayProgramme };
+export { TherapeuticIntervention };
