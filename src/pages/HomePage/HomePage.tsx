@@ -12,7 +12,7 @@ const HomepageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
 `;
 
@@ -51,7 +51,7 @@ const ServicesSection = styled.section`
   justify-content: center;
   align-items: center;
   padding: ${({ theme }) => `0 ${theme.spacing.S8}`};
-  margin-bottom: ${({ theme }) => theme.spacing.S48};
+  margin-bottom: ${({ theme }) => theme.spacing.S72};
   width: 100%;
   box-sizing: border-box;
 `;
@@ -60,7 +60,7 @@ const ServicesHeader = styled.h2`
   ${({ theme }) => theme.fontSize.F1824}
   font-weight: ${({ theme }) => theme.fontWeight.medium};
   color: ${({ theme }) => theme.colors.GREY_DARK};
-  margin-bottom: ${({ theme }) => theme.spacing.S24};
+  margin-bottom: ${({ theme }) => theme.spacing.S48};
 
   ${breakpoints.large} {
     ${({ theme }) => theme.fontSize.F2424};
@@ -76,7 +76,8 @@ const ServicesCardContainer = styled.div`
   ${breakpoints.large} {
     flex-direction: row;
     height: 250px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
 `;
 
@@ -92,7 +93,7 @@ const SCard = styled(Card)`
     width: 30%;
     height: 100%;
     margin-bottom: 0;
-    margin-right: ${({ theme }) => theme.spacing.S20};
+    margin-right: ${({ theme }) => theme.spacing.S28};
     flex: 1 1 0px;
 
     &:last-child {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { List, Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -9,11 +8,11 @@ import { Skeleton } from 'components/Toolkit/Skeleton/Skeleton';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
+import { SectionSubHeading } from 'components/Toolkit/SectionSubHeading/SectionSubHeading';
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
-import { NavigatorBlock } from 'components/Toolkit/NavigatorBlock/NavigatorBlock';
-import { Button } from 'components/Toolkit/Button/Button';
 
-const DayProgrammeWrapper = styled.div`
+const EducationalInterventionWrapper = styled.div`
+  min-height: 60vh;
   padding: ${({ theme }) =>
     `${theme.spacing.S8} ${theme.spacing.S8} ${theme.spacing.S48}`};
 
@@ -33,6 +32,10 @@ const SBreadcrumbs = styled(Breadcrumbs)`
 `;
 
 const SSectionHeading = styled(SectionHeading)`
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+`;
+
+const SSectionSubHeading = styled(SectionSubHeading)`
   margin-bottom: ${({ theme }) => theme.spacing.S24};
 `;
 
@@ -56,52 +59,23 @@ const SSimpleList = styled(SimpleList)`
   }
 `;
 
-const SNavigatorBlock = styled(NavigatorBlock)`
-  margin: ${({ theme }) => `${theme.spacing.S32} ${theme.spacing.S16}`};
-
-  ${breakpoints.large} {
-    margin-bottom: ${({ theme }) => theme.spacing.S48};
-  }
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: ${({ theme }) => theme.spacing.S16};
-
-  ${breakpoints.large} {
-    flex-direction: row;
-    padding: ${({ theme }) => `${theme.spacing.S16} ${theme.spacing.S48}`};
-  }
-`;
-
-const SButton = styled(Button)`
-  margin-bottom: ${({ theme }) => theme.spacing.S16};
-
-  ${breakpoints.large} {
-    margin-bottom: 0;
-    margin-right: ${({ theme }) => theme.spacing.S16};
-  }
-`;
-
-function DayProgramme() {
+function EducationalIntervention() {
   const crumbs = [
     { display: 'Home', href: '/test' },
     { display: 'Day Programme', href: '/dayprogramme' },
+    {
+      display: 'Educational Intervention',
+      href: '/dayprogramme/educational_intervention',
+    },
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
 
-  const ids: string[] = [
-    'YND9hRAAACMAXK_o',
-    'YNGLUxAAACMAXyGq',
-    'YTjyghAAACQAaaF_',
-  ];
+  const ids: string[] = ['YNGMqRAAACEAXyer'];
 
   useEffect(() => {
     const fetchData = async () => {
       const { results } = await prismic.getByIDs(ids, {});
-      console.log(results);
       setDocument(results);
     };
 
@@ -110,7 +84,7 @@ function DayProgramme() {
 
   return (
     <DefaultLayout>
-      <DayProgrammeWrapper>
+      <EducationalInterventionWrapper>
         {document ? (
           <>
             <SBreadcrumbs crumbs={crumbs} />
@@ -119,36 +93,22 @@ function DayProgramme() {
                 {data.title && (
                   <>
                     <SSectionHeading>{data.title[0].text}</SSectionHeading>
+                    <SSectionSubHeading>
+                      {data.subtitle[0].text}
+                    </SSectionSubHeading>
                     <Paragraph>{data.paragraph[0].text}</Paragraph>
                   </>
                 )}
                 {data.list && <SSimpleList items={data.list} />}
               </Fragment>
             ))}
-            <SSectionHeading>Services Available</SSectionHeading>
-            <SNavigatorBlock
-              links={[
-                { href: '#', displayValue: 'Therapeutic Intervention' },
-                { href: '#', displayValue: 'Educational Intervention' },
-                { href: '#', displayValue: 'Programme Path' },
-                { href: '#', displayValue: 'Outreach' },
-                { href: '#', displayValue: 'Information Pack' },
-              ]}
-            />
-            <SSectionHeading>What to do next</SSectionHeading>
-            <ButtonWrapper>
-              <SButton icon={<List />}>Criteria for assessment</SButton>
-              <Button variant="SECONDARY" icon={<Download />}>
-                Download Referral form
-              </Button>
-            </ButtonWrapper>
           </>
         ) : (
           <Skeleton />
         )}
-      </DayProgrammeWrapper>
+      </EducationalInterventionWrapper>
     </DefaultLayout>
   );
 }
 
-export { DayProgramme };
+export { EducationalIntervention };

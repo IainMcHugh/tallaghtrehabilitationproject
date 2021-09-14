@@ -6,7 +6,7 @@ import { breakpoints } from 'styles/breakpoints';
 import { Link } from 'components/Toolkit/Link/Link';
 
 const Container = styled.footer`
-  background-color: ${({ theme }) => theme.colors.GREY_DARK};
+  background-color: ${({ theme }) => theme.colors.GREY_DARKER};
   color: ${({ theme }) => theme.colors.YELLOW};
   padding: ${({ theme }) => `${theme.spacing.S24} ${theme.spacing.S8}`};
   border-radius: ${({ theme }) => theme.borderRadius.top8};

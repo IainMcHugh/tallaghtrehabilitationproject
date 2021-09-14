@@ -10,9 +10,9 @@ import StudentPlacement from 'components/About/StudentPlacement';
 import AnnualReports from 'components/About/AnnualReports';
 // import DayProgramme from 'components/DayProgramme/DayProgramme';
 // import TherapeuticIntervention from 'components/DayProgramme/TherapeuticIntervention';
-import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
+// import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
 import ProgrammePath from 'components/DayProgramme/ProgrammePath';
-import Outreach from 'components/DayProgramme/Outreach';
+// import Outreach from 'components/DayProgramme/Outreach';
 import AfterCare from 'components/Aftercare/AfterCare';
 import RoomRental from 'components/RoomRental/RoomRental';
 import Contact from 'components/Contact/Contact';
@@ -21,8 +21,10 @@ import Donate from 'components/Contact/Donate';
 import PrivacyPolicy from 'components/utils/PrivacyPolicy';
 
 import { HomePage } from 'pages/HomePage/HomePage';
-import { DayProgramme } from 'pages/DayProgramme/DayProgramme';
-import { TherapeuticIntervention } from 'pages/TherapeuticIntervention/TherapeuticIntervention';
+import { DayProgramme } from 'pages/DayProgramme';
+import { TherapeuticIntervention } from 'pages/DayProgramme/TherapeuticIntervention';
+import { EducationalIntervention } from 'pages/DayProgramme/EducationalIntervention';
+import { Outreach } from 'pages/DayProgramme/Outreach';
 
 function Routing() {
   return (

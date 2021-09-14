@@ -23,6 +23,10 @@ const Wrapper = styled.div`
   box-shadow: ${({ theme }) => theme.shadow.drop};
   overflow-x: scroll;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   ${breakpoints.large} {
     width: fit-content;
   }

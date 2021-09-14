@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { List, Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -10,10 +9,9 @@ import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
-import { NavigatorBlock } from 'components/Toolkit/NavigatorBlock/NavigatorBlock';
-import { Button } from 'components/Toolkit/Button/Button';
 
 const TherapeuticInterventionWrapper = styled.div`
+  min-height: 60vh;
   padding: ${({ theme }) =>
     `${theme.spacing.S8} ${theme.spacing.S8} ${theme.spacing.S48}`};
 

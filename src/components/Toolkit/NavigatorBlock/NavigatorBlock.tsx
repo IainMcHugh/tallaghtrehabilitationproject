@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => `${theme.spacing.S8} 0`};
-  border-radius: ${({ theme }) => theme.borderRadius.drop4};
+  border-radius: ${({ theme }) => theme.borderRadius.drop8};
   background-color: ${({ theme }) => theme.colors.YELLOW};
   box-shadow: ${({ theme }) => `8px -8px 0 ${theme.colors.YELLOW_DARK}`};
 `;

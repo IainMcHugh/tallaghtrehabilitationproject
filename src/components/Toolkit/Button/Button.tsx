@@ -44,6 +44,8 @@ const IconContainer = styled.span<{ variant: Variant }>`
   background-color: ${({ theme }) => `${theme.colors.WHITE}66`};
   border-radius: ${({ theme }) => theme.borderRadius.drop4};
 
+  ${({ variant }) => variant === 'PRIMARY' && `margin-left: 1px;`}
+
   & > svg {
     color: ${({ theme, variant }) => {
       switch (variant) {
