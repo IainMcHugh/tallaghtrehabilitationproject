@@ -8,10 +8,21 @@ import { Skeleton } from 'components/Toolkit/Skeleton/Skeleton';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
-import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
-import { Calendar } from 'components/Toolkit/Calendar/Calendar';
+import { TextCard } from 'components/Toolkit/TextCard/TextCard';
 
-const TherapeuticInterventionWrapper = styled.div`
+type TGroupValue = {
+  spans: [];
+  text: string;
+  type: string;
+};
+
+type TGroup = {
+  title: TGroupValue[];
+  subtitle: TGroupValue[];
+  body: TGroupValue[];
+};
+
+const ProgrammePathWrapper = styled.div`
   min-height: 60vh;
   padding: ${({ theme }) =>
     `${theme.spacing.S8} ${theme.spacing.S8} ${theme.spacing.S48}`};
@@ -47,38 +58,29 @@ const Paragraph = styled.p`
   }
 `;
 
-const SSimpleList = styled(SimpleList)`
-  margin-bottom: ${({ theme }) => theme.spacing.S24};
-
-  ${breakpoints.large} {
-    margin-bottom: ${({ theme }) => theme.spacing.S48};
-  }
+const ProgrammePathBlock = styled.div`
+  background-color: ${({ theme }) => theme.colors.BLUE_LIGHT};
+  padding: ${({ theme }) => `${theme.spacing.S24} ${theme.spacing.S24}`};
+  border-radius: ${({ theme }) => theme.borderRadius.drop8};
 `;
 
-function TherapeuticIntervention() {
+function ProgrammePath() {
   const crumbs = [
     { display: 'Home', href: '/test' },
     { display: 'Day Programme', href: '/dayprogramme' },
     {
-      display: 'Therapeutic Intervention',
-      href: '/dayprogramme/therapeutic_intervention',
+      display: 'Programme Path',
+      href: '/dayprogramme/programme_path',
     },
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
 
-  const ids: string[] = [
-    'YNGLshAAACEAXyNQ',
-    'YNGMEBAAACEAXyT0',
-    'YNGMQBAAACMAXyXX',
-    'YT_AwBAAACQA5MbM',
-    'YNGMeBAAACQAXybO',
-  ];
+  const ids: string[] = ['YUOydREAACUAytpM', 'YUOzixEAACMAyt84'];
 
   useEffect(() => {
     const fetchData = async () => {
       const { results } = await prismic.getByIDs(ids, {});
-      console.log(results);
       setDocument(results);
     };
 
@@ -87,7 +89,7 @@ function TherapeuticIntervention() {
 
   return (
     <DefaultLayout>
-      <TherapeuticInterventionWrapper>
+      <ProgrammePathWrapper>
         {document ? (
           <>
             <SBreadcrumbs crumbs={crumbs} />
@@ -99,20 +101,27 @@ function TherapeuticIntervention() {
                     <Paragraph>{data.paragraph[0].text}</Paragraph>
                   </>
                 )}
-                {data.list && <SSimpleList items={data.list} />}
+                {data.group && (
+                  <ProgrammePathBlock>
+                    {(data.group as TGroup[]).map((groupData, index) => (
+                      <TextCard
+                        key={index}
+                        title={groupData.title[0].text}
+                        subtitle={groupData.subtitle[0].text}
+                        body={groupData.body[0].text}
+                      />
+                    ))}
+                  </ProgrammePathBlock>
+                )}
               </Fragment>
             ))}
-            <Calendar
-              days={['Monday', 'Wednesday', 'Friday']}
-              times={['11:00am - 12:30pm', '12:45pm - 2:00pm']}
-            />
           </>
         ) : (
           <Skeleton />
         )}
-      </TherapeuticInterventionWrapper>
+      </ProgrammePathWrapper>
     </DefaultLayout>
   );
 }
 
-export { TherapeuticIntervention };
+export { ProgrammePath };

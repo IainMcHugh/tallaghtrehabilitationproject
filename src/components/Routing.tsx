@@ -11,7 +11,7 @@ import AnnualReports from 'components/About/AnnualReports';
 // import DayProgramme from 'components/DayProgramme/DayProgramme';
 // import TherapeuticIntervention from 'components/DayProgramme/TherapeuticIntervention';
 // import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
-import ProgrammePath from 'components/DayProgramme/ProgrammePath';
+// import ProgrammePath from 'components/DayProgramme/ProgrammePath';
 // import Outreach from 'components/DayProgramme/Outreach';
 import AfterCare from 'components/Aftercare/AfterCare';
 import RoomRental from 'components/RoomRental/RoomRental';
@@ -25,6 +25,7 @@ import { DayProgramme } from 'pages/DayProgramme';
 import { TherapeuticIntervention } from 'pages/DayProgramme/TherapeuticIntervention';
 import { EducationalIntervention } from 'pages/DayProgramme/EducationalIntervention';
 import { Outreach } from 'pages/DayProgramme/Outreach';
+import { ProgrammePath } from 'pages/DayProgramme/ProgrammePath';
 
 function Routing() {
   return (

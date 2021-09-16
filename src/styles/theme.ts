@@ -11,6 +11,7 @@ export const theme: DefaultTheme = {
     YELLOW_LIGHTER: '#ffed66',
     YELLOW_DARK: '#dcc200',
     YELLOW_DARKER: '#bba000',
+    RED: '#f07470',
     GREY: '#000000',
     GREY_LIGHT: '#bbbbbb',
     GREY_LIGHTER: '#eeeeee',
