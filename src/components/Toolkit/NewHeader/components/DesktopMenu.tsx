@@ -3,7 +3,12 @@ import styled from 'styled-components';
 
 import { Link } from 'components/Toolkit/Link/Link';
 
-type TMenuItem = { displayText: string; href: string };
+type TMenuItem = {
+  displayText: string;
+  href: string;
+  external?: boolean;
+  download?: boolean;
+};
 interface IDesktopMenu {
   items: TMenuItem[];
   className?: string;
@@ -33,9 +38,16 @@ const SLink = styled(Link)`
 function DesktopMenu({ items, className }: IDesktopMenu) {
   return (
     <Container className={className}>
-      {items.map(({ displayText, href }, index) => (
+      {items.map(({ displayText, href, external, download }, index) => (
         <ListItem key={index}>
-          <SLink href={href}>{displayText}</SLink>
+          <SLink
+            href={href}
+            target={external ? '_blank' : undefined}
+            rel={external ? 'noopener noreferrer' : undefined}
+            download={download}
+          >
+            {displayText}
+          </SLink>
         </ListItem>
       ))}
     </Container>

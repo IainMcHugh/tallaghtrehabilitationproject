@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import { List, Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
-import { breakpoints } from 'styles/breakpoints';
-import { usePrismic } from 'services/prismic';
 import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
 import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
+import InfoPack from 'documents/referral_forms/information_brochure.pdf';
+import { breakpoints } from 'styles/breakpoints';
+import { usePrismic } from 'services/prismic';
 import { Skeleton } from 'components/Toolkit/Skeleton/Skeleton';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
@@ -79,7 +80,7 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const SButton = styled(Button)`
+const SButtonLink = styled(ButtonLink)`
   margin-bottom: ${({ theme }) => theme.spacing.S16};
 
   ${breakpoints.large} {
@@ -146,17 +147,25 @@ function DayProgramme() {
                 },
                 { href: '/dayprogramme/outreach', displayValue: 'Outreach' },
                 {
-                  href: '/dayprogramme/information_pack',
+                  href: InfoPack,
                   displayValue: 'Information Pack',
+                  external: true,
                 },
               ]}
             />
             <SSectionHeading>What to do next</SSectionHeading>
             <ButtonWrapper>
-              <SButton icon={<List />}>Criteria for assessment</SButton>
-              <Button variant="SECONDARY" icon={<Download />}>
+              <SButtonLink icon={<List />} href={DPCriteria} external>
+                Criteria for assessment
+              </SButtonLink>
+              <ButtonLink
+                variant="SECONDARY"
+                icon={<Download />}
+                href={DPReferralForm}
+                download
+              >
                 Download Referral form
-              </Button>
+              </ButtonLink>
             </ButtonWrapper>
           </>
         ) : (

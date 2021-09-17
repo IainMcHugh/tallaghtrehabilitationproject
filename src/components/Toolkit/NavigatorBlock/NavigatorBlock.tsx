@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { breakpoints } from 'styles/breakpoints';
 
-type TLinks = { href: string; displayValue: string };
+type TLinks = { href: string; displayValue: string; external?: boolean };
 interface INavigatorBlock {
   links: TLinks[];
   className?: string;
@@ -46,8 +46,13 @@ const NavItem = styled.a`
 function NavigatorBlock({ links, className }: INavigatorBlock) {
   return (
     <Wrapper className={className}>
-      {links.map(({ href, displayValue }, index) => (
-        <NavItem key={index} href={href}>
+      {links.map(({ href, displayValue, external }, index) => (
+        <NavItem
+          key={index}
+          href={href}
+          target={external ? '_blank' : undefined}
+          rel={external ? 'noopener noreferrer' : undefined}
+        >
           {displayValue}
         </NavItem>
       ))}

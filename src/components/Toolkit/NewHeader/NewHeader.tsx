@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
 
+import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
+import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
 import { breakpoints } from 'styles/breakpoints';
 import { useDimensions } from 'hooks/useDimensions';
 import { MenuToggle } from 'components/Toolkit/MenuToggle/MenuToggle';
@@ -200,14 +202,28 @@ function NewHeader() {
     },
     {
       displayText: 'Day Programme',
-      href: '#',
+      href: '/dayprogramme',
       subListItems: [
-        { displayText: 'Therapeutic Intervention', href: '#' },
-        { displayText: 'Educational Intervention', href: '#' },
-        { displayText: 'Programme Path', href: '#' },
-        { displayText: 'Outreach', href: '#' },
-        { displayText: 'Criteria for Assessment', href: '#' },
-        { displayText: 'Download Referral Form', href: '#' },
+        {
+          displayText: 'Therapeutic Intervention',
+          href: '/dayprogramme/therapeutic_intervention',
+        },
+        {
+          displayText: 'Educational Intervention',
+          href: '/dayprogramme/educational_intervention',
+        },
+        { displayText: 'Programme Path', href: '/dayprogramme/programme_path' },
+        { displayText: 'Outreach', href: '/dayprogramme/outreach' },
+        {
+          displayText: 'Criteria for Assessment',
+          href: DPCriteria,
+          external: true,
+        },
+        {
+          displayText: 'Download Referral Form',
+          href: DPReferralForm,
+          download: true,
+        },
       ],
     },
     {
