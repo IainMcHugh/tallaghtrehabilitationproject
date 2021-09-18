@@ -76,7 +76,6 @@ function About() {
         />
       </Helmet>
       <div className="background-image-container"></div>
-      {console.log(doc)}
       <BannerContainer>
         <BannerImage
           src={require('../../images/Team/group2.jpg')}

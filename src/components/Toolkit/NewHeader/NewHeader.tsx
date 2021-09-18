@@ -193,11 +193,14 @@ function NewHeader() {
   const listItems = [
     {
       displayText: 'About',
-      href: '#',
+      href: '/about',
       subListItems: [
-        { displayText: 'Board Of Management', href: '#' },
-        { displayText: 'Student Placement', href: '#' },
-        { displayText: 'Annual Reports', href: '#' },
+        {
+          displayText: 'Board Of Management',
+          href: '/about/board_of_management',
+        },
+        { displayText: 'Student Placement', href: '/about/student_placement' },
+        { displayText: 'Annual Reports', href: '/about/annual_reports' },
       ],
     },
     {

@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import Header from 'components/Toolkit/Header/Header';
 // import ScrollToTop from 'components/ScrollToTop';
 import Home from 'components/Home/Home';
-import About from 'components/About/About';
-import BoardOfManagement from 'components/About/boardOfManagement';
-import StudentPlacement from 'components/About/StudentPlacement';
-import AnnualReports from 'components/About/AnnualReports';
+// import About from 'components/About/About';
+// import BoardOfManagement from 'components/About/boardOfManagement';
+// import StudentPlacement from 'components/About/StudentPlacement';
+// import AnnualReports from 'components/About/AnnualReports';
 // import DayProgramme from 'components/DayProgramme/DayProgramme';
 // import TherapeuticIntervention from 'components/DayProgramme/TherapeuticIntervention';
 // import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
@@ -26,6 +26,10 @@ import { TherapeuticIntervention } from 'pages/DayProgramme/TherapeuticIntervent
 import { EducationalIntervention } from 'pages/DayProgramme/EducationalIntervention';
 import { Outreach } from 'pages/DayProgramme/Outreach';
 import { ProgrammePath } from 'pages/DayProgramme/ProgrammePath';
+import { About } from 'pages/About';
+import { BoardOfManagement } from 'pages/About/BoardOfManagement';
+import { StudentPlacement } from 'pages/About/StudentPlacement';
+import { AnnualReports } from 'pages/About/AnnualReports';
 
 function Routing() {
   return (
