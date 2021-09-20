@@ -6,6 +6,7 @@ import { Phone, CreditCard } from 'react-feather';
 import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
 import ACReferralForm from 'documents/referral_forms/Aftercare_referral_form.pdf';
 import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
+import RRLeaflet from 'documents/referral_forms/room_rental_booklet.pdf';
 import { breakpoints } from 'styles/breakpoints';
 import { useDimensions } from 'hooks/useDimensions';
 import { MenuToggle } from 'components/Toolkit/MenuToggle/MenuToggle';
@@ -243,8 +244,10 @@ function NewHeader() {
     },
     {
       displayText: 'Room Rental',
-      href: '#',
-      subListItems: [{ displayText: 'Room Rental Booklet', href: '#' }],
+      href: '/roomrental',
+      subListItems: [
+        { displayText: 'Room Rental Booklet', href: RRLeaflet, external: true },
+      ],
     },
     {
       displayText: 'Contact',

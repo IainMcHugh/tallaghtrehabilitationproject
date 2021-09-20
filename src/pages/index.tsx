@@ -7,7 +7,7 @@ import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Carousel } from 'components/Toolkit/Carousel/Carousel';
 import { Card } from 'components/Toolkit/Card/Card';
 
-const HomepageWrapper = styled.div`
+const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,11 +166,11 @@ const SocialMediaIcon = styled.button`
   color: ${({ theme }) => theme.colors.GREY_DARK};
 `;
 
-function HomePage() {
+function Home() {
   return (
     <>
       <DefaultLayout>
-        <HomepageWrapper>
+        <HomeWrapper>
           <HeroSection>
             <HeroImage src={require('images/TRPFrontEdit.png')} alt="hero" />
             <HeroContainer>
@@ -222,7 +222,7 @@ function HomePage() {
               </SocialMediaIcons>
             </SocialMediaData>
           </SocialMediaSection>
-        </HomepageWrapper>
+        </HomeWrapper>
       </DefaultLayout>
     </>
   );
@@ -243,4 +243,4 @@ const data = [
   },
 ];
 
-export { HomePage };
+export { Home };
