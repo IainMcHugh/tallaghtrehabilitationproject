@@ -4,6 +4,7 @@ import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
 
 import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
+import ACReferralForm from 'documents/referral_forms/Aftercare_referral_form.pdf';
 import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
 import { breakpoints } from 'styles/breakpoints';
 import { useDimensions } from 'hooks/useDimensions';
@@ -231,8 +232,14 @@ function NewHeader() {
     },
     {
       displayText: 'Aftercare',
-      href: '#',
-      subListItems: [{ displayText: 'Download Referral Form', href: '#' }],
+      href: '/aftercare',
+      subListItems: [
+        {
+          displayText: 'Download Referral Form',
+          href: ACReferralForm,
+          download: true,
+        },
+      ],
     },
     {
       displayText: 'Room Rental',

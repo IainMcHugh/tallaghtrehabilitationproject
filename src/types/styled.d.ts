@@ -15,7 +15,16 @@ declare module 'styled-components' {
       YELLOW_LIGHTER: string;
       YELLOW_DARK: string;
       YELLOW_DARKER: string;
+      PINK: string;
+      PINK_LIGHT: string;
+      GREEN: string;
+      GREEN_LIGHT: string;
+      PURPLE: string;
+      PURPLE_LIGHT: string;
       RED: string;
+      RED_LIGHT: string;
+      TURQUOISE: string;
+      TURQUOISE_LIGHT: string;
       GREY: string;
       GREY_LIGHT: string;
       GREY_LIGHTER: string;

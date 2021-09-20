@@ -1,22 +1,21 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
-import { List, Download } from 'react-feather';
+import { Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
-import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
-import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
-import InfoPack from 'documents/referral_forms/information_brochure.pdf';
+import ACReferralForm from 'documents/referral_forms/Aftercare_referral_form.pdf';
 import { breakpoints } from 'styles/breakpoints';
 import { usePrismic } from 'services/prismic';
 import { Skeleton } from 'components/Toolkit/Skeleton/Skeleton';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
+import { SectionSubHeading } from 'components/Toolkit/SectionSubHeading/SectionSubHeading';
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
-import { NavigatorBlock } from 'components/Toolkit/NavigatorBlock/NavigatorBlock';
+import { Activities } from 'components/Toolkit/Activities/Activities';
 import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
 
-const DayProgrammeWrapper = styled.div`
+const AftercareWrapper = styled.div`
   min-height: 60vh;
   padding: ${({ theme }) =>
     `${theme.spacing.S8} ${theme.spacing.S8} ${theme.spacing.S48}`};
@@ -40,6 +39,10 @@ const SSectionHeading = styled(SectionHeading)`
   margin-bottom: ${({ theme }) => theme.spacing.S24};
 `;
 
+const SSectionSubHeading = styled(SectionSubHeading)`
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+`;
+
 const Paragraph = styled.p`
   ${({ theme }) => theme.fontSize.F1624};
   padding: ${({ theme }) => `0 ${theme.spacing.S8}`};
@@ -60,46 +63,35 @@ const SSimpleList = styled(SimpleList)`
   }
 `;
 
-const SNavigatorBlock = styled(NavigatorBlock)`
-  margin: ${({ theme }) => `${theme.spacing.S32} ${theme.spacing.S16}`};
-
+const ActivitiesWrapper = styled.div`
   ${breakpoints.large} {
-    margin-bottom: ${({ theme }) => theme.spacing.S48};
+    padding: ${({ theme }) => `0 ${theme.spacing.S48}`};
   }
 `;
 
 const ButtonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   padding: ${({ theme }) => theme.spacing.S16};
 
   ${breakpoints.large} {
-    flex-direction: row;
     padding: ${({ theme }) => `${theme.spacing.S16} ${theme.spacing.S48}`};
   }
 `;
 
-const SButtonLink = styled(ButtonLink)`
-  margin-bottom: ${({ theme }) => theme.spacing.S16};
-
-  ${breakpoints.large} {
-    margin-bottom: 0;
-    margin-right: ${({ theme }) => theme.spacing.S16};
-  }
-`;
-
-function DayProgramme() {
+function Aftercare() {
   const crumbs = [
     { display: 'Home', href: '/test' },
-    { display: 'Day Programme', href: '/dayprogramme' },
+    { display: 'Aftercare', href: '/aftercare' },
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
 
   const ids: string[] = [
-    'YND9hRAAACMAXK_o',
-    'YNGLUxAAACMAXyGq',
-    'YTjyghAAACQAaaF_',
+    'YNGRyhAAACMAXz5e',
+    'YNGTOhAAACQAX0S8',
+    'YUjjZBEAACEArHEy',
+    'YUjqLREAACEArI-u',
+    'YNGUCxAAACIAX0hl',
+    'YUjk8hEAACEArHgq',
   ];
 
   useEffect(() => {
@@ -114,7 +106,7 @@ function DayProgramme() {
 
   return (
     <DefaultLayout>
-      <DayProgrammeWrapper>
+      <AftercareWrapper>
         {document ? (
           <>
             <SBreadcrumbs crumbs={crumbs} />
@@ -123,46 +115,34 @@ function DayProgramme() {
                 {data.title && (
                   <>
                     <SSectionHeading>{data.title[0].text}</SSectionHeading>
+                    {data.subtitle.length !== 0 && (
+                      <SSectionSubHeading>
+                        {data.subtitle[0].text}
+                      </SSectionSubHeading>
+                    )}
                     <Paragraph>{data.paragraph[0].text}</Paragraph>
                   </>
                 )}
-                {data.list && <SSimpleList items={data.list} />}
+                {data.list && index !== 3 && <SSimpleList items={data.list} />}
+                {index === 3 && (
+                  <>
+                    <SSectionHeading>Activities</SSectionHeading>
+                    <ActivitiesWrapper>
+                      <Activities
+                        activies={data.list.map(
+                          ({ text }: { text: string }) => {
+                            const [day, heading, description] = text.split(':');
+                            return { day, heading, description };
+                          },
+                        )}
+                      />
+                    </ActivitiesWrapper>
+                  </>
+                )}
               </Fragment>
             ))}
-            <SSectionHeading>Services Available</SSectionHeading>
-            <SNavigatorBlock
-              links={[
-                {
-                  href: '/dayprogramme/therapeutic_intervention',
-                  displayValue: 'Therapeutic Intervention',
-                },
-                {
-                  href: '/dayprogramme/educational_intervention',
-                  displayValue: 'Educational Intervention',
-                },
-                {
-                  href: '/dayprogramme/programme_path',
-                  displayValue: 'Programme Path',
-                },
-                { href: '/dayprogramme/outreach', displayValue: 'Outreach' },
-                {
-                  href: InfoPack,
-                  displayValue: 'Information Pack',
-                  external: true,
-                },
-              ]}
-            />
-            <SSectionHeading>What to do next</SSectionHeading>
             <ButtonWrapper>
-              <SButtonLink icon={<List />} href={DPCriteria} external>
-                Criteria for assessment
-              </SButtonLink>
-              <ButtonLink
-                variant="SECONDARY"
-                icon={<Download />}
-                href={DPReferralForm}
-                download
-              >
+              <ButtonLink icon={<Download />} href={ACReferralForm} download>
                 Download Referral form
               </ButtonLink>
             </ButtonWrapper>
@@ -170,9 +150,9 @@ function DayProgramme() {
         ) : (
           <Skeleton />
         )}
-      </DayProgrammeWrapper>
+      </AftercareWrapper>
     </DefaultLayout>
   );
 }
 
-export { DayProgramme };
+export { Aftercare };

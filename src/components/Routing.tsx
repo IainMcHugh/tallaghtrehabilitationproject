@@ -13,7 +13,7 @@ import Home from 'components/Home/Home';
 // import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
 // import ProgrammePath from 'components/DayProgramme/ProgrammePath';
 // import Outreach from 'components/DayProgramme/Outreach';
-import AfterCare from 'components/Aftercare/AfterCare';
+// import AfterCare from 'components/Aftercare/AfterCare';
 import RoomRental from 'components/RoomRental/RoomRental';
 import Contact from 'components/Contact/Contact';
 import Donate from 'components/Contact/Donate';
@@ -21,15 +21,16 @@ import Donate from 'components/Contact/Donate';
 import PrivacyPolicy from 'components/utils/PrivacyPolicy';
 
 import { HomePage } from 'pages/HomePage/HomePage';
+import { About } from 'pages/About';
+import { BoardOfManagement } from 'pages/About/BoardOfManagement';
+import { StudentPlacement } from 'pages/About/StudentPlacement';
+import { AnnualReports } from 'pages/About/AnnualReports';
 import { DayProgramme } from 'pages/DayProgramme';
 import { TherapeuticIntervention } from 'pages/DayProgramme/TherapeuticIntervention';
 import { EducationalIntervention } from 'pages/DayProgramme/EducationalIntervention';
 import { Outreach } from 'pages/DayProgramme/Outreach';
 import { ProgrammePath } from 'pages/DayProgramme/ProgrammePath';
-import { About } from 'pages/About';
-import { BoardOfManagement } from 'pages/About/BoardOfManagement';
-import { StudentPlacement } from 'pages/About/StudentPlacement';
-import { AnnualReports } from 'pages/About/AnnualReports';
+import { Aftercare } from 'pages/Aftercare';
 
 function Routing() {
   return (
@@ -67,7 +68,7 @@ function Routing() {
           component={ProgrammePath}
         />
         <Route path="/dayprogramme/outreach" exact component={Outreach} />
-        <Route path="/aftercare" exact component={AfterCare} />
+        <Route path="/aftercare" exact component={Aftercare} />
         <Route path="/roomrental" exact component={RoomRental} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/contact/donate" exact component={Donate} />
