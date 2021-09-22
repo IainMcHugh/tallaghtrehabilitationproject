@@ -24,9 +24,9 @@ const Icon = styled.button`
 `;
 
 function RRBooklet() {
-  const [pageLeft, setPageLeft] = useState(false);
-  const [pageRight, setPageRight] = useState(true);
-  const [activePage, setActivePage] = useState(0);
+  const [pageLeft, setPageLeft] = useState<boolean>(false);
+  const [pageRight, setPageRight] = useState<boolean>(true);
+  const [activePage, setActivePage] = useState<number>(0);
 
   function renderSwitch() {
     switch (activePage) {

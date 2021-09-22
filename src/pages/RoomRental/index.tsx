@@ -9,6 +9,7 @@ import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
+import { Booklet } from 'components/Toolkit/Booklet/Booklet';
 import RRBooklet from 'components/RoomRental/Toolkit/RRBooklet';
 
 const RoomRentalWrapper = styled.div`
@@ -55,16 +56,8 @@ const SSimpleList = styled(SimpleList)`
   }
 `;
 
-const BookletWrapper = styled.div`
-  max-width: 600px;
-
-  & img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: ${({ theme }) => theme.shadow.drop};
-  }
+const SBooklet = styled(Booklet)`
+  margin-bottom: ${({ theme }) => theme.spacing.S48};
 `;
 
 function RoomRental() {
@@ -104,11 +97,7 @@ function RoomRental() {
                   </>
                 )}
                 {data.list && <SSimpleList items={data.list} />}
-                {index === 0 && (
-                  <BookletWrapper>
-                    <RRBooklet />
-                  </BookletWrapper>
-                )}
+                {index === 0 && <SBooklet bookletLength={16} />}
               </Fragment>
             ))}
           </>
