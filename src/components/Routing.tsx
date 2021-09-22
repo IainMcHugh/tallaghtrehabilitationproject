@@ -15,7 +15,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import Outreach from 'components/DayProgramme/Outreach';
 // import AfterCare from 'components/Aftercare/AfterCare';
 // import RoomRental from 'components/RoomRental/RoomRental';
-import Contact from 'components/Contact/Contact';
+// import Contact from 'components/Contact/Contact';
 import Donate from 'components/Contact/Donate';
 // import Footer from 'components/Toolkit/Footer/Footer';
 import PrivacyPolicy from 'components/utils/PrivacyPolicy';
@@ -32,6 +32,7 @@ import { Outreach } from 'pages/DayProgramme/Outreach';
 import { ProgrammePath } from 'pages/DayProgramme/ProgrammePath';
 import { Aftercare } from 'pages/Aftercare';
 import { RoomRental } from 'pages/RoomRental';
+import { Contact } from 'pages/Contact';
 
 function Routing() {
   return (

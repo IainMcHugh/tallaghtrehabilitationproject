@@ -60,6 +60,7 @@ declare module 'styled-components' {
       F1418: string;
       F1618: string;
       F1818: string;
+      F1424: string;
       F1624: string;
       F1824: string;
       F2424: string;
@@ -83,6 +84,7 @@ declare module 'styled-components' {
     };
     shadow: {
       drop: string;
+      inset: string;
     };
   }
 }

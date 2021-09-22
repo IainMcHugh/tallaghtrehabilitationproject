@@ -38,6 +38,7 @@ export const theme: DefaultTheme = {
     F1418: 'font-size: 14px; line-height: 18px;',
     F1618: 'font-size: 16px; line-height: 18px;',
     F1818: 'font-size: 18px; line-height: 18px',
+    F1424: 'font-size: 14px; line-height: 24px;',
     F1624: 'font-size: 16px; line-height: 24px;',
     F1824: 'font-size: 18px; line-height: 24px;',
     F2424: 'font-size: 24px; line-height: 24px;',
@@ -79,5 +80,6 @@ export const theme: DefaultTheme = {
   },
   shadow: {
     drop: '0 1px 2.2px rgba(0, 0, 0, 0.017), 0 1px 5.3px rgba(0, 0, 0, 0.02), 0 1px 10px rgba(0, 0, 0, 0.03), 0 2px 10px rgba(0, 0, 0, 0.03), 0 4px 10px rgba(0, 0, 0, 0.03), 0 10px 10px rgba(0, 0, 0, 0.05)',
+    inset: 'inset -4px -4px 8px rgba(0, 0, 0, 0.12)',
   },
 };
