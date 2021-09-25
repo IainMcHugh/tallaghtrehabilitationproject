@@ -27,8 +27,8 @@ const Image = styled.img`
   margin-bottom: ${({ theme }) => theme.spacing.S12};
 
   ${breakpoints.large} {
-    height: 80%;
     width: auto;
+    height: 70%;
   }
 `;
 
@@ -36,6 +36,8 @@ const Data = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: ${({ theme }) => `0 ${theme.spacing.S24}`};
+  box-sizing: border-box;
 `;
 
 const Heading = styled.p`
@@ -43,12 +45,14 @@ const Heading = styled.p`
   color: ${({ theme }) => theme.colors.GREY_DARK};
   font-weight: ${({ theme }) => theme.fontWeight.light};
   margin-bottom: ${({ theme }) => theme.spacing.S8};
+  text-align: center;
 `;
 
 const SubHeading = styled.p`
   ${({ theme }) => theme.fontSize.F1216};
   color: ${({ theme }) => theme.colors.GREY_DARK};
   font-weight: ${({ theme }) => theme.fontWeight.medium};
+  text-align: center;
 `;
 
 function Card({

@@ -8,9 +8,10 @@ import { Skeleton } from 'components/Toolkit/Skeleton/Skeleton';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
+import { SectionSubHeading } from 'components/Toolkit/SectionSubHeading/SectionSubHeading';
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
 
-const OutreachWrapper = styled.div`
+const DonateWrapper = styled.div`
   min-height: 60vh;
   padding: ${({ theme }) =>
     `${theme.spacing.S8} ${theme.spacing.S8} ${theme.spacing.S48}`};
@@ -34,6 +35,10 @@ const SSectionHeading = styled(SectionHeading)`
   margin-bottom: ${({ theme }) => theme.spacing.S24};
 `;
 
+const SSectionSubHeading = styled(SectionSubHeading)`
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+`;
+
 const Paragraph = styled.p`
   ${({ theme }) => theme.fontSize.F1624};
   padding: ${({ theme }) => `0 ${theme.spacing.S8}`};
@@ -54,19 +59,19 @@ const SSimpleList = styled(SimpleList)`
   }
 `;
 
-function Outreach() {
+function Donate() {
   const crumbs = [
     { display: 'Home', href: '/' },
-    { display: 'Day Programme', href: '/dayprogramme' },
+    { display: 'Contact', href: '/contact' },
     {
-      display: 'Outreach',
-      href: '/dayprogramme/outreach',
+      display: 'Donate',
+      href: '/contact/donate',
     },
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
 
-  const ids: string[] = ['YNGQ4hAAACMAXzpc'];
+  const ids: string[] = ['YNGVwxAAACQAX1AN'];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -79,16 +84,22 @@ function Outreach() {
 
   return (
     <DefaultLayout>
-      <OutreachWrapper>
+      <DonateWrapper>
         {document ? (
           <>
             <SBreadcrumbs crumbs={crumbs} />
+            {console.log(document)}
             {document.map(({ data }, index) => (
               <Fragment key={index}>
                 {data.title && (
                   <>
                     <SSectionHeading>{data.title[0].text}</SSectionHeading>
-                    <Paragraph>{data.paragraph[0].text}</Paragraph>
+                    <SSectionSubHeading>
+                      {data.subtitle[0].text}
+                    </SSectionSubHeading>
+                    {data.paragraph.map((para: any, index: number) => (
+                      <Paragraph key={index}>{para.text}</Paragraph>
+                    ))}
                   </>
                 )}
                 {data.list && <SSimpleList items={data.list} />}
@@ -98,9 +109,9 @@ function Outreach() {
         ) : (
           <Skeleton />
         )}
-      </OutreachWrapper>
+      </DonateWrapper>
     </DefaultLayout>
   );
 }
 
-export { Outreach };
+export { Donate };

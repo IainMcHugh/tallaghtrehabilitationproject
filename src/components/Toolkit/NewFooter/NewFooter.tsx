@@ -195,17 +195,23 @@ function NewFooter() {
             <ContactText>Dublin 24</ContactText>
             <ContactText>D24 X59C</ContactText>
             <ContactText>D24 X59C</ContactText>
-            <ContactLink href="tel:353871476747">01 459 77 05</ContactLink>
+            <ContactLink href="tel:014597705">01 459 77 05</ContactLink>
             <ContactLink href="mailto:info@tallaghtrehabproject.ie">
               info@tallaghtrehabproject.ie
             </ContactLink>
           </ContactData>
           <UsefulLinksData>
             <UsefulLinksHeader>Useful Links</UsefulLinksHeader>
-            <SLink href="#">Contact</SLink>
-            <SLink href="#">Donate</SLink>
+            <SLink href="/contact">Contact</SLink>
+            <SLink href="/contact/donate">Donate</SLink>
             <SLink href="#">Privacy Policy</SLink>
-            <SLink href="#">Web Designer</SLink>
+            <SLink
+              href="https://iainmchugh.github.io/portfolio/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Web Designer
+            </SLink>
           </UsefulLinksData>
           <SocialMediaData>
             <SocialMediaIcon href="#">

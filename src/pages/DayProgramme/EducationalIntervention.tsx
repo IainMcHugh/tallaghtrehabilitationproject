@@ -61,7 +61,7 @@ const SSimpleList = styled(SimpleList)`
 
 function EducationalIntervention() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'Day Programme', href: '/dayprogramme' },
     {
       display: 'Educational Intervention',

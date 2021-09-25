@@ -62,7 +62,7 @@ const SSimpleList = styled(SimpleList)`
 
 function StudentPlacement() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'About', href: '/about' },
     {
       display: 'Student Placement',

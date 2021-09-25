@@ -63,14 +63,13 @@ function Footer() {
                 D24 X59C
               </h4>
               <h4>
-                <a href="tel:353871476747">(01) 459 77 05</a>
+                <a href="tel:014597705">(01) 459 77 05</a>
               </h4>
               <h4>
                 <a href="mailto:info@tallaghtrehabproject.ie">
                   info@tallaghtrehabproject.ie
                 </a>
               </h4>
-              {/* <h4><a href="fax:353871476747">Fax: (01) 414 81 23</a></h4> */}
             </div>
             <div className="footer-a-1">
               <h3>

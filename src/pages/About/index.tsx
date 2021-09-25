@@ -101,7 +101,7 @@ const SNavigatorBlock = styled(NavigatorBlock)`
 
 function About() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'About', href: '/about' },
   ];
   const [document, setDocument] = useState<Document[] | null>();

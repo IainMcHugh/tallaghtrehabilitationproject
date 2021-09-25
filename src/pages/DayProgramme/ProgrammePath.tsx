@@ -66,7 +66,7 @@ const ProgrammePathBlock = styled.div`
 
 function ProgrammePath() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'Day Programme', href: '/dayprogramme' },
     {
       display: 'Programme Path',

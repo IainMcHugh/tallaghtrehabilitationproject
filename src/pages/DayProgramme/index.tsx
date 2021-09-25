@@ -90,7 +90,7 @@ const SButtonLink = styled(ButtonLink)`
 
 function DayProgramme() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'Day Programme', href: '/dayprogramme' },
   ];
   const [document, setDocument] = useState<Document[] | null>();

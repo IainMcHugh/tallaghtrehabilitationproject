@@ -17,9 +17,10 @@ const HomeWrapper = styled.div`
 `;
 
 const HeroSection = styled.section`
-  position: relative;
   width: 100%;
   height: 80vh;
+  position: relative;
+  display: flex;
   overflow: hidden;
   &::-webkit-scrollbar {
     display: none;
@@ -29,8 +30,8 @@ const HeroSection = styled.section`
 const HeroImage = styled.img`
   height: 100%;
   width: auto;
+  margin: 0 auto;
   object-fit: cover;
-  box-shadow: ${({ theme }) => theme.shadow.drop};
 `;
 
 const HeroContainer = styled.div`
@@ -68,20 +69,21 @@ const ServicesHeader = styled.h2`
 `;
 
 const ServicesCardContainer = styled.div`
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   ${breakpoints.large} {
+    max-width: none;
     flex-direction: row;
-    height: 250px;
     width: 80%;
     margin: 0 auto;
   }
 `;
 
-const SCard = styled(Card)`
+const CardLink = styled.a`
   width: 100%;
   margin-bottom: ${({ theme }) => theme.spacing.S24};
 
@@ -91,7 +93,7 @@ const SCard = styled(Card)`
 
   ${breakpoints.large} {
     width: 30%;
-    height: 100%;
+    height: 250px;
     margin-bottom: 0;
     margin-right: ${({ theme }) => theme.spacing.S28};
     flex: 1 1 0px;
@@ -99,6 +101,12 @@ const SCard = styled(Card)`
     &:last-child {
       margin-right: 0;
     }
+  }
+`;
+
+const SCard = styled(Card)`
+  ${breakpoints.large} {
+    height: 250px;
   }
 `;
 
@@ -167,6 +175,21 @@ const SocialMediaIcon = styled.button`
 `;
 
 function Home() {
+  const carouselData = [
+    {
+      title: 'Mission Statement',
+      body: 'We believe in the advantage of rehabilitation within our community, as addiction can happen in social & emotional isolation, we are here to provide a supportive and nurturing environment where participants are encouraged to work in an open & therapeutic setting on their previous drug/alcohol use.',
+    },
+    {
+      title: 'Values',
+      body: 'Tallaght Rehabilitation Project values and respects the rights of all our participants to engage in a recovery process that is positive, honest, and compassionate, dignified and also meets the needs of our clients through progressive pathways and emotional growth.',
+    },
+    {
+      title: 'Commitment and Growth',
+      body: 'The Tallaght Rehabilitation Project Organisation is committed to providing quality services for people who are in recovery from drug and alcohol addiction. Our organisation and programmes strive to provide quality based services which are evidence based and promote good corporate governance in order to be a leader in local community based therapeutic rehabilitation.',
+    },
+  ];
+
   return (
     <>
       <DefaultLayout>
@@ -174,30 +197,40 @@ function Home() {
           <HeroSection>
             <HeroImage src={require('images/TRPFrontEdit.png')} alt="hero" />
             <HeroContainer>
-              <Carousel width={[304, 304, 500]} items={data} speed={8000} />
+              <Carousel
+                width={[304, 304, 500]}
+                items={carouselData}
+                speed={8000}
+              />
             </HeroContainer>
           </HeroSection>
           <ServicesSection>
             <ServicesHeader>Services we offer</ServicesHeader>
             <ServicesCardContainer>
-              <SCard
-                imageUrl={require('images/dp_home.jpg')}
-                imageAlt="test"
-                heading="Day Programme"
-                subheading="Click here to find out about our Day Programme"
-              />
-              <SCard
-                imageUrl={require('images/a_home.jpg')}
-                imageAlt="test"
-                heading="Aftercare"
-                subheading="Find out more about our Aftercare services"
-              />
-              <SCard
-                imageUrl={require('images/stock_roomrental3.jpg')}
-                imageAlt="test"
-                heading="Room Rental"
-                subheading="Learn more about our room rentals and meetings"
-              />
+              <CardLink href="/dayprogramme">
+                <SCard
+                  imageUrl={require('images/dp_home.jpg')}
+                  imageAlt="test"
+                  heading="Day Programme"
+                  subheading="Click here to find out about our Day Programme"
+                />
+              </CardLink>
+              <CardLink href="/aftercare">
+                <SCard
+                  imageUrl={require('images/a_home.jpg')}
+                  imageAlt="test"
+                  heading="Aftercare"
+                  subheading="Find out more about our Aftercare services"
+                />
+              </CardLink>
+              <CardLink href="/roomrental">
+                <SCard
+                  imageUrl={require('images/stock_roomrental3.jpg')}
+                  imageAlt="test"
+                  heading="Room Rental"
+                  subheading="Learn more about our room rentals and meetings"
+                />
+              </CardLink>
             </ServicesCardContainer>
           </ServicesSection>
           <SocialMediaSection>
@@ -227,20 +260,5 @@ function Home() {
     </>
   );
 }
-
-const data = [
-  {
-    title: 'Mission Statement',
-    body: 'We believe in the advantage of rehabilitation within our community, as addiction can happen in social & emotional isolation, we are here to provide a supportive and nurturing environment where participants are encouraged to work in an open & therapeutic setting on their previous drug/alcohol use.',
-  },
-  {
-    title: 'Values',
-    body: 'Tallaght Rehabilitation Project values and respects the rights of all our participants to engage in a recovery process that is positive, honest, and compassionate, dignified and also meets the needs of our clients through progressive pathways and emotional growth.',
-  },
-  {
-    title: 'Commitment and Growth',
-    body: 'The Tallaght Rehabilitation Project Organisation is committed to providing quality services for people who are in recovery from drug and alcohol addiction. Our organisation and programmes strive to provide quality based services which are evidence based and promote good corporate governance in order to be a leader in local community based therapeutic rehabilitation.',
-  },
-];
 
 export { Home };

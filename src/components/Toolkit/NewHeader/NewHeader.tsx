@@ -13,6 +13,7 @@ import { MenuToggle } from 'components/Toolkit/MenuToggle/MenuToggle';
 import { Link } from 'components/Toolkit/Link/Link';
 import { MobileMenuItem } from 'components/Toolkit/NewHeader/components/MobileMenuItem';
 import { Button } from 'components/Toolkit/Button/Button';
+import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
 import { DesktopMenu } from 'components/Toolkit/NewHeader/components/DesktopMenu';
 
 const Container = styled.header`
@@ -130,7 +131,7 @@ const ButtonContainer = styled(motion.div)`
   bottom: 0;
 `;
 
-const SButton = styled(Button)`
+const SButtonLink = styled(ButtonLink)`
   margin-bottom: ${({ theme }) => theme.spacing.S16};
 `;
 
@@ -251,8 +252,10 @@ function NewHeader() {
     },
     {
       displayText: 'Contact',
-      href: '#',
-      subListItems: [{ displayText: 'Make a Donation', href: '#' }],
+      href: '/contact',
+      subListItems: [
+        { displayText: 'Make a Donation', href: '/contact/donate' },
+      ],
     },
   ];
 
@@ -338,10 +341,16 @@ function NewHeader() {
             </SMobileMenuItem>
           ))}
           <ButtonContainer variants={buttonVariants}>
-            <SButton icon={<CreditCard />}>Donate</SButton>
-            <Button icon={<Phone />} variant="SECONDARY">
+            <SButtonLink icon={<CreditCard />} href="/contact/donate">
+              Donate
+            </SButtonLink>
+            <ButtonLink
+              icon={<Phone />}
+              variant="SECONDARY"
+              href="tel:014597705"
+            >
               Call Us
-            </Button>
+            </ButtonLink>
           </ButtonContainer>
         </MobileMenuContainer>
       </MotionNav>
@@ -358,10 +367,12 @@ function NewHeader() {
         </DesktopList>
       </DesktopNav>
       <DesktopButtonContainer>
-        <Button icon={<CreditCard />}>Donate</Button>
-        <Button icon={<Phone />} variant="SECONDARY">
+        <ButtonLink icon={<CreditCard />} href="/contact/donate">
+          Donate
+        </ButtonLink>
+        <ButtonLink icon={<Phone />} variant="SECONDARY" href="tel:014597705">
           Call Us
-        </Button>
+        </ButtonLink>
       </DesktopButtonContainer>
     </Container>
   );

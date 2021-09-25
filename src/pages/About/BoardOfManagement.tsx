@@ -74,7 +74,7 @@ const ListItem = styled.li`
 
 function BoardOfManagement() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'About', href: '/about' },
     {
       display: 'Board Of Management',

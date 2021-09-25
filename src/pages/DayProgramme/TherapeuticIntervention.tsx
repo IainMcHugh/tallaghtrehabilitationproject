@@ -57,7 +57,7 @@ const SSimpleList = styled(SimpleList)`
 
 function TherapeuticIntervention() {
   const crumbs = [
-    { display: 'Home', href: '/test' },
+    { display: 'Home', href: '/' },
     { display: 'Day Programme', href: '/dayprogramme' },
     {
       display: 'Therapeutic Intervention',
