@@ -8,7 +8,15 @@ import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
 import { ContactForm } from 'components/Toolkit/ContactForm/ContactForm';
 import { Button } from 'components/Toolkit/Button/Button';
+import { Map } from 'components/Toolkit/Map/Map';
 
+type TMapSetting = {
+  center: {
+    lat: number;
+    lng: number;
+  };
+  zoom: number;
+};
 interface TSubmission {
   name: string;
   email: string;
@@ -57,6 +65,13 @@ function Contact() {
       href: '/contact',
     },
   ];
+  const mapSettings: TMapSetting = {
+    center: {
+      lat: 53.275826,
+      lng: -6.402779,
+    },
+    zoom: 17,
+  };
 
   function handleSubmit(values: TSubmission) {
     console.log(values);
@@ -76,6 +91,7 @@ function Contact() {
         />
         <SButton icon={<CreditCard />}>Make a donation</SButton>
       </ContactWrapper>
+      <Map settings={mapSettings} />
     </DefaultLayout>
   );
 }

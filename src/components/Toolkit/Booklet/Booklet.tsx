@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
+import { breakpoints } from 'styles/breakpoints';
+
 interface IBooklet {
   bookletLength: number;
   className?: string;
@@ -10,15 +12,22 @@ interface IBooklet {
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: ${({ theme }) =>
-    `${theme.spacing.S48} auto ${theme.spacing.S48}`};
-  column-gap: ${({ theme }) => theme.spacing.S24};
+    `${theme.spacing.S24} auto ${theme.spacing.S24}`};
+  column-gap: ${({ theme }) => theme.spacing.S8};
   justify-content: center;
   justify-items: center;
   align-items: center;
+
+  ${breakpoints.large} {
+    column-gap: ${({ theme }) => theme.spacing.S24};
+    grid-template-columns: ${({ theme }) =>
+      `${theme.spacing.S48} auto ${theme.spacing.S48}`};
+  }
 `;
 
 type TChevronButton = { hide: boolean };
 const ChevronButton = styled.button<TChevronButton>`
+  background-color: transparent;
   border: none;
   ${({ hide }) => hide && 'visibility: hidden;'}
   transition: transform 200ms ease-in-out;
@@ -29,6 +38,7 @@ const ChevronButton = styled.button<TChevronButton>`
 `;
 
 const BookletPage = styled.img`
+  width: 100%;
   max-width: 600px;
   height: auto;
   object-fit: contain;
