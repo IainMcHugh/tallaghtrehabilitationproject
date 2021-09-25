@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Facebook, Instagram, Twitter } from 'react-feather';
+// import { Facebook, Instagram, Twitter } from 'react-feather';
 
 import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Carousel } from 'components/Toolkit/Carousel/Carousel';
 import { Card } from 'components/Toolkit/Card/Card';
+import { SocialMediaToggle } from 'components/Toolkit/SocialMediaToggle/SocialMediaToggle';
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -166,12 +167,19 @@ const SocialMediaIcons = styled.div`
   display: grid;
   grid-template-columns: ${({ theme }) => `repeat(3, ${theme.spacing.S48})`};
   column-gap: ${({ theme }) => theme.spacing.S8};
+  margin-bottom: ${({ theme }) => theme.spacing.S16};
 `;
 
 const SocialMediaIcon = styled.button`
   border: none;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.GREY_DARK};
+`;
+
+const SocialMediaEmbed = styled.div`
+  height: 100%;
+  overflow-y: hidden;
+  border-radius: ${({ theme }) => theme.borderRadius.all8};
 `;
 
 function Home() {
@@ -238,7 +246,8 @@ function Home() {
               src={require('images/kiltalown_old.jpg')}
               alt="Kiltalown old"
             />
-            <SocialMediaData>
+            <SocialMediaToggle />
+            {/* <SocialMediaData>
               <SocialMediaHeading>
                 Follow us on Social Media!
               </SocialMediaHeading>
@@ -253,7 +262,30 @@ function Home() {
                   <Twitter size={32} />
                 </SocialMediaIcon>
               </SocialMediaIcons>
-            </SocialMediaData>
+              <SocialMediaEmbed>
+                <div
+                  className="fb-page"
+                  data-href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
+                  data-tabs="timeline"
+                  data-width="400"
+                  data-height=""
+                  data-small-header="true"
+                  data-adapt-container-width="true"
+                  data-hide-cover="false"
+                  data-show-facepile="true"
+                >
+                  <blockquote
+                    cite="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
+                    className="fb-xfbml-parse-ignore"
+                  >
+                    <a href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/">
+                      Tallaght Rehabilitation Project &amp; Tallaght Wide
+                      Aftercare Services
+                    </a>
+                  </blockquote>
+                </div>
+              </SocialMediaEmbed>
+            </SocialMediaData> */}
           </SocialMediaSection>
         </HomeWrapper>
       </DefaultLayout>
