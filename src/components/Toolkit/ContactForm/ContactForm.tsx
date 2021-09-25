@@ -4,16 +4,9 @@ import { Send } from 'react-feather';
 
 import { Button } from 'components/Toolkit/Button/Button';
 import { breakpoints } from 'styles/breakpoints';
-
-interface TSubmission {
-  name: string;
-  email: string;
-  message: string;
-}
-
 interface IContactForm {
   id: string;
-  onSubmit: (t: TSubmission) => void;
+  onSubmit: (t: Record<string, unknown>) => void;
   clearForm: boolean;
   setClearForm: (t: boolean) => void;
   className?: string;
@@ -134,11 +127,23 @@ function ContactForm({
       </Header>
       <Form id={id} onSubmit={handleSubmit}>
         <Label htmlFor="name">Name</Label>
-        <TextField id="name" name="name" type="text" inputMode="text" />
+        <TextField
+          id="name"
+          name="name"
+          type="text"
+          inputMode="text"
+          required
+        />
         <Label htmlFor="email">Email</Label>
-        <TextField id="email" name="email" type="text" inputMode="email" />
+        <TextField
+          id="email"
+          name="email"
+          type="text"
+          inputMode="email"
+          required
+        />
         <Label htmlFor="message">Your message</Label>
-        <TextArea id="message" name="message" />
+        <TextArea id="message" name="message" required />
         <SButton icon={<Send />} type="submit">
           Send
         </SButton>

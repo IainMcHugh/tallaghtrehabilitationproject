@@ -214,13 +214,25 @@ function NewFooter() {
             </SLink>
           </UsefulLinksData>
           <SocialMediaData>
-            <SocialMediaIcon href="#">
+            <SocialMediaIcon
+              href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Facebook size={32} />
             </SocialMediaIcon>
-            <SocialMediaIcon href="#">
+            <SocialMediaIcon
+              href="https://www.instagram.com/trp_tallaght_wide_aftercare/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagram size={32} />
             </SocialMediaIcon>
-            <SocialMediaIcon href="#">
+            <SocialMediaIcon
+              href="https://twitter.com/trpdublin?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Twitter size={32} />
             </SocialMediaIcon>
           </SocialMediaData>

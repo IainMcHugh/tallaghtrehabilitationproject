@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 import { CreditCard } from 'react-feather';
 
 import { breakpoints } from 'styles/breakpoints';
+import { fireToast } from 'utils/toast';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
 import { ContactForm } from 'components/Toolkit/ContactForm/ContactForm';
-import { Button } from 'components/Toolkit/Button/Button';
+import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
 import { Map } from 'components/Toolkit/Map/Map';
 
 type TMapSetting = {
@@ -51,7 +53,7 @@ const SContactForm = styled(ContactForm)`
   margin-bottom: 48px;
 `;
 
-const SButton = styled(Button)`
+const SButtonLink = styled(ButtonLink)`
   max-width: 600px;
   margin: 0 auto;
 `;
@@ -73,8 +75,29 @@ function Contact() {
     zoom: 17,
   };
 
-  function handleSubmit(values: TSubmission) {
+  function handleSubmit(values: Record<string, unknown>) {
     console.log(values);
+    emailjs
+      .send(
+        'service_mqcli2f',
+        'template_mysew9h',
+        values,
+        'user_rgFV9WPXjRWF3bTP31LQN',
+      )
+      .then(
+        () => {
+          fireToast({
+            text: `Thanks ${values.name}, your message was sent successfully.`,
+            variant: 'SUCCESS',
+          });
+        },
+        () => {
+          fireToast({
+            text: `Oops! There was an error when trying to send your message.`,
+            variant: 'ERROR',
+          });
+        },
+      );
     setClearForm(true);
   }
 
@@ -89,7 +112,9 @@ function Contact() {
           clearForm={clearForm}
           setClearForm={setClearForm}
         />
-        <SButton icon={<CreditCard />}>Make a donation</SButton>
+        <SButtonLink icon={<CreditCard />} href="/contact/donate">
+          Make a donation
+        </SButtonLink>
       </ContactWrapper>
       <Map settings={mapSettings} />
     </DefaultLayout>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactGa from 'react-ga';
 import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Routing } from 'components/Routing';
 import { theme } from 'styles/theme';
@@ -16,6 +18,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Routing />
       <GlobalStyles />
+      <ToastContainer />
     </ThemeProvider>
   );
 }
