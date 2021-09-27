@@ -204,7 +204,7 @@ function NewFooter() {
             <UsefulLinksHeader>Useful Links</UsefulLinksHeader>
             <SLink href="/contact">Contact</SLink>
             <SLink href="/contact/donate">Donate</SLink>
-            <SLink href="#">Privacy Policy</SLink>
+            <SLink href="/contact/privacy-policy">Privacy Policy</SLink>
             <SLink
               href="https://iainmchugh.github.io/portfolio/"
               target="_blank"

@@ -259,6 +259,8 @@ function NewHeader() {
     },
   ];
 
+  const isStaging = window.location.href.includes('iainmchugh');
+
   const sidebar = {
     open: (height = 100) => ({
       clipPath: `circle(${height * 4 + 1000}px at 92% 36px)`,
@@ -337,7 +339,13 @@ function NewHeader() {
         <MobileMenuContainer variants={variants} isOpen={isOpen}>
           {listItems.map(({ displayText, href }, index) => (
             <SMobileMenuItem key={index}>
-              <Link href={href}>{displayText}</Link>
+              <Link
+                href={`${
+                  isStaging ? '/tallaghtrehabilitationproject' : ''
+                }${href}`}
+              >
+                {displayText}
+              </Link>
             </SMobileMenuItem>
           ))}
           <ButtonContainer variants={buttonVariants}>
@@ -358,7 +366,12 @@ function NewHeader() {
         <DesktopList>
           {listItems.map(({ displayText, href, subListItems }, index) => (
             <DesktopListItem key={index}>
-              <Link href={href} variant="THICK">
+              <Link
+                href={`${
+                  isStaging ? '/tallaghtrehabilitationproject' : ''
+                }${href}`}
+                variant="THICK"
+              >
                 {displayText}
               </Link>
               <SDesktopMenu items={subListItems} />

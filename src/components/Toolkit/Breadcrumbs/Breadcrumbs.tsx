@@ -49,17 +49,23 @@ const SLink = styled(Link)`
 
 const SChevronRight = styled(ChevronRight)`
   margin-right: ${({ theme }) => theme.spacing.S8};
+  box-shadow: none;
 `;
 
 function Breadcrumbs({ crumbs, className }: IBreadcrumbs) {
   const length = crumbs.length - 1;
   const theme = useTheme();
+  const isStaging = window.location.href.includes('iainmchugh');
 
   return (
     <Wrapper className={className}>
       {crumbs.map(({ display, href }, index) => (
         <Crumb key={index}>
-          <SLink href={href} color="GREY_DARK" fontSize="F1216">
+          <SLink
+            href={`${isStaging ? '/tallaghtrehabilitationproject' : ''}${href}`}
+            color="GREY_DARK"
+            fontSize="F1216"
+          >
             {display}
           </SLink>
           {length !== index && (

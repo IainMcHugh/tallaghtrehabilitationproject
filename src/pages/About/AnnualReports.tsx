@@ -35,6 +35,7 @@ const LinksWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: ${({ theme }) => theme.spacing.S8};
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
 
   ${breakpoints.large} {
     grid-template-columns: 1fr 1fr;
@@ -52,6 +53,11 @@ const LinkBlock = styled.div`
   justify-content: center;
   align-items: center;
   opacity: 0.6;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   & > a {
     ${({ theme }) => theme.fontSize.F1624};

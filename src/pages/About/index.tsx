@@ -152,15 +152,15 @@ function About() {
             <SNavigatorBlock
               links={[
                 {
-                  href: '/about/board_of_management',
+                  href: '/tallaghtrehabilitationproject/about/board_of_management',
                   displayValue: 'Board of Management',
                 },
                 {
-                  href: '/about/student_placement',
+                  href: '/tallaghtrehabilitationproject/about/student_placement',
                   displayValue: 'Student Placement',
                 },
                 {
-                  href: '/about/annual_reports',
+                  href: '/tallaghtrehabilitationproject/about/annual_reports',
                   displayValue: 'Annual Reports',
                 },
               ]}

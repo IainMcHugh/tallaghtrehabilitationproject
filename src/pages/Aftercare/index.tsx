@@ -64,6 +64,8 @@ const SSimpleList = styled(SimpleList)`
 `;
 
 const ActivitiesWrapper = styled.div`
+  margin-bottom: ${({ theme }) => theme.spacing.S24};
+
   ${breakpoints.large} {
     padding: ${({ theme }) => `0 ${theme.spacing.S48}`};
   }

@@ -15,7 +15,7 @@ function SMFacebook({ active }: ISMYoutube) {
           tabs="timeline"
         />
       </FacebookProvider> */}
-      <div
+      {/* <div
         className="fb-page"
         data-href="https://www.facebook.com/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
         data-tabs="timeline"
@@ -35,7 +35,7 @@ function SMFacebook({ active }: ISMYoutube) {
             Services
           </a>
         </blockquote>
-      </div>
+      </div> */}
     </div>
   );
 }

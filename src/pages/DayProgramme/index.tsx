@@ -133,18 +133,21 @@ function DayProgramme() {
             <SNavigatorBlock
               links={[
                 {
-                  href: '/dayprogramme/therapeutic_intervention',
+                  href: '/tallaghtrehabilitationproject/dayprogramme/therapeutic_intervention',
                   displayValue: 'Therapeutic Intervention',
                 },
                 {
-                  href: '/dayprogramme/educational_intervention',
+                  href: '/tallaghtrehabilitationproject/dayprogramme/educational_intervention',
                   displayValue: 'Educational Intervention',
                 },
                 {
-                  href: '/dayprogramme/programme_path',
+                  href: '/tallaghtrehabilitationproject/dayprogramme/programme_path',
                   displayValue: 'Programme Path',
                 },
-                { href: '/dayprogramme/outreach', displayValue: 'Outreach' },
+                {
+                  href: '/tallaghtrehabilitationproject/dayprogramme/outreach',
+                  displayValue: 'Outreach',
+                },
                 {
                   href: InfoPack,
                   displayValue: 'Information Pack',
