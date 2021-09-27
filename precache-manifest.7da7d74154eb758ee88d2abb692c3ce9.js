@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5beeca259adfb2ed78b68974e985d5e3",
+    "revision": "a1eb0a5c6ef46119225e49ab5ee34c11",
     "url": "/index.html"
   },
   {
-    "revision": "964c39613dc1bb1e9d2c",
-    "url": "/static/css/main.d347f75b.chunk.css"
+    "revision": "3588c089847c98c8418e",
+    "url": "/static/css/2.b8803beb.chunk.css"
   },
   {
-    "revision": "ef6f0333939a52f54b2c",
-    "url": "/static/js/2.a5bfdb0f.chunk.js"
+    "revision": "3588c089847c98c8418e",
+    "url": "/static/js/2.30445a77.chunk.js"
   },
   {
-    "revision": "567d5de4befe1ca240dd1104da597b75",
-    "url": "/static/js/2.a5bfdb0f.chunk.js.LICENSE.txt"
+    "revision": "d0c79fea965c631215f7dd25dd347bee",
+    "url": "/static/js/2.30445a77.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "964c39613dc1bb1e9d2c",
-    "url": "/static/js/main.41e3784f.chunk.js"
+    "revision": "c984ad2d5b8bcad08246",
+    "url": "/static/js/main.1686dc78.chunk.js"
   },
   {
-    "revision": "9b98dacd3c8525a279bf",
-    "url": "/static/js/runtime-main.eede87aa.js"
+    "revision": "6d43117c2d37c88e25a3",
+    "url": "/static/js/runtime-main.ab22a448.js"
   },
   {
     "revision": "fcfb8e785148dc72a93b0d978489d2ed",
@@ -30,10 +30,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cc7827e356f03675285dd7462a47e283",
     "url": "/static/media/Day_programme_referral_form.cc7827e3.pdf"
-  },
-  {
-    "revision": "be29f3c5ccd30b97f9c394a02c9ce5d7",
-    "url": "/static/media/LEMONMILK-Regular.be29f3c5.otf"
   },
   {
     "revision": "f17a165e006372b9e9bb3505611eeda2",
@@ -128,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/dp_home.92bc8112.jpg"
   },
   {
+    "revision": "cac52319ef0b5c51304a8289e7969863",
+    "url": "/static/media/full_logo.cac52319.svg"
+  },
+  {
     "revision": "a42b2ec3682f50efafce8660014cb71e",
     "url": "/static/media/group1.a42b2ec3.png"
   },
@@ -148,16 +148,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/instagram.4a7da80e.jpg"
   },
   {
-    "revision": "26b65b3c69220aba6edc015a20be9519",
-    "url": "/static/media/instagramLogo.26b65b3c.jpg"
-  },
-  {
     "revision": "67b64d8f6cd15eddd27aaffafd68ca64",
     "url": "/static/media/kiltalown_old.67b64d8f.jpg"
-  },
-  {
-    "revision": "590e6cc1553e13236384cc1164826fcb",
-    "url": "/static/media/play_button_out.590e6cc1.png"
   },
   {
     "revision": "e732145257d6018a3dcf5bbd11b2cf66",
@@ -242,13 +234,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "597e8bd4e38f92dbacbd972105a215d3",
     "url": "/static/media/trp_2018_annual_review.597e8bd4.pdf"
-  },
-  {
-    "revision": "6918db95c0f5675ee30e5f6f3445daa6",
-    "url": "/static/media/twitterLogo.6918db95.png"
-  },
-  {
-    "revision": "8b424e8d552565ace674251413e329db",
-    "url": "/static/media/vid_thumbnail.8b424e8d.jpg"
   }
 ]);
