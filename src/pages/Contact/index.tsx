@@ -76,7 +76,6 @@ function Contact() {
   };
 
   function handleSubmit(values: Record<string, unknown>) {
-    console.log(values);
     emailjs
       .send(
         'service_mqcli2f',

@@ -88,7 +88,6 @@ function Donate() {
         {document ? (
           <>
             <SBreadcrumbs crumbs={crumbs} />
-            {console.log(document)}
             {document.map(({ data }, index) => (
               <Fragment key={index}>
                 {data.title && (

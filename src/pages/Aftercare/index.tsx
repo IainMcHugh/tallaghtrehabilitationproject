@@ -99,7 +99,6 @@ function Aftercare() {
   useEffect(() => {
     const fetchData = async () => {
       const { results } = await prismic.getByIDs(ids, {});
-      console.log(results);
       setDocument(results);
     };
 

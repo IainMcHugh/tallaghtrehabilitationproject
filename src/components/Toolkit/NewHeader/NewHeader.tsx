@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { Link as ReactLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
@@ -31,15 +32,24 @@ const Container = styled.header`
   }
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled(ReactLink)`
+  position: absolute;
+  top: 12px;
+  left: 12px;
   display: flex;
   align-items: center;
+  color: ${({ theme }) => theme.colors.YELLOW};
+  transition: opacity 200ms ease-in-out;
 
   z-index: 9999;
 
   & > svg {
     width: 48px;
     height: 48px;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 `;
 
@@ -77,9 +87,8 @@ const MotionNav = styled(motion.nav)<{ isOpen: boolean }>`
   left: 0;
   right: 16px;
   width: 100vw;
-  z-index: 9999;
+  z-index: 9990;
   ${({ isOpen }) => (isOpen ? 'bottom: 0;' : 'height: 72px;')}
-  /* bottom: 0; */
 
   ${breakpoints.large} {
     display: none;
@@ -190,6 +199,7 @@ const DesktopButtonContainer = styled.div`
 
 function NewHeader() {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isCurrentlyOpen, setIsCurrentlyOpen] = useState<boolean>(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const listItems = [
@@ -310,7 +320,7 @@ function NewHeader() {
 
   return (
     <Container>
-      <LogoContainer>
+      <LogoContainer to="/">
         <Logo src={require('images/full_logo.svg')} alt="logo" />
         <LogoTextContainer>
           <LogoText>
@@ -329,11 +339,13 @@ function NewHeader() {
         animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
-        isOpen={isOpen}
+        isOpen={isCurrentlyOpen}
+        onAnimationStart={() => isOpen && setIsCurrentlyOpen(true)}
+        onAnimationComplete={() => !isOpen && setIsCurrentlyOpen(false)}
       >
         <MotionDiv variants={sidebar} />
         <SMenuToggle toggle={() => toggleOpen()} />
-        <MobileMenuContainer variants={variants} isOpen={isOpen}>
+        <MobileMenuContainer variants={variants} isOpen={isCurrentlyOpen}>
           {listItems.map(({ displayText, href }, index) => (
             <SMobileMenuItem key={index}>
               <Link href={href}>{displayText}</Link>
