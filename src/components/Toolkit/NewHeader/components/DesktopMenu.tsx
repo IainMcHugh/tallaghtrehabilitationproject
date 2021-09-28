@@ -36,14 +36,12 @@ const SLink = styled(Link)`
 `;
 
 function DesktopMenu({ items, className }: IDesktopMenu) {
-  const isStaging = window.location.href.includes('iainmchugh');
-
   return (
     <Container className={className}>
       {items.map(({ displayText, href, external, download }, index) => (
         <ListItem key={index}>
           <SLink
-            href={`${isStaging ? '/tallaghtrehabilitationproject' : ''}${href}`}
+            href={href}
             target={external ? '_blank' : undefined}
             rel={external ? 'noopener noreferrer' : undefined}
             download={download}

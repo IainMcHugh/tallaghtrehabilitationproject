@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
 
-import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
+import DPReferralForm from 'documents/referral_forms/Day_Programme_referral_form.pdf';
 import ACReferralForm from 'documents/referral_forms/Aftercare_referral_form.pdf';
 import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
 import RRLeaflet from 'documents/referral_forms/room_rental_booklet.pdf';
@@ -12,7 +12,6 @@ import { useDimensions } from 'hooks/useDimensions';
 import { MenuToggle } from 'components/Toolkit/MenuToggle/MenuToggle';
 import { Link } from 'components/Toolkit/Link/Link';
 import { MobileMenuItem } from 'components/Toolkit/NewHeader/components/MobileMenuItem';
-import { Button } from 'components/Toolkit/Button/Button';
 import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
 import { DesktopMenu } from 'components/Toolkit/NewHeader/components/DesktopMenu';
 
@@ -259,8 +258,6 @@ function NewHeader() {
     },
   ];
 
-  const isStaging = window.location.href.includes('iainmchugh');
-
   const sidebar = {
     open: (height = 100) => ({
       clipPath: `circle(${height * 4 + 1000}px at 92% 36px)`,
@@ -339,13 +336,7 @@ function NewHeader() {
         <MobileMenuContainer variants={variants} isOpen={isOpen}>
           {listItems.map(({ displayText, href }, index) => (
             <SMobileMenuItem key={index}>
-              <Link
-                href={`${
-                  isStaging ? '/tallaghtrehabilitationproject' : ''
-                }${href}`}
-              >
-                {displayText}
-              </Link>
+              <Link href={href}>{displayText}</Link>
             </SMobileMenuItem>
           ))}
           <ButtonContainer variants={buttonVariants}>
@@ -366,12 +357,7 @@ function NewHeader() {
         <DesktopList>
           {listItems.map(({ displayText, href, subListItems }, index) => (
             <DesktopListItem key={index}>
-              <Link
-                href={`${
-                  isStaging ? '/tallaghtrehabilitationproject' : ''
-                }${href}`}
-                variant="THICK"
-              >
+              <Link href={href} variant="THICK">
                 {displayText}
               </Link>
               <SDesktopMenu items={subListItems} />

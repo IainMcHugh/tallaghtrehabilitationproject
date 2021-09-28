@@ -55,17 +55,12 @@ const SChevronRight = styled(ChevronRight)`
 function Breadcrumbs({ crumbs, className }: IBreadcrumbs) {
   const length = crumbs.length - 1;
   const theme = useTheme();
-  const isStaging = window.location.href.includes('iainmchugh');
 
   return (
     <Wrapper className={className}>
       {crumbs.map(({ display, href }, index) => (
         <Crumb key={index}>
-          <SLink
-            href={`${isStaging ? '/tallaghtrehabilitationproject' : ''}${href}`}
-            color="GREY_DARK"
-            fontSize="F1216"
-          >
+          <SLink href={href} color="GREY_DARK" fontSize="F1216">
             {display}
           </SLink>
           {length !== index && (

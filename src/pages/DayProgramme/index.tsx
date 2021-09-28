@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { List, Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
-import DPReferralForm from 'documents/referral_forms/Day_programme_referral_form.pdf';
+import DPReferralForm from 'documents/referral_forms/Day_Programme_referral_form.pdf';
 import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
 import InfoPack from 'documents/referral_forms/information_brochure.pdf';
 import { breakpoints } from 'styles/breakpoints';
