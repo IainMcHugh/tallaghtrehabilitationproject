@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { Facebook, Instagram, Twitter } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
@@ -84,7 +84,7 @@ const ServicesCardContainer = styled.div`
   }
 `;
 
-const CardLink = styled.a`
+const CardLink = styled(Link)`
   width: 100%;
   margin-bottom: ${({ theme }) => theme.spacing.S24};
 
@@ -134,54 +134,6 @@ const SocialMediaImage = styled.img`
   border-radius: ${({ theme }) => theme.borderRadius.all8};
 `;
 
-const SocialMediaData = styled.div`
-  position: absolute;
-  top: ${({ theme }) => theme.spacing.S24};
-  bottom: ${({ theme }) => theme.spacing.S24};
-  left: ${({ theme }) => theme.spacing.S8};
-  right: ${({ theme }) => theme.spacing.S8};
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  ${breakpoints.large} {
-    top: ${({ theme }) => theme.spacing.S48};
-    bottom: ${({ theme }) => theme.spacing.S48};
-    left: ${({ theme }) => theme.spacing.S80};
-    right: ${({ theme }) => theme.spacing.S80};
-  }
-`;
-
-const SocialMediaHeading = styled.h2`
-  ${({ theme }) => theme.fontSize.F1824};
-  color: ${({ theme }) => theme.colors.GREY_DARK};
-  font-weight: ${({ theme }) => theme.fontWeight.light};
-  margin-bottom: ${({ theme }) => theme.spacing.S16};
-
-  ${breakpoints.large} {
-    ${({ theme }) => theme.fontSize.F2424};
-  }
-`;
-
-const SocialMediaIcons = styled.div`
-  display: grid;
-  grid-template-columns: ${({ theme }) => `repeat(3, ${theme.spacing.S48})`};
-  column-gap: ${({ theme }) => theme.spacing.S8};
-  margin-bottom: ${({ theme }) => theme.spacing.S16};
-`;
-
-const SocialMediaIcon = styled.button`
-  border: none;
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.GREY_DARK};
-`;
-
-const SocialMediaEmbed = styled.div`
-  height: 100%;
-  overflow-y: hidden;
-  border-radius: ${({ theme }) => theme.borderRadius.all8};
-`;
-
 function Home() {
   const carouselData = [
     {
@@ -215,7 +167,7 @@ function Home() {
           <ServicesSection>
             <ServicesHeader>Services we offer</ServicesHeader>
             <ServicesCardContainer>
-              <CardLink href="/dayprogramme">
+              <CardLink to="/dayprogramme">
                 <SCard
                   imageUrl={require('images/dp_home.jpg')}
                   imageAlt="test"
@@ -223,7 +175,7 @@ function Home() {
                   subheading="Click here to find out about our Day Programme"
                 />
               </CardLink>
-              <CardLink href="/aftercare">
+              <CardLink to="/aftercare">
                 <SCard
                   imageUrl={require('images/a_home.jpg')}
                   imageAlt="test"
@@ -231,7 +183,7 @@ function Home() {
                   subheading="Find out more about our Aftercare services"
                 />
               </CardLink>
-              <CardLink href="/roomrental">
+              <CardLink to="/roomrental">
                 <SCard
                   imageUrl={require('images/stock_roomrental3.jpg')}
                   imageAlt="test"
@@ -247,45 +199,6 @@ function Home() {
               alt="Kiltalown old"
             />
             <SocialMediaToggle />
-            {/* <SocialMediaData>
-              <SocialMediaHeading>
-                Follow us on Social Media!
-              </SocialMediaHeading>
-              <SocialMediaIcons>
-                <SocialMediaIcon>
-                  <Facebook size={32} />
-                </SocialMediaIcon>
-                <SocialMediaIcon>
-                  <Instagram size={32} />
-                </SocialMediaIcon>
-                <SocialMediaIcon>
-                  <Twitter size={32} />
-                </SocialMediaIcon>
-              </SocialMediaIcons>
-              <SocialMediaEmbed>
-                <div
-                  className="fb-page"
-                  data-href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
-                  data-tabs="timeline"
-                  data-width="400"
-                  data-height=""
-                  data-small-header="true"
-                  data-adapt-container-width="true"
-                  data-hide-cover="false"
-                  data-show-facepile="true"
-                >
-                  <blockquote
-                    cite="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
-                    className="fb-xfbml-parse-ignore"
-                  >
-                    <a href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/">
-                      Tallaght Rehabilitation Project &amp; Tallaght Wide
-                      Aftercare Services
-                    </a>
-                  </blockquote>
-                </div>
-              </SocialMediaEmbed>
-            </SocialMediaData> */}
           </SocialMediaSection>
         </HomeWrapper>
       </DefaultLayout>

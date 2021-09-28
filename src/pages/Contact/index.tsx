@@ -112,7 +112,11 @@ function Contact() {
           clearForm={clearForm}
           setClearForm={setClearForm}
         />
-        <SButtonLink icon={<CreditCard />} href="/contact/donate">
+        <SButtonLink
+          icon={<CreditCard />}
+          href="/contact/donate"
+          isClientLink={true}
+        >
           Make a donation
         </SButtonLink>
       </ContactWrapper>

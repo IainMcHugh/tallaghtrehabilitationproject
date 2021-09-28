@@ -340,7 +340,11 @@ function NewHeader() {
             </SMobileMenuItem>
           ))}
           <ButtonContainer variants={buttonVariants}>
-            <SButtonLink icon={<CreditCard />} href="/contact/donate">
+            <SButtonLink
+              icon={<CreditCard />}
+              href="/contact/donate"
+              isClientLink={true}
+            >
               Donate
             </SButtonLink>
             <ButtonLink
@@ -366,7 +370,11 @@ function NewHeader() {
         </DesktopList>
       </DesktopNav>
       <DesktopButtonContainer>
-        <ButtonLink icon={<CreditCard />} href="/contact/donate">
+        <ButtonLink
+          icon={<CreditCard />}
+          href="/contact/donate"
+          isClientLink={true}
+        >
           Donate
         </ButtonLink>
         <ButtonLink icon={<Phone />} variant="SECONDARY" href="tel:014597705">

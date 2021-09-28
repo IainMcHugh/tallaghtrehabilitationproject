@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { breakpoints } from 'styles/breakpoints';
+import { Link } from 'components/Toolkit/Link/Link';
 
 type TLinks = { href: string; displayValue: string; external?: boolean };
 interface INavigatorBlock {
@@ -18,7 +19,7 @@ const Wrapper = styled.div`
   box-shadow: ${({ theme }) => `8px -8px 0 ${theme.colors.YELLOW_DARK}`};
 `;
 
-const NavItem = styled.a`
+const NavItem = styled(Link)`
   margin: ${({ theme }) => `0 ${theme.spacing.S16}`};
   padding: ${({ theme }) => `${theme.spacing.S8} 0`};
   ${({ theme }) => theme.fontSize.F1824};
