@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
@@ -83,6 +84,13 @@ function AnnualReports() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Annual Reports</title>
+        <meta
+          name="description"
+          content="The annual reports for Tallaght Rehabilitation Project."
+        />
+      </Helmet>
       <AnnualReportsWrapper>
         <SBreadcrumbs crumbs={crumbs} />
         <SSectionHeading>Annual Reports</SSectionHeading>

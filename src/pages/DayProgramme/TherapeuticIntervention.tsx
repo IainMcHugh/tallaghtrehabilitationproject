@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -86,6 +87,13 @@ function TherapeuticIntervention() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Therapeutic Intervention</title>
+        <meta
+          name="description"
+          content="The Therapeutic component of the programme, forms the core around which all other sessions are interwoven."
+        />
+      </Helmet>
       <TherapeuticInterventionWrapper>
         {document ? (
           <>

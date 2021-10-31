@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
@@ -153,6 +154,13 @@ function Home() {
   return (
     <>
       <DefaultLayout>
+        <Helmet>
+          <title>Tallaght Rehabilitation Project</title>
+          <meta
+            name="description"
+            content="From all Staff, Participants, and Board of Management&nbsp;we would like to welcome you to the Tallaght Rehabilitation Project website."
+          />
+        </Helmet>
         <HomeWrapper>
           <HeroSection>
             <HeroImage src={require('images/TRPFrontEdit.png')} alt="hero" />

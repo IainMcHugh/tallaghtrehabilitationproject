@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 import { RichText } from 'prismic-reactjs';
 
@@ -85,6 +86,13 @@ function StudentPlacement() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Student Placement</title>
+        <meta
+          name="description"
+          content="Tallaght Rehabilitation Project always welcome people wishing to volunteer their time here at Kiltalown House and Tallaght Rehabilitation Project and can provide appropriate training and support for interested volunteers."
+        />
+      </Helmet>
       <StudentPlacementWrapper>
         {document ? (
           <>

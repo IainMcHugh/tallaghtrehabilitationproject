@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -89,6 +90,13 @@ function ProgrammePath() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Programme Path</title>
+        <meta
+          name="description"
+          content="The Programme Path outlines the path of engagement over a 12 month period."
+        />
+      </Helmet>
       <ProgrammePathWrapper>
         {document ? (
           <>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { List, Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
@@ -113,6 +114,13 @@ function DayProgramme() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Day Programme</title>
+        <meta
+          name="description"
+          content="TRP is a dedicated specialist rehabilitation project in the Tallaght area providing a community based day-programme for people in recovery with addiction problems."
+        />
+      </Helmet>
       <DayProgrammeWrapper>
         {document ? (
           <>

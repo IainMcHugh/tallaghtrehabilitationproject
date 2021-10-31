@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
@@ -107,6 +108,13 @@ function Aftercare() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Aftercare</title>
+        <meta
+          name="description"
+          content="Tallaght Wide Aftercare Service is a post rehabilitation service that seeks to positively reinforce the gains that people make during early recovery and in turn seeks to support people who wish to continue on the journey of recovery from addiction."
+        />
+      </Helmet>
       <AftercareWrapper>
         {document ? (
           <>

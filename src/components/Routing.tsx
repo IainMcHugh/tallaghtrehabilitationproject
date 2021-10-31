@@ -1,24 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom';
-
-// import Header from 'components/Toolkit/Header/Header';
-// import ScrollToTop from 'components/ScrollToTop';
-// import Home from 'components/Home/Home';
-// import About from 'components/About/About';
-// import BoardOfManagement from 'components/About/boardOfManagement';
-// import StudentPlacement from 'components/About/StudentPlacement';
-// import AnnualReports from 'components/About/AnnualReports';
-// import DayProgramme from 'components/DayProgramme/DayProgramme';
-// import TherapeuticIntervention from 'components/DayProgramme/TherapeuticIntervention';
-// import EducationalIntervention from 'components/DayProgramme/EducationalIntervention';
-// import ProgrammePath from 'components/DayProgramme/ProgrammePath';
-// import Outreach from 'components/DayProgramme/Outreach';
-// import AfterCare from 'components/Aftercare/AfterCare';
-// import RoomRental from 'components/RoomRental/RoomRental';
-// import Contact from 'components/Contact/Contact';
-// import Donate from 'components/Contact/Donate';
-// import Footer from 'components/Toolkit/Footer/Footer';
-// import PrivacyPolicy from 'components/utils/PrivacyPolicy';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import ScrollToTop from 'components/ScrollToTop';
 import { Home } from 'pages';
@@ -38,10 +19,10 @@ import { Donate } from 'pages/Contact/Donate';
 import { PrivacyPolicy } from 'pages/Contact/PrivacyPolicy';
 
 function Routing() {
+  // When updating github pages, replace Router with HashRouter
   return (
-    <HashRouter>
+    <Router>
       <ScrollToTop />
-      {/* <Header /> */}
       <Route
         path={['/', '/tallaghtrehabilitationproject']}
         exact
@@ -144,8 +125,7 @@ function Routing() {
         exact
         component={PrivacyPolicy}
       />
-      {/* <Footer /> */}
-    </HashRouter>
+    </Router>
   );
 }
 

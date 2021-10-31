@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -97,6 +98,15 @@ function BoardOfManagement() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Board of Management</title>
+        <meta
+          name="description"
+          content="The board of directors is made up of representatives from a range of
+        statutory, voluntary and community agencies/groups based in the Tallaght
+        area who freely volunteer their time and expertise."
+        />
+      </Helmet>
       <BoardOfManagementWrapper>
         {document ? (
           <>

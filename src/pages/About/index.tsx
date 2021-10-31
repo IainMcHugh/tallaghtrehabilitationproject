@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -120,6 +121,13 @@ function About() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>About Us</title>
+        <meta
+          name="description"
+          content="Tallaght Rehabilitation Project is a Community based rehabilitation day-programme for people in recovery from drug and alcohol addiction and who reside in the Tallaght Wide area."
+        />
+      </Helmet>
       <BannerContainer>
         <BannerImage
           src={require('../../images/Team/group2.jpg')}

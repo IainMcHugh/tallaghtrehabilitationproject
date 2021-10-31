@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -84,6 +85,13 @@ function EducationalIntervention() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Educational Intervention</title>
+        <meta
+          name="description"
+          content="The education component of the programme is designed to be learner focused and provides short modules relevant in content to the needs of the group."
+        />
+      </Helmet>
       <EducationalInterventionWrapper>
         {document ? (
           <>

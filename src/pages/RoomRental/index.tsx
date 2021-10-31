@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -84,6 +85,13 @@ function RoomRental() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Room Rental</title>
+        <meta
+          name="description"
+          content="Kiltalown House is an 18th Century House beautifully restored, and is the ideal setting not only for rehabilitation but for training, counselling and holistic treatments."
+        />
+      </Helmet>
       <RoomRentalWrapper>
         {document ? (
           <>

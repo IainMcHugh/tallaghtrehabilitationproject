@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import type { Document } from '@prismicio/client/types/documents';
 
 import { breakpoints } from 'styles/breakpoints';
@@ -84,6 +85,13 @@ function Donate() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Donate</title>
+        <meta
+          name="description"
+          content="Would you consider making a donation today? Your contribution will be acknowledged on our website and on our annual report and on social media if you so wish."
+        />
+      </Helmet>
       <DonateWrapper>
         {document ? (
           <>

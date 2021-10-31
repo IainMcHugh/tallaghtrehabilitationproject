@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import emailjs from 'emailjs-com';
 import { CreditCard } from 'react-feather';
 
@@ -102,6 +103,13 @@ function Contact() {
 
   return (
     <DefaultLayout>
+      <Helmet>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="Get in touch with the Tallaght Rehabilitation Project for more information on our services."
+        />
+      </Helmet>
       <ContactWrapper>
         <SBreadcrumbs crumbs={crumbs} />
         <SSectionHeading>Get in touch</SSectionHeading>
