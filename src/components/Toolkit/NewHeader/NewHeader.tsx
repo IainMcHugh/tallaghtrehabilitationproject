@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Link as ReactLink } from 'react-router-dom';
 import styled from 'styled-components';
+import ReactGa from 'react-ga4';
 import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
 
@@ -318,6 +319,24 @@ function NewHeader() {
     }
   }, [isOpen]);
 
+  function handleDonateClick() {
+    ReactGa.event({
+      category: 'link',
+      action: 'donate-navigation',
+      label: 'Clicking the Donate link',
+    });
+    return true;
+  }
+
+  function handleCallUsClick() {
+    ReactGa.event({
+      category: 'button',
+      action: 'call-us-button',
+      label: 'Clicking the Donate link',
+    });
+    return true;
+  }
+
   return (
     <Container>
       <LogoContainer to="/">
@@ -356,6 +375,7 @@ function NewHeader() {
               icon={<CreditCard />}
               href="/contact/donate"
               isClientLink={true}
+              onClick={handleDonateClick}
             >
               Donate
             </SButtonLink>
@@ -363,6 +383,7 @@ function NewHeader() {
               icon={<Phone />}
               variant="SECONDARY"
               href="tel:014597705"
+              onClick={handleCallUsClick}
             >
               Call Us
             </ButtonLink>
@@ -386,10 +407,16 @@ function NewHeader() {
           icon={<CreditCard />}
           href="/contact/donate"
           isClientLink={true}
+          onClick={handleDonateClick}
         >
           Donate
         </ButtonLink>
-        <ButtonLink icon={<Phone />} variant="SECONDARY" href="tel:014597705">
+        <ButtonLink
+          icon={<Phone />}
+          variant="SECONDARY"
+          href="tel:014597705"
+          onClick={handleCallUsClick}
+        >
           Call Us
         </ButtonLink>
       </DesktopButtonContainer>
