@@ -16,6 +16,7 @@ import { Link } from 'components/Toolkit/Link/Link';
 import { MobileMenuItem } from 'components/Toolkit/NewHeader/components/MobileMenuItem';
 import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
 import { DesktopMenu } from 'components/Toolkit/NewHeader/components/DesktopMenu';
+import type { IListItems } from 'types';
 
 const Container = styled.header`
   display: relative;
@@ -203,7 +204,7 @@ function NewHeader() {
   const [isCurrentlyOpen, setIsCurrentlyOpen] = useState<boolean>(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  const listItems = [
+  const listItems: IListItems[] = [
     {
       displayText: 'About',
       href: '/about',

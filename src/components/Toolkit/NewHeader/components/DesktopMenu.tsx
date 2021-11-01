@@ -35,19 +35,33 @@ const SLink = styled(Link)`
   ${({ theme }) => theme.fontSize.F1616}
 `;
 
+const ALink = styled.a`
+  display: block;
+  width: 100%;
+  height: 100%;
+  ${({ theme }) => theme.fontSize.F1616}
+  font-weight: ${({ theme }) => theme.fontWeight.light};
+  color: ${({ theme }) => theme.colors.YELLOW};
+`;
+
 function DesktopMenu({ items, className }: IDesktopMenu) {
   return (
     <Container className={className}>
       {items.map(({ displayText, href, external, download }, index) => (
         <ListItem key={index}>
-          <SLink
-            href={href}
-            target={external ? '_blank' : undefined}
-            rel={external ? 'noopener noreferrer' : undefined}
-            download={download}
-          >
-            {displayText}
-          </SLink>
+          {download ? (
+            <ALink href={href} download>
+              {displayText}
+            </ALink>
+          ) : (
+            <SLink
+              href={href}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noopener noreferrer' : undefined}
+            >
+              {displayText}
+            </SLink>
+          )}
         </ListItem>
       ))}
     </Container>
