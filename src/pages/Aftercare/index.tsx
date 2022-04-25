@@ -15,6 +15,7 @@ import { SectionSubHeading } from 'components/Toolkit/SectionSubHeading/SectionS
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
 import { Activities } from 'components/Toolkit/Activities/Activities';
 import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
+import { useRefferalForms } from 'hooks/useReferralForms';
 
 const AftercareWrapper = styled.div`
   min-height: 60vh;
@@ -87,6 +88,7 @@ function Aftercare() {
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
+  const { forms } = useRefferalForms(prismic);
 
   const ids: string[] = [
     'YNGRyhAAACMAXz5e',
@@ -150,11 +152,18 @@ function Aftercare() {
                 )}
               </Fragment>
             ))}
-            <ButtonWrapper>
-              <ButtonLink icon={<Download />} href={ACReferralForm} download>
-                Download Referral form
-              </ButtonLink>
-            </ButtonWrapper>
+            {forms && (
+              <ButtonWrapper>
+                <ButtonLink
+                  icon={<Download />}
+                  href={forms.aftercareReferralForm}
+                  download
+                  external
+                >
+                  Download Referral form
+                </ButtonLink>
+              </ButtonWrapper>
+            )}
           </>
         ) : (
           <Skeleton />

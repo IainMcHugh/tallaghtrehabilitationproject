@@ -5,10 +5,6 @@ import ReactGa from 'react-ga4';
 import { motion, useCycle } from 'framer-motion';
 import { Phone, CreditCard } from 'react-feather';
 
-import DPReferralForm from 'documents/referral_forms/Day_Programme_referral_form.pdf';
-import ACReferralForm from 'documents/referral_forms/Aftercare_referral_form.pdf';
-import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
-import RRLeaflet from 'documents/referral_forms/room_rental_booklet.pdf';
 import { breakpoints } from 'styles/breakpoints';
 import { useDimensions } from 'hooks/useDimensions';
 import { MenuToggle } from 'components/Toolkit/MenuToggle/MenuToggle';
@@ -17,6 +13,8 @@ import { MobileMenuItem } from 'components/Toolkit/NewHeader/components/MobileMe
 import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
 import { DesktopMenu } from 'components/Toolkit/NewHeader/components/DesktopMenu';
 import type { IListItems } from 'types';
+import { useRefferalForms } from 'hooks/useReferralForms';
+import { usePrismic } from 'services/prismic';
 
 const Container = styled.header`
   display: relative;
@@ -204,6 +202,8 @@ function NewHeader() {
   const [isCurrentlyOpen, setIsCurrentlyOpen] = useState<boolean>(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+  const prismic = usePrismic();
+  const { forms } = useRefferalForms(prismic);
   const listItems: IListItems[] = [
     {
       displayText: 'About',
@@ -233,12 +233,13 @@ function NewHeader() {
         { displayText: 'Outreach', href: '/dayprogramme/outreach' },
         {
           displayText: 'Criteria for Assessment',
-          href: DPCriteria,
+          href: forms?.criteriaForAssessment ?? '',
           external: true,
         },
         {
           displayText: 'Download Referral Form',
-          href: DPReferralForm,
+          href: forms?.dayProgrammeReferralForm ?? '',
+          external: true,
           download: true,
         },
       ],
@@ -249,8 +250,9 @@ function NewHeader() {
       subListItems: [
         {
           displayText: 'Download Referral Form',
-          href: ACReferralForm,
+          href: forms?.aftercareReferralForm ?? '',
           download: true,
+          external: true,
         },
       ],
     },
@@ -258,7 +260,12 @@ function NewHeader() {
       displayText: 'Room Rental',
       href: '/roomrental',
       subListItems: [
-        { displayText: 'Room Rental Booklet', href: RRLeaflet, external: true },
+        {
+          displayText: 'Room Rental Booklet',
+          href: forms?.roomRentalBooklet ?? '',
+          external: true,
+          download: true,
+        },
       ],
     },
     {

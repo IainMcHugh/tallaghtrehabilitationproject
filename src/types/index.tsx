@@ -8,3 +8,11 @@ interface IListItem {
   external?: boolean;
   download?: boolean;
 }
+
+export interface IMediaItem {
+  kind: string;
+  link_type: string;
+  name: string;
+  size: string;
+  url: string;
+}

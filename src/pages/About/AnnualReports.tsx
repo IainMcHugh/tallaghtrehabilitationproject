@@ -6,7 +6,9 @@ import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Breadcrumbs } from 'components/Toolkit/Breadcrumbs/Breadcrumbs';
 import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading';
-import * as reports from 'components/About/reports';
+import { usePrismic } from 'services/prismic';
+import { useAuditedAccounts } from 'hooks/useAuditedAccounts';
+import { useAnnualReports } from 'hooks/useAnnualReports';
 
 const AnnualReportsWrapper = styled.div`
   min-height: 60vh;
@@ -63,6 +65,7 @@ const LinkBlock = styled.div`
   & > a {
     ${({ theme }) => theme.fontSize.F1624};
     color: ${({ theme }) => theme.colors.WHITE};
+    text-transform: capitalize;
   }
 
   ${breakpoints.large} {
@@ -73,6 +76,10 @@ const LinkBlock = styled.div`
 `;
 
 function AnnualReports() {
+  const prismic = usePrismic();
+  const { audits } = useAuditedAccounts(prismic);
+  const { reports } = useAnnualReports(prismic);
+
   const crumbs = [
     { display: 'Home', href: '/' },
     { display: 'About', href: '/about' },
@@ -94,106 +101,29 @@ function AnnualReports() {
       <AnnualReportsWrapper>
         <SBreadcrumbs crumbs={crumbs} />
         <SSectionHeading>Annual Reports</SSectionHeading>
-        <LinksWrapper>
-          <LinkBlock>
-            <a href={reports.ar2020} download>
-              TRP Annual Report 2020
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2019} download>
-              TRP Annual Report 2019
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2018} download>
-              TRP Annual Report 2018
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2017} download>
-              TRP Annual Report 2017
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2015} download>
-              TRP Annual Report 2015
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2014} download>
-              TRP Annual Report 2014
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2013} download>
-              TRP Annual Report 2013
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2012} download>
-              TRP Annual Report 2012
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2011} download>
-              TRP Annual Report 2011
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2010} download>
-              TRP Annual Report 2010
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2009} download>
-              TRP Annual Report 2009
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2008} download>
-              TRP Annual Report 2008
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.ar2007} download>
-              TRP Annual Report 2007
-            </a>
-          </LinkBlock>
-        </LinksWrapper>
+        {reports && (
+          <LinksWrapper>
+            {reports.reverse().map((report, index) => (
+              <LinkBlock key={index}>
+                <a href={report.url} download>
+                  {report.name}
+                </a>
+              </LinkBlock>
+            ))}
+          </LinksWrapper>
+        )}
         <SSectionHeading>Audited Accounts</SSectionHeading>
-        <LinksWrapper>
-          <LinkBlock>
-            <a href={reports.aa2020} download>
-              TRP Audited Accounts 2020
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.aa2019} download>
-              TRP Audited Accounts 2019
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.aa2018} download>
-              TRP Audited Accounts 2018
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.aa2017} download>
-              TRP Audited Accounts 2017
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.aa2016} download>
-              TRP Audited Accounts 2016
-            </a>
-          </LinkBlock>
-          <LinkBlock>
-            <a href={reports.aa2015} download>
-              TRP Audited Accounts 2015
-            </a>
-          </LinkBlock>
-        </LinksWrapper>
+        {audits && (
+          <LinksWrapper>
+            {audits.reverse().map((audit, index) => (
+              <LinkBlock key={index}>
+                <a href={audit.url} download>
+                  {audit.name}
+                </a>
+              </LinkBlock>
+            ))}
+          </LinksWrapper>
+        )}
       </AnnualReportsWrapper>
     </DefaultLayout>
   );

@@ -49,16 +49,17 @@ function DesktopMenu({ items, className }: IDesktopMenu) {
     <Container className={className}>
       {items.map(({ displayText, href, external, download }, index) => (
         <ListItem key={index}>
-          {download ? (
-            <ALink href={href} download>
+          {external ? (
+            <ALink
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              download={download}
+            >
               {displayText}
             </ALink>
           ) : (
-            <SLink
-              href={href}
-              target={external ? '_blank' : undefined}
-              rel={external ? 'noopener noreferrer' : undefined}
-            >
+            <SLink href={href} download={download}>
               {displayText}
             </SLink>
           )}

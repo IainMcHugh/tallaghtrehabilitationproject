@@ -4,9 +4,6 @@ import { Helmet } from 'react-helmet';
 import { List, Download } from 'react-feather';
 import type { Document } from '@prismicio/client/types/documents';
 
-import DPReferralForm from 'documents/referral_forms/Day_Programme_referral_form.pdf';
-import DPCriteria from 'documents/referral_forms/criteria_for_assessment_2019.pdf';
-import InfoPack from 'documents/referral_forms/information_brochure.pdf';
 import { breakpoints } from 'styles/breakpoints';
 import { usePrismic } from 'services/prismic';
 import { Skeleton } from 'components/Toolkit/Skeleton/Skeleton';
@@ -16,6 +13,7 @@ import { SectionHeading } from 'components/Toolkit/SectionHeading/SectionHeading
 import { SimpleList } from 'components/Toolkit/SimpleList/SimpleList';
 import { NavigatorBlock } from 'components/Toolkit/NavigatorBlock/NavigatorBlock';
 import { ButtonLink } from 'components/Toolkit/Link/ButtonLink';
+import { useRefferalForms } from 'hooks/useReferralForms';
 
 const DayProgrammeWrapper = styled.div`
   min-height: 60vh;
@@ -96,6 +94,7 @@ function DayProgramme() {
   ];
   const [document, setDocument] = useState<Document[] | null>();
   const prismic = usePrismic();
+  const { forms } = useRefferalForms(prismic);
 
   const ids: string[] = [
     'YND9hRAAACMAXK_o',
@@ -106,6 +105,7 @@ function DayProgramme() {
   useEffect(() => {
     const fetchData = async () => {
       const { results } = await prismic.getByIDs(ids, {});
+      console.log(results);
       setDocument(results);
     };
 
@@ -156,7 +156,7 @@ function DayProgramme() {
                   displayValue: 'Outreach',
                 },
                 {
-                  href: InfoPack,
+                  href: forms?.informationBrochure ?? '',
                   displayValue: 'Information Pack',
                   external: true,
                 },
@@ -164,17 +164,37 @@ function DayProgramme() {
             />
             <SSectionHeading>What to do next</SSectionHeading>
             <ButtonWrapper>
-              <SButtonLink icon={<List />} href={DPCriteria} external>
+              {/* <SButtonLink icon={<List />} href={DPCriteria} external>
                 Criteria for assessment
-              </SButtonLink>
-              <ButtonLink
+              </SButtonLink> */}
+              {/* <ButtonLink
                 variant="SECONDARY"
                 icon={<Download />}
                 href={DPReferralForm}
                 download
               >
                 Download Referral form
-              </ButtonLink>
+              </ButtonLink> */}
+              {forms?.criteriaForAssessment && (
+                <SButtonLink
+                  icon={<List />}
+                  href={forms.criteriaForAssessment}
+                  external
+                >
+                  Criteria for assessment
+                </SButtonLink>
+              )}
+              {forms?.dayProgrammeReferralForm && (
+                <ButtonLink
+                  variant="SECONDARY"
+                  icon={<Download />}
+                  href={forms.dayProgrammeReferralForm}
+                  external
+                  download
+                >
+                  Download Referral form
+                </ButtonLink>
+              )}
             </ButtonWrapper>
           </>
         ) : (
