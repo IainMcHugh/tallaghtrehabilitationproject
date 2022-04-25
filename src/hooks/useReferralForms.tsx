@@ -27,7 +27,6 @@ const useRefferalForms = (prismic: DefaultClient) => {
   const getRefferalForms = async () => {
     try {
       const { data } = await prismic.getByID(REFERRAL_ID, {});
-      console.log(data);
       const aftercareCriteriaForm = data[ReferralForms.aftercare_criteria_form]
         .url as string;
       const aftercareReferralForm = data[ReferralForms.aftercare_referral_form]
