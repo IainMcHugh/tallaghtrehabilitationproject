@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67608aafcfa37820f1e02da57f87ca5c",
+    "revision": "b1861d21b846e9df8d59af1cc2a46064",
     "url": "/index.html"
   },
   {
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.41f2eb29.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b59cb3dcb65ff27ec8c1",
-    "url": "/static/js/main.645a59cb.chunk.js"
+    "revision": "96f16d96a5b6265562a3",
+    "url": "/static/js/main.23a06f6f.chunk.js"
   },
   {
     "revision": "6d43117c2d37c88e25a3",
     "url": "/static/js/runtime-main.ab22a448.js"
-  },
-  {
-    "revision": "f17a165e006372b9e9bb3505611eeda2",
-    "url": "/static/media/SocialProtection_MARK_MASTER_Std_Colour.f17a165e.jpg"
   },
   {
     "revision": "b81d4dbc7a77ce4e9c56d367298b72e3",
@@ -34,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ccff1e2b6f745ecc959bd45457e5acdf",
     "url": "/static/media/a_home.ccff1e2b.jpg"
+  },
+  {
+    "revision": "c4dc00b54ebb070bf86a79f13a93d2c6",
+    "url": "/static/media/department_of_social_protection.c4dc00b5.png"
   },
   {
     "revision": "92bc8112adae33a734076fd0802720e3",
