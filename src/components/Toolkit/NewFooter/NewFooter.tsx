@@ -168,7 +168,7 @@ function NewFooter() {
             alt=""
           />
           <AffiliateImage
-            src={require('images/SocialProtection_MARK_MASTER_Std_Colour.jpg')}
+            src={require('images/department_of_social_protection.png')}
             alt=""
           />
           <AffiliateImage
