@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1861d21b846e9df8d59af1cc2a46064",
+    "revision": "00df949a8e216a33aad46abe9e8983eb",
     "url": "/index.html"
   },
   {
-    "revision": "e1e113cc4e1b2c676d5f",
+    "revision": "e2cc82e478871d2a8810",
     "url": "/static/css/2.b8803beb.chunk.css"
   },
   {
-    "revision": "e1e113cc4e1b2c676d5f",
-    "url": "/static/js/2.41f2eb29.chunk.js"
+    "revision": "e2cc82e478871d2a8810",
+    "url": "/static/js/2.397c7e7c.chunk.js"
   },
   {
     "revision": "d0c79fea965c631215f7dd25dd347bee",
-    "url": "/static/js/2.41f2eb29.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.397c7e7c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "96f16d96a5b6265562a3",
-    "url": "/static/js/main.23a06f6f.chunk.js"
+    "revision": "e16ee738409c48e45b10",
+    "url": "/static/js/main.f4094ce5.chunk.js"
   },
   {
     "revision": "6d43117c2d37c88e25a3",
@@ -54,10 +54,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d7900140864342e6f9da3f09bdfaecf6",
     "url": "/static/media/hse_logo_border_2016_web.d7900140.jpg"
-  },
-  {
-    "revision": "4a7da80e03d65f7bbd12a3df7b1f891d",
-    "url": "/static/media/instagram.4a7da80e.jpg"
   },
   {
     "revision": "67b64d8f6cd15eddd27aaffafd68ca64",
