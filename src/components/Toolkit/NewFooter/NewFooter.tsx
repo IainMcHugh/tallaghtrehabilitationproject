@@ -136,7 +136,7 @@ const SocialMediaData = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 144px;
+  width: 88px;
   height: 32px;
   display: flex;
   justify-content: space-between;
@@ -146,7 +146,7 @@ const SocialMediaData = styled.div`
     position: initial;
     flex-direction: column;
     width: 32px;
-    height: 144px;
+    height: 88px;
   }
 `;
 
@@ -221,25 +221,18 @@ function NewFooter() {
           </UsefulLinksData>
           <SocialMediaData>
             <SocialMediaIcon
-              href="https://www.facebook.com/pages/category/Community-Organization/Tallaght-Rehabilitation-Project-Tallaght-Wide-Aftercare-Services-174568196235168/"
+              href="https://www.facebook.com/profile.php?id=100064670447242"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Facebook size={32} />
             </SocialMediaIcon>
             <SocialMediaIcon
-              href="https://www.instagram.com/trp_tallaght_wide_aftercare/"
+              href="https://www.instagram.com/tallaghtrehabproject/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Instagram size={32} />
-            </SocialMediaIcon>
-            <SocialMediaIcon
-              href="https://twitter.com/trpdublin?lang=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter size={32} />
             </SocialMediaIcon>
           </SocialMediaData>
         </BottomSection>

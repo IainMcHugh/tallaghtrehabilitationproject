@@ -7,7 +7,6 @@ import { breakpoints } from 'styles/breakpoints';
 import { DefaultLayout } from 'components/Layouts/DefaultLayout/DefaultLayout';
 import { Carousel } from 'components/Toolkit/Carousel/Carousel';
 import { Card } from 'components/Toolkit/Card/Card';
-import { SocialMediaToggle } from 'components/Toolkit/SocialMediaToggle/SocialMediaToggle';
 
 const HomeWrapper = styled.div`
   display: flex;
@@ -206,7 +205,6 @@ function Home() {
               src={require('images/kiltalown_old.jpg')}
               alt="Kiltalown old"
             />
-            <SocialMediaToggle />
           </SocialMediaSection>
         </HomeWrapper>
       </DefaultLayout>
